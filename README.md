@@ -1,4 +1,4 @@
-# MCPSX-Web
+# mcpsx-Web
 
 This is a Next.js project built with React 19 and Tailwind CSS, featuring a comprehensive UI component library based on Radix UI.
 

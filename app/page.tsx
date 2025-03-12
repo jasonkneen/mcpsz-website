@@ -2,10 +2,45 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Terminal, Zap, Clock, Code2, Github } from "lucide-react"
 import { ReactNode } from "react"
+import { SoftwareApplicationJsonLd, OrganizationJsonLd, FAQPageJsonLd } from "@/components/json-ld"
 
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-black text-white">
+      {/* Structured Data for SEO */}
+      <SoftwareApplicationJsonLd
+        name="mcpsx CLI"
+        description="A powerful CLI tool for managing Context Protocol (MCP), creating logical groups of tools, and optimizing token usage when interacting with AI models."
+        applicationCategory="DeveloperApplication"
+        operatingSystem="Windows, macOS, Linux"
+        url="https://mcpsx.run"
+        offers={{
+          price: "0",
+          priceCurrency: "USD"
+        }}
+      />
+      <OrganizationJsonLd
+        name="mcpsx"
+        url="https://mcpsx.run"
+        logo="https://mcpsx.run/logo.png"
+        sameAs={["https://github.com/jasonkneen/mcpsx"]}
+      />
+      <FAQPageJsonLd
+        questions={[
+          {
+            question: "What is mcpsx CLI?",
+            answer: "mcpsx CLI is a powerful command line interface for managing Context Protocol (MCP), creating logical groups of tools, and optimizing token usage when interacting with AI models."
+          },
+          {
+            question: "How does mcpsx optimize token usage?",
+            answer: "By categorizing your tools into purpose-specific groups, mcpsx significantly reduces token usage when communicating with AI models. Instead of sending all available tools to the system instruction, you can selectively include only the relevant tools for a specific task or context."
+          },
+          {
+            question: "What operating systems does mcpsx support?",
+            answer: "mcpsx is available for macOS, Linux, and Windows."
+          }
+        ]}
+      />
       <header className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center space-x-2">
           <Terminal className="h-6 w-6 text-emerald-400" />
@@ -36,42 +71,44 @@ export default function Home() {
           </ul>
         </nav>
         <div className="flex items-center space-x-4">
-          <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+          <Link href="https://github.com/jasonkneen/mcpsx" target="_blank" rel="noopener noreferrer">
             <Github className="h-5 w-5 text-gray-400 hover:text-white transition-colors" />
           </Link>
           <Button
             variant="outline"
             className="hidden md:flex border-emerald-500 text-emerald-400 hover:bg-emerald-950 hover:text-emerald-300"
+            asChild
           >
-            Get Started
+            <Link href="/docs/#install">Get Started</Link>
           </Button>
         </div>
       </header>
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="container mx-auto px-4 py-20 md:py-32">
+        <section className="container mx-auto px-4 py-10 md:py-32">
           <div className="grid gap-8 md:grid-cols-2 md:gap-12 items-center">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                Supercharge your <span className="text-emerald-400">MCP Server</span> workflow
+                Supercharge your <span className="text-emerald-400">MCP</span> workflow
               </h1>
               <p className="text-lg md:text-xl text-gray-400 max-w-md">
-                A powerful, lightweight CLI tool designed to intelligently organize and manage MCP servers. Create logical collections of tools, filter by use case, and optimize token usage when interacting with AI models—all while simplifying MCP management and significantly reducing inference costs.
+                A powerful, lightweight CLI tool designed to intelligently organize and manage Context Protocol (MCP). Create logical collections of tools, filter by use case, and optimize token usage when interacting with AI models—all while simplifying MCP management and significantly reducing inference costs.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
                   Download Now
                 </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-emerald-500 text-emerald-400 hover:bg-emerald-950 hover:text-emerald-300"
-                >
-                  View Documentation
-                </Button>
-              </div>
-              <div className="pt-2 text-sm text-gray-500">Available for macOS, Linux, and Windows</div>
+                <Link href="/docs/#install">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-emerald-500 text-emerald-400 hover:bg-emerald-950 hover:text-emerald-300"
+                  >
+                    View Documentation
+                  </Button>
+                </Link>
+              </div>             
             </div>
             <div className="relative rounded-lg border border-gray-800 bg-gray-950 p-2 shadow-2xl">
               <div className="flex items-center border-b border-gray-800 px-4 py-2">
@@ -84,17 +121,17 @@ export default function Home() {
               </div>
               <div className="font-mono p-4 text-sm">
                 <p className="text-gray-400 mt-2">
-                  $ <span className="text-white">mcpsx groups add "front-end-tools" --servers="react-mcp,tailwind-mcp,vite-mcp"</span>
+                  $ <span className="text-white">mcpsx groups add "front-end-tools" --tools="react-mcp,tailwind-mcp,vite-mcp"</span>
                 </p>
                 <p className="text-emerald-400">✓ Creating group...</p>
                 <p className="text-emerald-400">✓ Adding tools...</p>
-                <p className="text-emerald-400">✓ Creating virtual MCP...</p>
+                <p className="text-emerald-400">✓ Creating virtual tools...</p>
                 <p className="text-gray-400 mt-2">
-                  $ <span className="text-white">mcpsx stdio --group="front-end-tools"</span>
+                  $ <span className="text-white">mcpsx run --group="front-end-tools"</span>
                 </p>
-                <p className="text-emerald-400">✓ Serving front-end-tools over STDIO...</p>
+                <p className="text-emerald-400">✓ Running front-end-tools...</p>
                 <p className="text-white mt-2">
-                  Deployment complete! <span className="text-emerald-400">https://app.example.com</span>
+                  stdio server running
                 </p>
                 <p className="text-gray-400 mt-2">
                   $ <span className="animate-pulse">█</span>
@@ -105,12 +142,12 @@ export default function Home() {
         </section>
 
         {/* Features Section */}
-        <section id="features" className="bg-gray-950 py-20">
+        <section id="features" className="bg-gray-950 py-10">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Powerful Features</h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
-                MCPSX comes packed with everything you need to streamline your MCP server workflow, intelligently organize your tools, and optimize model interactions.
+                mcpsx comes packed with everything you need to streamline your Context Protocol workflow, intelligently organize your tools, and optimize model interactions.
               </p>
             </div>
 
@@ -122,13 +159,13 @@ export default function Home() {
               />
               <FeatureCard
                 icon={<Code2 className="h-6 w-6 text-emerald-400" />}
-                title="MCP Server management"
-                description="Add, edit and delete MCP servers in one centralized place, with configurations that sync seamlessly across your entire environment."
+                title="MCP management"
+                description="Add, edit and delete MCP tools in one centralized place, with configurations that sync seamlessly across your entire environment."
               />
               <FeatureCard
                 icon={<Clock className="h-6 w-6 text-emerald-400" />}
                 title="Categories and Grouping"
-                description="Create logical collections of servers and tools based on project type, stack, or workflow—making it easy to organize and access exactly what you need."
+                description="Create logical collections of tools based on project type, stack, or workflow—making it easy to organize and access exactly what you need."
               />
               <FeatureCard
                 icon={<Github className="h-6 w-6 text-emerald-400" />}
@@ -137,13 +174,13 @@ export default function Home() {
               />
               <FeatureCard
                 icon={<Terminal className="h-6 w-6 text-emerald-400" />}
-                title="Talk to your MCPs"
-                description="Test and talk to your MCP servers with a gorgeus chat interface."
+                title="Talk to MCP"
+                description="Test and talk to Context Protocol with a gorgeous chat interface."
               />
               <FeatureCard
                 icon={<ArrowRight className="h-6 w-6 text-emerald-400" />}
-                title="Workflows and Agentic MCPs"
-                description="COMING SOON — Create sophisticated workflows of MCPs linked with our conditional MCP for advanced flow-based operations and intelligent tool orchestration."
+                title="Workflows and Agentic MCP"
+                description="COMING SOON — Create sophisticated workflows linked with our conditional MCP for advanced flow-based operations and intelligent tool orchestration."
               />
             </div>
           </div>
@@ -167,9 +204,11 @@ export default function Home() {
               </div>
 
               <div className="mt-10 text-center">
-                <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
-                  <Link href="/docs/" className="text-white">View Full Documentation</Link>
-                </Button>
+                <Link href="/docs/#install">
+                  <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
+                    View Full Documentation
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -182,9 +221,9 @@ export default function Home() {
 
             <div className="grid gap-8 md:grid-cols-3">
               <TestimonialCard
-                quote="MCPSX lets me create specialized tool collections for different projects. My models are more focused, and I've cut my token usage by 40% since organizing my MCPs into logical groups."
+                quote="mcpsx lets me create specialized tool collections for different projects. My models are more focused, and I've cut my token usage by 40% since organizing my MCP tools into logical groups."
                 author="Sarah Chen"
-                role="Somethihng Inc."
+                role="Something Inc."
               />
               <TestimonialCard
                 quote="The time-saving features in mcpsx are incredible. I've cut my deployment time in half since switching."
@@ -216,15 +255,17 @@ export default function Home() {
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to supercharge your terminal?</h2>
               <p className="text-xl text-gray-400 mb-8">
-                Join thousands of developers who have already optimized their MCP workflows, reduced token usage, and improved AI interactions.
+                Join thousands of developers who have already optimized their Context Protocol workflows, reduced token usage, and improved AI interactions.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
                   Download Now
                 </Button>
-                <Button size="lg" variant="outline" className="border-gray-700 hover:bg-gray-900">
-                  Star on GitHub
-                </Button>
+                <Link href="https://github.com/jasonkneen/mcpsx" target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" variant="outline" className="border-gray-700 hover:bg-gray-900">
+                    Star on GitHub
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -239,7 +280,7 @@ export default function Home() {
                 <Terminal className="h-5 w-5 text-emerald-400" />
                 <span className="text-lg font-bold">mcpsx</span>
               </div>
-              <p className="text-gray-400 text-sm">A modern MCP management tool designed to optimize AI interactions and reduce token usage.</p>
+              <p className="text-gray-400 text-sm">A modern Context Protocol management tool designed to optimize AI interactions and reduce token usage.</p>
             </div>
 
             <div>
@@ -324,7 +365,7 @@ export default function Home() {
           <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-gray-500">© {new Date().getFullYear()} mcpsx. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="#" className="text-gray-400 hover:text-emerald-400">
+              <Link href="https://github.com/jasonkneen/mcpsx" className="text-gray-400 hover:text-emerald-400">
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </Link>
@@ -334,7 +375,7 @@ export default function Home() {
                 </svg>
                 <span className="sr-only">Twitter</span>
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-emerald-400">
+              <Link href="https://github.com/jasonkneen/mcpsx" className="text-gray-400 hover:text-emerald-400">
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path
                     fillRule="evenodd"
