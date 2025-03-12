@@ -145,7 +145,7 @@ export default function Home() {
         <section id="features" className="bg-gray-950 py-10">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Powerful Features</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-glow">Powerful Features</h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
                 mcpsx comes packed with everything you need to streamline your Context Protocol workflow, intelligently organize your tools, and optimize model interactions.
               </p>
