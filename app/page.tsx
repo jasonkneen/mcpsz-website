@@ -64,7 +64,7 @@ export default function Home() {
               </Link>
             </li>
             <li>
-              <Link href="#community" className="hover:text-emerald-400 transition-colors">
+              <Link href="https://github.com/jasonkneen/mcpsx/discussions/" className="hover:text-emerald-400 transition-colors">
                 Community
               </Link>
             </li>
@@ -162,32 +162,32 @@ export default function Home() {
               <FeatureCard
                 icon={<Zap className="h-6 w-6 text-emerald-400" />}
                 title="Lightning Fast"
-                description="Built with performance in mind. Execute commands in milliseconds, not seconds."
+                description="Built with performance in mind. Retrieve tooling from 100s of servers instantly and group and categorise all your tooling into logical 'toolboxes'."
               />
               <FeatureCard
                 icon={<Code2 className="h-6 w-6 text-emerald-400" />}
-                title="MCP management"
-                description="Add, edit and delete MCP tools in one centralized place, with configurations that sync seamlessly across your entire environment."
+                title="One-stop MCP Management"
+                description="Add, edit and delete MCP tools in one centralized place, with configurations that sync seamlessly across all your MCP-enabled IDEs."
               />
               <FeatureCard
                 icon={<Clock className="h-6 w-6 text-emerald-400" />}
-                title="Categories and Grouping"
-                description="Create logical collections of tools based on project type, stack, or workflow—making it easy to organize and access exactly what you need."
+                title="Grouping, Tagging, Organising"
+                description="Create logical collections of tools based on a project, workspace, task, stack so you have only the tools you need for the task in hand."
               />
               <FeatureCard
                 icon={<Github className="h-6 w-6 text-emerald-400" />}
-                title="Filtering and optimising"
-                description="Minimize token usage and improve AI focus by sending only relevant tools to models. Create specialized toolsets for different tasks that optimize both performance and cost."
+                title="Ad-hoc and dynamic tooling"
+                description="Provision any tool on-the-fly, and adapt tooling recommendations based on usage, git commits, codebase requirements. Why send 100s of tools in every request when they are not needed!"
               />
               <FeatureCard
                 icon={<Terminal className="h-6 w-6 text-emerald-400" />}
-                title="Talk to MCP"
-                description="Test and talk to Context Protocol with a gorgeous chat interface."
+                title="Talk to your MCP Servers"
+                description="Chat and test with your MCPs in a gorgeous, interactive chat interface and chain and test workflows in a sandboxed environment."
               />
               <FeatureCard
                 icon={<ArrowRight className="h-6 w-6 text-emerald-400" />}
-                title="Workflows and Agentic MCP"
-                description="COMING SOON — Create sophisticated workflows linked with our conditional MCP for advanced flow-based operations and intelligent tool orchestration."
+                title="MCPs as agents"
+                description="Use our built-in (and downloadable) Workflow MCPs that can fit between MCP tools providing powerful workflows."
               />
             </div>
           </div>
@@ -208,6 +208,20 @@ export default function Home() {
                     <pre className="text-emerald-400">npm install -g mcpsx</pre>
                   </div>
                 </div>
+                
+              </div>
+
+
+              <div className="space-y-6 mt-6">
+                <div className="rounded-lg border border-gray-800 bg-gray-950 overflow-hidden">
+                  <div className="border-b border-gray-800 px-4 py-2 bg-gray-900 flex items-center">
+                    <span className="text-sm font-medium">Using npx (installed or not)</span>
+                  </div>
+                  <div className="p-4 font-mono text-sm overflow-x-auto">
+                    <pre className="text-emerald-400">npx -y @jasonkneen/mcpsx run</pre>
+                  </div>
+                </div>
+                
               </div>
 
               <div className="mt-10 text-center">
@@ -228,19 +242,19 @@ export default function Home() {
 
             <div className="grid gap-8 md:grid-cols-3">
               <TestimonialCard
-                quote="mcpsx lets me create specialized tool collections for different projects. My models are more focused, and I've cut my token usage by 40% since organizing my MCP tools into logical groups."
-                author="Sarah Chen"
-                role="Something Inc."
+                quote="We have 100s of MCP Servers already, it was a SLOPPY mess. With mcpsx I realised that it was really simple to organise MCPs and now we have easy integration with no JSON, YAML schemas and we save tokens and money!"
+                author="Nathan Yesave"
+                role="Developer"
               />
               <TestimonialCard
-                quote="The time-saving features in mcpsx are incredible. I've cut my deployment time in half since switching."
-                author="Marcus Johnson"
-                role="DevOps Engineer"
+                quote="I thought I could manage it a better way myself, but struggled with basic integration into one of my IDEs. Now I realise what I could have achieved."
+                author="Alexis Blah"
+                role="Near Tesla, Texas"
               />
               <TestimonialCard
-                quote="I was skeptical at first, but after a week with mcpsx, I can't imagine going back to a regular terminal."
-                author="Priya Patel"
-                role="Full Stack Developer"
+                quote="I didn't understand why people went on about it, and the concept, it just looked like something anyone could have done. I was wrong and things were not ok. So I tried it and I'm hooked and now everything is a-ok!"
+                author="Alex Ayoke"
+                role="Nonce Crypto Specialist"
               />
             </div>
 
@@ -262,7 +276,7 @@ export default function Home() {
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to supercharge your terminal?</h2>
               <p className="text-xl text-gray-400 mb-8">
-                Join thousands of developers who have already optimized their Context Protocol workflows, reduced token usage, and improved AI interactions.
+                Join thousands of developers who are optimizing their MCP workflows and connecting to thousands of available MCP servers..
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link href="https://www.npmjs.com/package/@jasonkneen/mcpsx" target="_blank" rel="noopener noreferrer">
