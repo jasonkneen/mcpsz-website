@@ -93,12 +93,14 @@ export default function Home() {
                 Supercharge your <span className="text-emerald-400">MCP</span> workflow
               </h1>
               <p className="text-lg md:text-xl text-gray-400 max-w-md">
-                A powerful, lightweight CLI tool designed to intelligently organize and manage Context Protocol (MCP). Create logical collections of tools, filter by use case, and optimize token usage when interacting with AI models—all while simplifying MCP management and significantly reducing inference costs.
+                A powerful, lightweight CLI tool designed to organize and manage Your MCP Server workflow, creating logical collections of tools, filter by use case, and reduce tokens wasted in system prompting with LLMs being able to access specifical tool sets for specific tasks resulting in reduced time, cost, hallucinations and mistakes that usually come with overloading Large Language Models.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
+                <Link href="https://www.npmjs.com/package/@jasonkneen/mcpsx" target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
                   Download Now
-                </Button>
+                  </Button>
+                </Link>
                 <Link href="/docs/#install">
                   <Button
                     size="lg"
@@ -258,9 +260,11 @@ export default function Home() {
                 Join thousands of developers who have already optimized their Context Protocol workflows, reduced token usage, and improved AI interactions.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
+                <Link href="https://www.npmjs.com/package/@jasonkneen/mcpsx" target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
                   Download Now
-                </Button>
+                  </Button>
+                </Link>
                 <Link href="https://github.com/jasonkneen/mcpsx" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" variant="outline" className="border-gray-700 hover:bg-gray-900">
                     Star on GitHub
