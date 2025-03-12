@@ -36,6 +36,15 @@ jobs:
     - name: Build project
       run: npm run build
 
+    - name: Debug output directory
+      run: |
+        echo "Contents of ./out directory:"
+        find ./out -type f | sort
+        echo "Contents of ./out/_next directory:"
+        find ./out/_next -type f -name "*.css" | sort || echo "No CSS files found"
+        echo "Contents of CSS files:"
+        find ./out/_next -type f -name "*.css" -exec cat {} \; || echo "No CSS files found"
+
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
