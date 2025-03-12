@@ -33,27 +33,22 @@ jobs:
     - name: Install autoprefixer
       run: npm install --legacy-peer-deps autoprefixer
 
-    - name: Set environment variables
-      run: |
-        echo "NODE_ENV=production" >> $GITHUB_ENV
-        echo "GITHUB_ACTIONS=true" >> $GITHUB_ENV
-
     - name: Build project
-      run: npm run build
+      run: NODE_ENV=production npm run build
       env:
         NODE_ENV: production
-        GITHUB_ACTIONS: true
 
-    - name: Debug output directory
+    - name: Fix paths for GitHub Pages
       run: |
-        echo "Contents of ./out directory:"
-        find ./out -type f | sort
-        echo "Contents of ./out/_next directory:"
-        find ./out/_next -type f -name "*.css" | sort || echo "No CSS files found"
-        echo "Contents of CSS files:"
-        find ./out/_next -type f -name "*.css" -exec cat {} \; || echo "No CSS files found"
-        echo "Checking asset references in HTML:"
-        grep -r "/_next/" ./out/*.html || echo "No asset references found"
+        # Create a .nojekyll file to prevent GitHub Pages from ignoring files that begin with an underscore
+        touch ./out/.nojekyll || true
+        
+        # Create a copy of the index.html as 404.html for client-side routing
+        cp ./out/index.html ./out/404.html || true
+        
+        # List the output directory to verify the build
+        ls -la ./out
+        ls -la ./out/_next || echo "No _next directory found"
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3

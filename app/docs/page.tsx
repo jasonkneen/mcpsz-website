@@ -24,7 +24,7 @@ export default function Docs() {
               </Link>
             </li>
             <li>
-              <Link href="/docs" className="text-emerald-400 transition-colors">
+              <Link href="/docs/" className="text-emerald-400 transition-colors">
                 Docs
               </Link>
             </li>

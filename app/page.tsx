@@ -24,7 +24,7 @@ export default function Home() {
               </Link>
             </li>
             <li>
-              <Link href="/docs" className="hover:text-emerald-400 transition-colors">
+              <Link href="/docs/" className="hover:text-emerald-400 transition-colors">
                 Docs
               </Link>
             </li>
@@ -168,7 +168,7 @@ export default function Home() {
 
               <div className="mt-10 text-center">
                 <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
-                  <Link href="/docs" className="text-white">View Full Documentation</Link>
+                  <Link href="/docs/" className="text-white">View Full Documentation</Link>
                 </Button>
               </div>
             </div>
