@@ -18,7 +18,7 @@ const nextConfig = {
     unoptimized: true,
   },
   output: 'export',
-  basePath: process.env.GITHUB_ACTIONS && '/mcpsx',
+  basePath: process.env.GITHUB_ACTIONS && '/mcpsx-web',
   experimental: {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,
