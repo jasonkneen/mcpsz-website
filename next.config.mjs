@@ -11,14 +11,16 @@ const nextConfig = {
     ignoreDuringBuilds: true,
     
   },
+  swcMinify: true,
   typescript: {
     ignoreBuildErrors: true,
   },
   images: {
     unoptimized: true,
   },
-  output: 'export',
-  basePath: process.env.GITHUB_ACTIONS && '/mcpsx-web',
+  output: 'export', 
+  basePath: process.env.GITHUB_ACTIONS ? '/mcpsx-web' : '',
+  trailingSlash: true,
   experimental: {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,
