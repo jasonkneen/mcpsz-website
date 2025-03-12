@@ -5,6 +5,11 @@ try {
   // ignore error
 }
 
+// Set the correct base path and asset prefix for GitHub Pages
+const isProd = process.env.NODE_ENV === 'production';
+const isGitHubActions = process.env.GITHUB_ACTIONS === 'true';
+const basePath = isGitHubActions ? '/mcpsx-web' : '';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
@@ -19,8 +24,16 @@ const nextConfig = {
     unoptimized: true,
   },
   output: 'export', 
-  basePath: process.env.GITHUB_ACTIONS ? '/mcpsx-web' : '',
-  trailingSlash: true,
+  assetPrefix: basePath,
+  basePath: basePath,
+  // Add custom webpack config to ensure assets are correctly prefixed
+  webpack: (config, { dev, isServer }) => {
+    if (!dev && !isServer) {
+      // Set the publicPath for static assets in production
+      config.output.publicPath = `${basePath}/_next/`;
+    }
+    return config;
+  },
   experimental: {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,

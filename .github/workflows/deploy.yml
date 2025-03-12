@@ -33,8 +33,16 @@ jobs:
     - name: Install autoprefixer
       run: npm install --legacy-peer-deps autoprefixer
 
+    - name: Set environment variables
+      run: |
+        echo "NODE_ENV=production" >> $GITHUB_ENV
+        echo "GITHUB_ACTIONS=true" >> $GITHUB_ENV
+
     - name: Build project
       run: npm run build
+      env:
+        NODE_ENV: production
+        GITHUB_ACTIONS: true
 
     - name: Debug output directory
       run: |
@@ -44,6 +52,8 @@ jobs:
         find ./out/_next -type f -name "*.css" | sort || echo "No CSS files found"
         echo "Contents of CSS files:"
         find ./out/_next -type f -name "*.css" -exec cat {} \; || echo "No CSS files found"
+        echo "Checking asset references in HTML:"
+        grep -r "/_next/" ./out/*.html || echo "No asset references found"
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
