@@ -126,19 +126,14 @@ export default function Home() {
                   $ <span className="text-white">mcpsx run</span>
                 </p>
                 <p className="text-emerald-400">✓ Directories created successfully</p>
-                <p className="text-emerald-400">✓ Connecting to clients...</p>
                 <p className="text-emerald-400">✓ Connected to 3 MCP clients</p>
                 <p className="text-emerald-400">✓ Found 3 servers in settings</p>
-                <p className="text-emerald-400">✓ Connected to 'memory'</p>
                 <p className="text-emerald-400">✓ Listed 9 tools from memory</p>
-                <p className="text-emerald-400">✓ Connected to 'prompts'</p>
                 <p className="text-emerald-400">✓ Listed 3 tools from 'prompts'</p>
-                <p className="text-emerald-400">✓ Connected to 'notifications'</p>
                 <p className="text-emerald-400">✓ Listed 2 tools from 'notifications'</p>
                 <p className="text-emerald-400">✓ co-pilot chat participants created</p>                
                 <p className="text-emerald-400">✓ Sorting by recently used / popular</p>     
                 <p className="text-emerald-400">✓ Added recommended tools based on recent tasks</p>     
-                <p className="text-emerald-400">✓ Server started successfully</p>
                 <p className="text-white mt-2">Ready to handle requests</p>
                 <p className="text-white-400 mt-2">
                   $ <span className="animate-pulse">█</span>
@@ -276,7 +271,7 @@ export default function Home() {
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to supercharge your terminal?</h2>
               <p className="text-xl text-gray-400 mb-8">
-                Join thousands of developers who are optimizing their MCP workflows and connecting to thousands of available MCP servers..
+                Join thousands of developers who can optimize their MCP workflows.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link href="https://www.npmjs.com/package/@jasonkneen/mcpsx" target="_blank" rel="noopener noreferrer">
@@ -386,7 +381,7 @@ export default function Home() {
           </div>
 
           <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-gray-500">© {new Date().getFullYear()} mcpsx. All rights reserved.</p>
+            <p className="text-sm text-gray-500">© {new Date().getFullYear()} CyberWorks Ltd. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="https://github.com/jasonkneen/mcpsx" className="text-gray-400 hover:text-emerald-400">
                 <Github className="h-5 w-5" />
