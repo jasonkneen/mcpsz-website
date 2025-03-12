@@ -9,6 +9,7 @@ try {
 const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
+    
   },
   typescript: {
     ignoreBuildErrors: true,
@@ -16,6 +17,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  output: 'export',
+  basePath: process.env.GITHUB_ACTIONS && '/mcpsx',
   experimental: {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,
