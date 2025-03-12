@@ -15,34 +15,40 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+ name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: 'pnpm'
-      
-      - name: Install pnpm
-        run: npm install -g pnpm
-      
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-        
-      - name: Install dependencies
-        run: pnpm install
-      
-      - name: Build with Next.js
-        run: pnpm run build
-      
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./out
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Create missing directory
+      run: mkdir -p docs
+
+    - name: Build project
+      run: npm run build
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs/_site
 
   deploy:
     environment:
