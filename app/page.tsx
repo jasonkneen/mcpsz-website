@@ -187,12 +187,12 @@ export default function Home() {
                 role="Somethihng Inc."
               />
               <TestimonialCard
-                quote="The time-saving features in TermX are incredible. I've cut my deployment time in half since switching."
+                quote="The time-saving features in mcpsx are incredible. I've cut my deployment time in half since switching."
                 author="Marcus Johnson"
                 role="DevOps Engineer"
               />
               <TestimonialCard
-                quote="I was skeptical at first, but after a week with TermX, I can't imagine going back to a regular terminal."
+                quote="I was skeptical at first, but after a week with mcpsx, I can't imagine going back to a regular terminal."
                 author="Priya Patel"
                 role="Full Stack Developer"
               />
@@ -237,7 +237,7 @@ export default function Home() {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <Terminal className="h-5 w-5 text-emerald-400" />
-                <span className="text-lg font-bold">TermX</span>
+                <span className="text-lg font-bold">mcpsx</span>
               </div>
               <p className="text-gray-400 text-sm">A modern MCP management tool designed to optimize AI interactions and reduce token usage.</p>
             </div>
@@ -322,7 +322,7 @@ export default function Home() {
           </div>
 
           <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-gray-500">© {new Date().getFullYear()} TermX. All rights reserved.</p>
+            <p className="text-sm text-gray-500">© {new Date().getFullYear()} mcpsx. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="#" className="text-gray-400 hover:text-emerald-400">
                 <Github className="h-5 w-5" />
