@@ -123,19 +123,24 @@ export default function Home() {
               </div>
               <div className="font-mono p-4 text-sm">
                 <p className="text-gray-400 mt-2">
-                  $ <span className="text-white">mcpsx groups add "front-end-tools" --tools="react-mcp,tailwind-mcp,vite-mcp"</span>
+                  $ <span className="text-white">mcpsx run</span>
                 </p>
-                <p className="text-emerald-400">✓ Creating group...</p>
-                <p className="text-emerald-400">✓ Adding tools...</p>
-                <p className="text-emerald-400">✓ Creating virtual tools...</p>
-                <p className="text-gray-400 mt-2">
-                  $ <span className="text-white">mcpsx run --group="front-end-tools"</span>
-                </p>
-                <p className="text-emerald-400">✓ Running front-end-tools...</p>
-                <p className="text-white mt-2">
-                  stdio server running
-                </p>
-                <p className="text-gray-400 mt-2">
+                <p className="text-emerald-400">✓ Directories created successfully</p>
+                <p className="text-emerald-400">✓ Connecting to clients...</p>
+                <p className="text-emerald-400">✓ Connected to 3 MCP clients</p>
+                <p className="text-emerald-400">✓ Found 3 servers in settings</p>
+                <p className="text-emerald-400">✓ Connected to 'memory'</p>
+                <p className="text-emerald-400">✓ Listed 9 tools from memory</p>
+                <p className="text-emerald-400">✓ Connected to 'prompts'</p>
+                <p className="text-emerald-400">✓ Listed 3 tools from 'prompts'</p>
+                <p className="text-emerald-400">✓ Connected to 'notifications'</p>
+                <p className="text-emerald-400">✓ Listed 2 tools from 'notifications'</p>
+                <p className="text-emerald-400">✓ co-pilot chat participants created</p>                
+                <p className="text-emerald-400">✓ Sorting by recently used / popular</p>     
+                <p className="text-emerald-400">✓ Added recommended tools based on recent tasks</p>     
+                <p className="text-emerald-400">✓ Server started successfully</p>
+                <p className="text-white mt-2">Ready to handle requests</p>
+                <p className="text-white-400 mt-2">
                   $ <span className="animate-pulse">█</span>
                 </p>
               </div>
