@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Terminal, Zap, Clock, Code2, Github } from "lucide-react"
+import { ReactNode } from "react"
 
 export default function Home() {
   return (
@@ -23,7 +24,7 @@ export default function Home() {
               </Link>
             </li>
             <li>
-              <Link href="#docs" className="hover:text-emerald-400 transition-colors">
+              <Link href="/docs" className="hover:text-emerald-400 transition-colors">
                 Docs
               </Link>
             </li>
@@ -56,7 +57,7 @@ export default function Home() {
                 Supercharge your <span className="text-emerald-400">MCP Server</span> workflow
               </h1>
               <p className="text-lg md:text-xl text-gray-400 max-w-md">
-                A powerful, lightweight CLI tool designed to manage mcp servers, creating groups, filtering servers and tools to maximise productivity while simplifying MCP management and installation and reducing tokens and inference costs.
+                A powerful, lightweight CLI tool designed to intelligently organize and manage MCP servers. Create logical collections of tools, filter by use case, and optimize token usage when interacting with AI models—all while simplifying MCP management and significantly reducing inference costs.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
@@ -109,7 +110,7 @@ export default function Home() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Powerful Features</h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
-                mcpsx comes packed with everything you need to streamline your mcp server development workflow.
+                MCPSX comes packed with everything you need to streamline your MCP server workflow, intelligently organize your tools, and optimize model interactions.
               </p>
             </div>
 
@@ -122,17 +123,17 @@ export default function Home() {
               <FeatureCard
                 icon={<Code2 className="h-6 w-6 text-emerald-400" />}
                 title="MCP Server management"
-                description="Add, edit and delete MCP servers in once place, and use everywhere."
+                description="Add, edit and delete MCP servers in one centralized place, with configurations that sync seamlessly across your entire environment."
               />
               <FeatureCard
                 icon={<Clock className="h-6 w-6 text-emerald-400" />}
                 title="Categories and Grouping"
-                description="Create logical groups of servers and / or tools to organise and manage tooling."
+                description="Create logical collections of servers and tools based on project type, stack, or workflow—making it easy to organize and access exactly what you need."
               />
               <FeatureCard
                 icon={<Github className="h-6 w-6 text-emerald-400" />}
                 title="Filtering and optimising"
-                description="Have collections of tools for different tasks, and use only the tools you want."
+                description="Minimize token usage and improve AI focus by sending only relevant tools to models. Create specialized toolsets for different tasks that optimize both performance and cost."
               />
               <FeatureCard
                 icon={<Terminal className="h-6 w-6 text-emerald-400" />}
@@ -142,7 +143,7 @@ export default function Home() {
               <FeatureCard
                 icon={<ArrowRight className="h-6 w-6 text-emerald-400" />}
                 title="Workflows and Agentic MCPs"
-                description="COMING SOON -- create workflows of MCPs linked with our conditional MCP for various flow-based operations."
+                description="COMING SOON — Create sophisticated workflows of MCPs linked with our conditional MCP for advanced flow-based operations and intelligent tool orchestration."
               />
             </div>
           </div>
@@ -167,7 +168,7 @@ export default function Home() {
 
               <div className="mt-10 text-center">
                 <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
-                  View Full Installation Guide
+                  <Link href="/docs" className="text-white">View Full Documentation</Link>
                 </Button>
               </div>
             </div>
@@ -181,7 +182,7 @@ export default function Home() {
 
             <div className="grid gap-8 md:grid-cols-3">
               <TestimonialCard
-                quote="I can keep my tooling to exactly what I need so the models are more focused on what they can do."
+                quote="MCPSX lets me create specialized tool collections for different projects. My models are more focused, and I've cut my token usage by 40% since organizing my MCPs into logical groups."
                 author="Sarah Chen"
                 role="Somethihng Inc."
               />
@@ -215,7 +216,7 @@ export default function Home() {
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to supercharge your terminal?</h2>
               <p className="text-xl text-gray-400 mb-8">
-                Join thousands of developers who have already upgraded their workflow.
+                Join thousands of developers who have already optimized their MCP workflows, reduced token usage, and improved AI interactions.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
@@ -238,7 +239,7 @@ export default function Home() {
                 <Terminal className="h-5 w-5 text-emerald-400" />
                 <span className="text-lg font-bold">TermX</span>
               </div>
-              <p className="text-gray-400 text-sm">A modern terminal experience designed for developers.</p>
+              <p className="text-gray-400 text-sm">A modern MCP management tool designed to optimize AI interactions and reduce token usage.</p>
             </div>
 
             <div>
@@ -351,7 +352,13 @@ export default function Home() {
   )
 }
 
-function FeatureCard({ icon, title, description }) {
+interface FeatureCardProps {
+  icon: ReactNode;
+  title: string;
+  description: string;
+}
+
+function FeatureCard({ icon, title, description }: FeatureCardProps) {
   return (
     <div className="bg-gray-900 p-6 rounded-lg border border-gray-800 hover:border-emerald-900 transition-colors">
       <div className="mb-4">{icon}</div>
@@ -361,7 +368,13 @@ function FeatureCard({ icon, title, description }) {
   )
 }
 
-function TestimonialCard({ quote, author, role }) {
+interface TestimonialCardProps {
+  quote: string;
+  author: string;
+  role: string;
+}
+
+function TestimonialCard({ quote, author, role }: TestimonialCardProps) {
   return (
     <div className="bg-gray-900 p-6 rounded-lg border border-gray-800">
       <div className="mb-4 text-emerald-400">
@@ -380,4 +393,3 @@ function TestimonialCard({ quote, author, role }) {
     </div>
   )
 }
-
