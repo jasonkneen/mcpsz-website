@@ -1,31 +1,39 @@
 $ mcpsx list tools
-┌─────────────────────────────────────────┐
-│ Memory Tools                            │
-├─────────────────────────────────────────┤
-│ memory_create_entities                  │
-│ memory_create_relations                 │
-│ memory_add_observations                 │
-│ memory_delete_entities                  │
-│ memory_delete_observations              │
-│ memory_delete_relations                 │
-│ memory_read_graph                       │
-│ memory_search_nodes                     │
-│ memory_open_nodes                       │
-└─────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────┐
+│ 🧠 Memory Tools                                             │
+├─────────────────────────────────────────────────────────────┤
+│ memory_create_entities       │ Create knowledge graph nodes │
+│ memory_create_relations      │ Link entities together       │
+│ memory_add_observations      │ Add facts to entities        │
+│ memory_delete_entities       │ Remove entities              │
+│ memory_delete_observations   │ Remove specific facts        │
+│ memory_delete_relations      │ Remove entity connections    │
+│ memory_read_graph            │ View entire knowledge graph  │
+│ memory_search_nodes          │ Find entities by query       │
+│ memory_open_nodes            │ View specific entities       │
+└─────────────────────────────────────────────────────────────┘
 
-┌─────────────────────────────────────────┐
-│ Prompt Tools                            │
-├─────────────────────────────────────────┤
-│ prompt-master_get_prompt                │
-│ prompt-master_generate_prompt           │
-│ prompt-master_save_prompt               │
-└─────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────┐
+│ 📝 Prompt Tools                                             │
+├─────────────────────────────────────────────────────────────┤
+│ prompt-master_get_prompt     │ Retrieve saved prompts       │
+│ prompt-master_generate_prompt│ Create task-specific prompts │
+│ prompt-master_save_prompt    │ Store prompts for reuse      │
+└─────────────────────────────────────────────────────────────┘
 
-┌─────────────────────────────────────────┐
-│ Notification Tools                      │
-├─────────────────────────────────────────┤
-│ notification-server_send_notification   │
-│ notification-server_broadcast_status    │
-└─────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────┐
+│ 📢 Notification Tools                                       │
+├─────────────────────────────────────────────────────────────┤
+│ notification-server_send_notification │ Send targeted alerts│
+│ notification-server_broadcast_status  │ Update system state │
+└─────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────┐
+│ 🔍 Code Indexer Tools                                       │
+├─────────────────────────────────────────────────────────────┤
+│ code-indexer_search_code     │ Find code by functionality   │
+│ code-indexer_get_snippet     │ Retrieve specific code blocks│
+│ code-indexer_find_references │ Locate symbol usages         │
+└─────────────────────────────────────────────────────────────┘
 
 $
