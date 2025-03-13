@@ -1,7 +1,15 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { Inter } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
 import { CursorEffectWrapper } from '@/components/cursor-effect-wrapper'
+
+// Define the font
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+})
 
 export const metadata: Metadata = {
   title: 'mcpsx CLI | Context Protocol Tools',
@@ -78,8 +86,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" dir="ltr" suppressHydrationWarning>
-      <body className="antialiased">
+    <html lang="en" dir="ltr" suppressHydrationWarning className={inter.variable}>
+      <body className="antialiased font-sans">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           {children}
           <CursorEffectWrapper />

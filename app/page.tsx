@@ -95,7 +95,7 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-2 md:gap-12 items-center">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                Supercharge your <span className="text-emerald-400">MCP</span> workflow
+                Supercharge your <span className="text-emerald-400">MCP</span> workflow for supporting IDEs & <span className="text-emerald-400">Copilot</span>
               </h1>
               <p className="text-lg md:text-xl text-gray-400 max-w-md">
                 A powerful, lightweight CLI tool that streamlines your MCP Server workflow. Create targeted tool collections, filter by use case, and reduce token waste—leading to faster, cheaper, and more accurate LLM responses.
@@ -215,7 +215,7 @@ export default function Home() {
                     <span className="text-sm font-medium">Using npm</span>
                   </div>
                   <div className="p-4 font-mono text-sm overflow-x-auto">
-                    <pre className="text-emerald-400">npm install -g mcpsx</pre>
+                    <pre className="text-emerald-400">npm install -g @jasonkneen/mcpsx</pre>
                   </div>
                 </div>
                 
