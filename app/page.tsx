@@ -338,25 +338,24 @@ export default function Home() {
             <div>
               <h3 className="font-medium mb-4">Resources</h3>
               <ul className="space-y-2 text-sm text-gray-400">
+                {/* Documentation link */}
                 <li>
                   <Link href="/docs" className="hover:text-emerald-400">
                     Documentation
                   </Link>
                 </li>
+                {/* Tutorials with Coming Soon badge */}
                 <li>
-                  <Link href="/docs/tutorials" className="hover:text-emerald-400">
-                    Tutorials
+                  <Link href="#" className="hover:text-emerald-400">
+                    <span className="flex items-center">
+                      Tutorials
+                      <span className="ml-2 px-2 py-0.5 text-xs bg-gray-800 rounded-full">Coming Soon</span>
+                    </span>
                   </Link>
                 </li>
+                {/* Support link */}
                 <li>
-                  {features.blog && (
-                  <Link href="/blog" className="hover:text-emerald-400">
-                    Blog
-                  </Link>
-                  )}
-                </li>
-                <li>
-                  <Link href="https://github.com/jasonkneen/mcpsx/issues" className="hover:text-emerald-400">
+                  <Link href="https://github.com/jasonkneen/mcpsx/issues" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400">
                     Support
                   </Link>
                 </li>
@@ -366,40 +365,31 @@ export default function Home() {
             <div>
               <h3 className="font-medium mb-4">Company</h3>
               <ul className="space-y-2 text-sm text-gray-400">
-                {features.blog && (
                 <li>
-                  <Link href="/blog/about" className="hover:text-emerald-400">
-                    About
+                  <Link href="#" className="hover:text-emerald-400">
+                    <span className="flex items-center">
+                      About
+                      <span className="ml-2 px-2 py-0.5 text-xs bg-gray-800 rounded-full">Coming Soon</span>
+                    </span>
                   </Link>
                 </li>
-                )}
-                {features.blog && (
                 <li>
-                  <Link href="/blog/careers" className="hover:text-emerald-400">
-                    Careers
+                  <Link href="/legal/privacy-policy" className="hover:text-emerald-400">
+                    Privacy Policy
                   </Link>
                 </li>
-                )}
-                {features.blog && (
                 <li>
-                  <Link href="/blog/contact" className="hover:text-emerald-400">
-                    Contact
+                  <Link href="/legal/terms-conditions" className="hover:text-emerald-400">
+                    Terms & Conditions
                   </Link>
                 </li>
-                )}
-                {features.blog && (
-                  <li>
-                    <Link href="/blog/privacy" className="hover:text-emerald-400">
-                      Privacy
-                    </Link>
-                  </li>
-                )}
+                
               </ul>
             </div>
           </div>
 
           <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-gray-500">© {new Date().getFullYear()} Jason Kneen. All rights reserved.</p>
+            <p className="text-sm text-gray-500">© {new Date().getFullYear()} CyberFish Ltd. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="https://github.com/jasonkneen/mcpsx" className="text-gray-400 hover:text-emerald-400">
                 <Github className="h-5 w-5" />

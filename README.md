@@ -33,6 +33,20 @@ This project is configured for automatic deployment to GitHub Pages:
 
 The project uses Next.js with static export configuration for GitHub Pages compatibility. The deployment is handled through GitHub Actions as defined in `.github/workflows/deploy.yml`.
 
+## Feature Flags
+
+The project uses feature flags to enable or disable certain features without modifying the code directly. Feature flags are configured using environment variables.
+
+To enable or disable features, create a `.env.local` file in the root directory with the following content:
+
+```bash
+# Feature Flags
+# Set to 'true' to enable features, 'false' to disable them
+
+# Blog feature flag (default: false)
+NEXT_PUBLIC_FEATURE_BLOG=true  # Change to false to disable the blog
+```
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
