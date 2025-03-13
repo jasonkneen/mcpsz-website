@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, Terminal, Zap, Clock, Code2, Github } from "lucide-react"
 import { ReactNode } from "react"
 import { SoftwareApplicationJsonLd, OrganizationJsonLd, FAQPageJsonLd } from "@/components/json-ld"
+import { AnimatedTerminal } from "@/components/animated-terminal"
 import { TiltPanel } from "@/components/tilt-panel"
 
 export default function Home() {
@@ -96,7 +97,7 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-2 md:gap-12 items-center">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                Supercharge your <span className="text-emerald-400">MCP</span> workflow for supporting IDEs & <span className="text-emerald-400">Copilot</span>
+                Supercharge your <span className="text-emerald-400">MCP</span> workflow in supporting IDEs & <span className="text-emerald-400">Copilot</span>
               </h1>
               <p className="text-lg md:text-xl text-gray-400 max-w-md">
                 A powerful, lightweight CLI tool that streamlines your MCP Server workflow. Create targeted tool collections, filter by use case, and reduce token waste—leading to faster, cheaper, and more accurate LLM responses.
@@ -127,30 +128,13 @@ export default function Home() {
                 </div>
                 <div className="ml-4 text-sm text-gray-400">terminal</div>
               </div>
-              <div className="font-mono p-4 text-sm">
-                <p className="text-gray-400 mt-2">
-                  $ <span className="text-white">mcpsx run</span>
-                </p>
-                <p className="text-emerald-400">✓ Directories created successfully</p>
-                <p className="text-emerald-400">✓ Connected to 3 MCP clients</p>
-                <p className="text-emerald-400">✓ Found 3 servers in settings</p>
-                <p className="text-emerald-400">✓ Listed 9 tools from memory</p>
-                <p className="text-emerald-400">✓ Listed 3 tools from 'prompts'</p>
-                <p className="text-emerald-400">✓ Listed 2 tools from 'notifications'</p>
-                <p className="text-emerald-400">✓ co-pilot chat participants created</p>                
-                <p className="text-emerald-400">✓ Sorting by recently used / popular</p>     
-                <p className="text-emerald-400">✓ Added recommended tools based on recent tasks</p>     
-                <p className="text-white mt-2">Ready to handle requests</p>
-                <p className="text-white-400 mt-2">
-                  $ <span className="animate-pulse">█</span>
-                </p>                
-                <div className="mt-4 flex justify-center">
-                  <div className="bg-gradient-to-r from-emerald-600 to-emerald-400 text-white text-xs font-bold px-3 py-1.5 rounded-full flex items-center shadow-lg">
-                    <svg className="w-3 h-3 mr-1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor" />
-                    </svg>
-                    Co-pilot Ready
-                  </div>
+              <AnimatedTerminal />
+              <div className="mt-4 flex justify-center">
+                <div className="bg-gradient-to-r from-emerald-600 to-emerald-400 text-white text-xs font-bold px-3 py-1.5 rounded-full flex items-center shadow-lg">
+                  <svg className="w-3 h-3 mr-1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor" />
+                  </svg>
+                  Co-pilot Ready
                 </div>
               </div>
             </div>
