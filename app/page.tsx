@@ -1,9 +1,10 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Terminal, Zap, Clock, Code2, Github } from "lucide-react"
-import { ReactNode } from "react"
+import { ReactNode, useEffect, useState } from "react"
 import { SoftwareApplicationJsonLd, OrganizationJsonLd, FAQPageJsonLd } from "@/components/json-ld"
 import { AnimatedTerminal } from "@/components/animated-terminal"
+import { features } from "@/config/features"
 import { TiltPanel } from "@/components/tilt-panel"
 
 export default function Home() {
@@ -70,11 +71,13 @@ export default function Home() {
                 Pricing
               </Link>
             </li>
-            <li>
-              <Link href="/blog" className="hover:text-emerald-400 transition-colors">
-                Blog
-              </Link>
-            </li>
+            {features.blog && (
+              <li>
+                <Link href="/blog" className="hover:text-emerald-400 transition-colors">
+                  Blog
+                </Link>
+              </li>
+            )}
             <li>
               <Link href="https://github.com/jasonkneen/mcpsx/discussions/" className="hover:text-emerald-400 transition-colors">
                 Community
@@ -315,16 +318,20 @@ export default function Home() {
                     Pricing
                   </Link>
                 </li>
+                {features.blog && (
                 <li>
                   <Link href="/blog/changelog" className="hover:text-emerald-400">
                     Changelog
                   </Link>
                 </li>
+                )}
+                {features.blog && (
                 <li>
                   <Link href="/blog/roadmap" className="hover:text-emerald-400">
                     Roadmap
                   </Link>
                 </li>
+                )}
               </ul>
             </div>
 
@@ -342,9 +349,11 @@ export default function Home() {
                   </Link>
                 </li>
                 <li>
+                  {features.blog && (
                   <Link href="/blog" className="hover:text-emerald-400">
                     Blog
                   </Link>
+                  )}
                 </li>
                 <li>
                   <Link href="https://github.com/jasonkneen/mcpsx/issues" className="hover:text-emerald-400">
@@ -357,26 +366,34 @@ export default function Home() {
             <div>
               <h3 className="font-medium mb-4">Company</h3>
               <ul className="space-y-2 text-sm text-gray-400">
+                {features.blog && (
                 <li>
                   <Link href="/blog/about" className="hover:text-emerald-400">
                     About
                   </Link>
                 </li>
+                )}
+                {features.blog && (
                 <li>
                   <Link href="/blog/careers" className="hover:text-emerald-400">
                     Careers
                   </Link>
                 </li>
+                )}
+                {features.blog && (
                 <li>
                   <Link href="/blog/contact" className="hover:text-emerald-400">
                     Contact
                   </Link>
                 </li>
-                <li>
-                  <Link href="/blog/privacy" className="hover:text-emerald-400">
-                    Privacy
-                  </Link>
-                </li>
+                )}
+                {features.blog && (
+                  <li>
+                    <Link href="/blog/privacy" className="hover:text-emerald-400">
+                      Privacy
+                    </Link>
+                  </li>
+                )}
               </ul>
             </div>
           </div>

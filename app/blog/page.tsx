@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowLeft, Terminal, Calendar, User, Clock } from "lucide-react"
+import { ArrowLeft, Terminal, Calendar, User, Clock, Github } from "lucide-react"
 
 export default function Blog() {
   return (
@@ -40,6 +40,9 @@ export default function Blog() {
           </ul>
         </nav>
         <div className="flex items-center space-x-4">
+          <Link href="https://github.com/jasonkneen/mcpsx" target="_blank" rel="noopener noreferrer">
+            <Github className="h-5 w-5 text-gray-400 hover:text-white transition-colors" />
+          </Link>
           <Button
             variant="outline"
             className="hidden md:flex border-emerald-500 bg-transparent text-emerald-400 hover:bg-emerald-950 hover:text-emerald-300"

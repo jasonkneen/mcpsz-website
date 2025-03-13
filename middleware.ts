@@ -1,0 +1,42 @@
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
+import { features } from './config/features';
+
+/**
+ * Middleware to handle feature flag redirects
+ * 
+ * This middleware checks if a requested route is for a feature that is disabled
+ * and redirects to the home page if necessary.
+ */
+export function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+
+  // Check if the path starts with /blog
+  if (pathname.startsWith('/blog') && !features.blog) {
+    // If the blog feature is disabled, redirect to the home page
+    return NextResponse.redirect(new URL('/', request.url));
+  }
+
+  // Add more feature flag checks here as needed
+  // Example:
+  // if (pathname.startsWith('/pricing') && !features.pricing) {
+  //   return NextResponse.redirect(new URL('/', request.url));
+  // }
+
+  // Continue with the request if no redirects are needed
+  return NextResponse.next();
+}
+
+/**
+ * Configure which paths the middleware should run on
+ * 
+ * This configuration specifies which paths the middleware should be executed for.
+ * It should include all paths that might need feature flag checks.
+ */
+export const config = {
+  matcher: [
+    '/blog/:path*',
+    // Add more paths here as needed
+    // '/pricing/:path*',
+  ],
+};
