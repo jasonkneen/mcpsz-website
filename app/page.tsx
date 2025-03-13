@@ -96,11 +96,11 @@ export default function Home() {
         <section className="container mx-auto px-4 py-10 md:py-32">
           <div className="grid gap-8 md:grid-cols-2 md:gap-12 items-center">
             <div className="space-y-6">
-              <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                Supercharge your <span className="text-emerald-400">MCP</span> workflow in supporting IDEs & <span className="text-emerald-400">Copilot</span>
+              <h1 className="text-3xl md:text-6xl font-bold leading-tight">
+                Supercharge your <span className="text-emerald-400">MCP</span> server workflow.
               </h1>
               <p className="text-lg md:text-xl text-gray-400 max-w-md">
-                A powerful, lightweight CLI tool that streamlines your MCP Server workflow. Create targeted tool collections, filter by use case, and reduce token waste—leading to faster, cheaper, and more accurate LLM responses.
+                A powerful, lightweight CLI that streamlines MCP Server workflow. Add all your MCPs and tools in one place, create targeted groups, filter by use case and save tokens and context windows for faster, cheaper, and more accurate LLM responses.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="https://www.npmjs.com/package/@jasonkneen/mcpsx" target="_blank" rel="noopener noreferrer">

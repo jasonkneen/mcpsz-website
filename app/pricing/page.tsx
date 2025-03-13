@@ -12,12 +12,12 @@ export default function Pricing() {
           <div className="flex items-center">
             <span className="text-xl font-bold">mcpsx</span>
             <div className="ml-3 flex items-center">
-              <div className="bg-gradient-to-r from-emerald-600 to-emerald-400 text-white text-xs font-bold px-2 py-1 rounded-full flex items-center shadow-lg">
+             {/*  <div className="bg-gradient-to-r from-emerald-600 to-emerald-400 text-white text-xs font-bold px-2 py-1 rounded-full flex items-center shadow-lg">
                 <svg className="w-3 h-3 mr-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor" />
                 </svg>
                 Co-pilot Ready
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -94,12 +94,14 @@ export default function Pricing() {
                   </div>
                   <div className="p-6">
                     <ul className="space-y-3 mb-6">
-                      <FeatureItem text="Unlimited MCP servers" />
-                      <FeatureItem text="Tool grouping & organization" />
-                      <FeatureItem text="Token optimization" />
-                      <FeatureItem text="Local configuration" />
+                      <FeatureItem text="Unlimited MCP servers & tools" />
+                      <FeatureItem text="Unlimited groups & filters" />
+                      <FeatureItem text="Prompt optimisation" />
+                      <FeatureItem text="Fully local" />
                       <FeatureItem text="Command-line interface" />
-                      <FeatureItem text="Basic MCP management" />
+                      <FeatureItem text="Chat with MCPs (your keys)" />
+                      <FeatureItem text="VSCode extension" />
+                      <FeatureItem text="Basic analytics" />
                       <FeatureItem text="Community support" />
                     </ul>
                     <Button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white">
@@ -117,19 +119,20 @@ export default function Pricing() {
                     <h2 className="text-2xl font-bold mb-1">PRO</h2>
                     <div className="flex items-baseline mb-4">
                       <span className="text-4xl font-bold">$9</span>
-                      <span className="text-gray-400 ml-2">/ month</span>
+                      <span className="text-gray-400 ml-2">/ month (billed yearly)</span>
                     </div>
                     <p className="text-gray-400">Advanced features for professional developers.</p>
                   </div>
                   <div className="p-6">
                     <ul className="space-y-3 mb-6">
                       <FeatureItem text="Everything in FREE" />
-                      <FeatureItem text="Cloud syncing" />
-                      <FeatureItem text="Installation capabilities" />
-                      <FeatureItem text="AI provisioning tools" />
-                      <FeatureItem text="Source code access" />
-                      <FeatureItem text="Priority support" />
-                      <FeatureItem text="Advanced analytics" />
+                      <FeatureItem text="Config cloud syncing" />
+                      <FeatureItem text="Workflows & MCP Agents" />
+                      <FeatureItem text="Unlimited chat with MCPs" />
+                      <FeatureItem text="Voice control" />
+                      <FeatureItem text="Source code contributer access with annual plans" />
+                      <FeatureItem text="Priority support with annual plans" />
+                      <FeatureItem text="Advanced Analytics & usage" />
                     </ul>
                     <Button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white" disabled>
                       Coming Soon
