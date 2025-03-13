@@ -4,7 +4,7 @@ import { ArrowLeft, Check, Terminal } from "lucide-react"
 
 export default function Pricing() {
   return (
-    <div className="flex min-h-screen flex-col bg-black text-white">
+    <div className="flex min-h-screen flex-col text-white">
       <header className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center space-x-2">
           <Terminal className="h-6 w-6 text-emerald-400" />

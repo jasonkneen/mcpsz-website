@@ -3,6 +3,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
 import { CursorEffectWrapper } from '@/components/cursor-effect-wrapper'
+import { AnimatedBackground } from '@/components/animated-background'
 
 // Define the font
 const inter = Inter({
@@ -89,6 +90,7 @@ export default function RootLayout({
     <html lang="en" dir="ltr" suppressHydrationWarning className={inter.variable}>
       <body className="antialiased font-sans">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <AnimatedBackground />
           {children}
           <CursorEffectWrapper />
         </ThemeProvider>

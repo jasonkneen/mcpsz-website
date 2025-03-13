@@ -6,7 +6,7 @@ import { SoftwareApplicationJsonLd, OrganizationJsonLd, FAQPageJsonLd } from "@/
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col bg-black text-white">
+    <div className="flex min-h-screen flex-col text-white">
       {/* Structured Data for SEO */}
       <SoftwareApplicationJsonLd
         name="mcpsx CLI"

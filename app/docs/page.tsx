@@ -6,7 +6,7 @@ import { FAQPageJsonLd } from "@/components/json-ld"
 
 export default function Docs() {
   return (
-    <div className="flex min-h-screen flex-col bg-black text-white">
+    <div className="flex min-h-screen flex-col text-white">
       {/* Structured Data for SEO */}
       <FAQPageJsonLd
         questions={[
