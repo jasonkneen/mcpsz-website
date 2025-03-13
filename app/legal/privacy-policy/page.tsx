@@ -134,7 +134,7 @@ export default function PrivacyPolicy() {
                   If you have any questions about this Privacy Policy, please contact us:
                 </p>
                 <ul className="list-disc pl-6 mb-6 space-y-1">
-                  <li>By email: <a href="mailto:hello@cyberfish.com" className="text-emerald-400 hover:text-emerald-300">hello@cyberfish.com</a></li>
+                  <li>By email: <a href="mailto:hello@synthience.ai" className="text-emerald-400 hover:text-emerald-300">hello@Synthience.ai</a></li>
                   <li>By visiting our GitHub discussions page: <a href="https://github.com/jasonkneen/mcpsx/discussions/" className="text-emerald-400 hover:text-emerald-300">https://github.com/jasonkneen/mcpsx/discussions/</a></li>
                 </ul>
               </div>
@@ -212,7 +212,7 @@ export default function PrivacyPolicy() {
           </div>
 
           <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-gray-500">© {new Date().getFullYear()} CyberFish Ltd. All rights reserved.</p>
+            <p className="text-sm text-gray-500">© {new Date().getFullYear()} Synthience.ai. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="https://github.com/jasonkneen/mcpsx" className="text-gray-400 hover:text-emerald-400">
                 <Github className="h-5 w-5" />

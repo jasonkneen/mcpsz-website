@@ -4,6 +4,7 @@ import { ArrowRight, Terminal, Zap, Clock, Code2, Github } from "lucide-react"
 import { ReactNode, useEffect, useState } from "react"
 import { SoftwareApplicationJsonLd, OrganizationJsonLd, FAQPageJsonLd } from "@/components/json-ld"
 import { AnimatedTerminal } from "@/components/animated-terminal"
+import { MediaCarousel } from "@/components/media-carousel"
 import { features } from "@/config/features"
 import { TiltPanel } from "@/components/tilt-panel"
 
@@ -111,7 +112,7 @@ export default function Home() {
                 The intelligent CLI that transforms how you work with AI. Organize your MCP tools into purpose-driven groups, slash token usage by up to 70%, and get faster, more accurate AI responses while reducing costs.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="https://www.npmjs.com/package/@jasonkneen/mcpsx" target="_blank" rel="noopener noreferrer">
+                <Link href="https://www.npmjs.com/package/mcpsx" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
                   Download Now
                   </Button>
@@ -128,23 +129,18 @@ export default function Home() {
               </div>         
             </div>
             <div className="relative rounded-lg border border-gray-800 bg-gray-950 p-2 shadow-2xl">
-              <div className="flex items-center border-b border-gray-800 px-4 py-2">
-                <div className="flex space-x-2">
-                  <div className="h-3 w-3 rounded-full bg-red-500"></div>
-                  <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
-                  <div className="h-3 w-3 rounded-full bg-green-500"></div>
-                </div>
-                <div className="ml-4 text-sm text-gray-400">terminal</div>
-              </div>
-              <AnimatedTerminal />
-              {/* <div className="mt-4 flex justify-center">
-                <div className="bg-gradient-to-r from-emerald-600 to-emerald-400 text-white text-xs font-bold px-3 py-1.5 rounded-full flex items-center shadow-lg">
-                  <svg className="w-3 h-3 mr-1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor" />
-                  </svg>
-                  Co-pilot Ready
-                </div>
-              </div> */}
+              <MediaCarousel 
+                mediaItems={[
+                  { type: 'terminal' }, 
+                  { type: 'image', src: '/vscode1.png', alt: 'VSCode Screenshot 1' }, 
+                  { type: 'terminal' }, 
+                  { type: 'image', src: '/vscode2.png', alt: 'VSCode Screenshot 2' } 
+                ]}
+                autoRotateInterval={5000}
+                initialAutoRotate={true}
+                showHeader={true}
+                className="border-t border-gray-800"
+              />
             </div>
           </div>
         </section>
@@ -208,7 +204,7 @@ export default function Home() {
                     <span className="text-sm font-medium">Using npm</span>
                   </div>
                   <div className="p-4 font-mono text-sm overflow-x-auto">
-                    <pre className="text-emerald-400">npm install -g @jasonkneen/mcpsx</pre>
+                    <pre className="text-emerald-400">npm install -g mcpsx</pre>
                   </div>
                 </div>
                 
@@ -221,7 +217,7 @@ export default function Home() {
                     <span className="text-sm font-medium">Using npx (installed or not)</span>
                   </div>
                   <div className="p-4 font-mono text-sm overflow-x-auto">
-                    <pre className="text-emerald-400">npx -y @jasonkneen/mcpsx run</pre>
+                    <pre className="text-emerald-400">npx -y mcpsx run</pre>
                   </div>
                 </div>
                 
@@ -273,7 +269,7 @@ export default function Home() {
                 Join thousands of AI developers who have seen their MCP workflows transformed, reducing tokens, optimising context and saving money.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Link href="https://www.npmjs.com/package/@jasonkneen/mcpsx" target="_blank" rel="noopener noreferrer">
+                <Link href="https://www.npmjs.com/package/mcpsx" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
                   Download Now
                   </Button>
@@ -389,7 +385,7 @@ export default function Home() {
           </div>
 
           <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-gray-500">© {new Date().getFullYear()} CyberFish Ltd. All rights reserved.</p>
+            <p className="text-sm text-gray-500">© {new Date().getFullYear()} Synthience.ai. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="https://github.com/jasonkneen/mcpsx" className="text-gray-400 hover:text-emerald-400">
                 <Github className="h-5 w-5" />

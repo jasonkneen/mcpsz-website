@@ -107,7 +107,7 @@ export default function BlogPost() {
                 </p>
 
                 <pre className="bg-gray-950 p-4 rounded-md overflow-x-auto mb-6">
-                  <code className="text-emerald-400">npm install -g @jasonkneen/mcpsx</code>
+                  <code className="text-emerald-400">npm install -g mcpsx</code>
                 </pre>
 
                 <p>
@@ -115,7 +115,7 @@ export default function BlogPost() {
                 </p>
 
                 <pre className="bg-gray-950 p-4 rounded-md overflow-x-auto mb-6">
-                  <code className="text-emerald-400">npx -y @jasonkneen/mcpsx run</code>
+                  <code className="text-emerald-400">npx -y mcpsx run</code>
                 </pre>
 
                 <h2>Basic Configuration</h2>

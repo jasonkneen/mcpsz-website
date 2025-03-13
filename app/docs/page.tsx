@@ -12,7 +12,7 @@ export default function Docs() {
         questions={[
           {
             question: "How do I install mcpsx CLI?",
-            answer: "You can install mcpsx CLI globally using npm: npm install -g @jasonkneen/mcpsx"
+            answer: "You can install mcpsx CLI globally using npm: npm install -g mcpsx"
           },
           {
             question: "How do I create a tool group in mcpsx?",
@@ -112,7 +112,7 @@ export default function Docs() {
                 <span className="text-sm font-medium">Install globally</span>
               </div>
               <div className="p-4 font-mono text-sm overflow-x-auto">
-                <pre className="text-emerald-400">npm install -g @jasonkneen/mcpsx</pre>
+                <pre className="text-emerald-400">npm install -g mcpsx</pre>
               </div>
             </div>
             
