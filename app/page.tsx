@@ -129,14 +129,14 @@ export default function Home() {
                 <div className="ml-4 text-sm text-gray-400">terminal</div>
               </div>
               <AnimatedTerminal />
-              <div className="mt-4 flex justify-center">
+              {/* <div className="mt-4 flex justify-center">
                 <div className="bg-gradient-to-r from-emerald-600 to-emerald-400 text-white text-xs font-bold px-3 py-1.5 rounded-full flex items-center shadow-lg">
                   <svg className="w-3 h-3 mr-1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor" />
                   </svg>
                   Co-pilot Ready
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
