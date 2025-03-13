@@ -1,19 +1,33 @@
-$ mcpsx create-group web-dev
-✓ Creating new group: web-dev
+$ mcpsx create-group react-project --smart
+🔍 Analyzing project structure...
+✓ Detected React/Next.js project with TypeScript
+🧠 Recommending optimal tool selection...
+✓ Creating new group: react-project
 ✓ Group created successfully
-✓ Adding tools to group...
-✓ Added 3 tools from 'code-indexer'
-✓ Added 2 tools from 'file-operations'
-✓ Added 4 tools from 'web-tools'
-✓ Group 'web-dev' created with 9 tools
-$ mcpsx list-groups
-┌─────────────────────────────────────────┐
-│ Available Groups                        │
-├─────────────────────────────────────────┤
-│ default                                 │
-│ memory                                  │
-│ prompts                                 │
-│ notifications                           │
-│ web-dev                                 │
-└─────────────────────────────────────────┘
+✓ Intelligently adding tools to group...
+✓ Added 3 tools from 'code-indexer' (code search, references, snippets)
+✓ Added 2 tools from 'file-operations' (file management, code generation)
+✓ Added 4 tools from 'web-tools' (component analysis, accessibility, performance)
+✓ Added 2 tools from 'prompt-master' (React-specific prompts)
+✓ Skipped 14 tools not relevant to current project
+📊 Token usage optimization: 71% reduction compared to sending all tools
+✓ Group 'react-project' created with 11 tools
+
+$ mcpsx list-groups --details
+┌───────────────────────────────────────────────────────────────────┐
+│ 📦 Available Groups                                               │
+├───────────────────────────────────────────────────────────────────┤
+│ default          │ All tools (25)      │ Default group            │
+│ memory           │ Memory tools (9)    │ Knowledge graph tools    │
+│ prompts          │ Prompt tools (3)    │ Prompt management        │
+│ notifications    │ Alert tools (2)     │ System notifications     │
+│ code-tools       │ Code tools (7)      │ Code analysis & search   │
+│ react-project    │ React tools (11)    │ React/Next.js optimized  │
+└───────────────────────────────────────────────────────────────────┘
+
+$ mcpsx run --group react-project
+✓ Starting mcpsx with 'react-project' group (11 tools)
+✓ Connected to all required MCP servers
+✓ Server started successfully on stdio
+✨ Ready! Using optimized toolset for React development
 $

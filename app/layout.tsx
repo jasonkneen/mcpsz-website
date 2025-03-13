@@ -13,11 +13,11 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'mcpsx CLI | Context Protocol Tools',
-  description: 'A powerful CLI tool for managing Context Protocol (MCP), creating logical groups of tools, and optimizing token usage when interacting with AI models.',
+  title: 'mcpsx CLI | Model Context Protocol Tools',
+  description: 'A powerful CLI tool for managing Model Context Protocol (MCP), creating logical groups of tools, and optimizing token usage when interacting with AI models.',
   generator: 'Next.js',
   metadataBase: new URL('https://mcpsx.run'),
-  keywords: 'MCP, Context Protocol, CLI, tools, AI models, token optimization, developer tools',
+  keywords: 'MCP, Model Context Protocol, CLI, tools, AI models, token optimization, developer tools',
   authors: [{ name: 'mcpsx Team' }],
   creator: 'mcpsx',
   publisher: 'mcpsx',
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: 'mcpsx CLI | Context Protocol Tools',
-    description: 'A powerful CLI tool for managing Context Protocol (MCP), creating logical groups of tools, and optimizing token usage when interacting with AI models.',
+    title: 'mcpsx CLI | Model Context Protocol Tools',
+    description: 'A powerful CLI tool for managing Model Context Protocol (MCP), creating logical groups of tools, and optimizing token usage when interacting with AI models.',
     url: 'https://mcpsx.run',
     siteName: 'mcpsx CLI',
     images: [
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
         url: 'https://mcpsx.run/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'mcpsx CLI - Context Protocol Tools',
+        alt: 'mcpsx CLI - Model Context Protocol Tools',
       },
     ],
     locale: 'en_US',
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'mcpsx CLI | Context Protocol Tools',
-    description: 'A powerful CLI tool for managing Context Protocol (MCP), creating logical groups of tools, and optimizing token usage when interacting with AI models.',
+    title: 'mcpsx CLI | Model Context Protocol Tools',
+    description: 'A powerful CLI tool for managing Model Context Protocol (MCP), creating logical groups of tools, and optimizing token usage when interacting with AI models.',
     images: ['https://mcpsx.run/og-image.jpg'],
     creator: '@mcpsx',
   },

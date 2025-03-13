@@ -6,7 +6,7 @@ This document outlines the SEO improvements implemented for the mcpsx.run websit
 
 ### Root Layout (`app/layout.tsx`)
 - Added comprehensive metadata including:
-  - Updated title and description to use "Context Protocol (MCP)" instead of "Model Context Protocol Server Tools"
+  - Updated title and description to use "Model Context Protocol (MCP)" instead of "Model Context Protocol Server Tools"
   - Keywords
   - Author and publisher information
   - Open Graph tags for social media sharing
@@ -18,7 +18,7 @@ This document outlines the SEO improvements implemented for the mcpsx.run websit
 
 ### Docs Layout (`app/docs/layout.tsx`)
 - Added section-specific metadata:
-  - Updated title and description to use "Context Protocol (MCP)" instead of "Model Context Protocol Server Tools"
+  - Updated title and description to use "Model Context Protocol (MCP)" instead of "Model Context Protocol Server Tools"
   - Keywords specific to documentation
   - Open Graph and Twitter Card tags for documentation
   - Canonical URL for the docs section
@@ -60,7 +60,7 @@ Implemented structured data on:
 
 ## Terminology Updates
 
-- Changed all references from "Model Context Protocol Server/s (MCPS)" to "Context Protocol (MCP)"
+- Changed all references from "Model Context Protocol Server/s (MCPS)" to "Model Context Protocol (MCP)"
 - Updated command examples to use "run" instead of "stdio"
 - Changed references from "servers" to "tools" throughout the site
 - Updated all examples and code snippets to reflect the new terminology

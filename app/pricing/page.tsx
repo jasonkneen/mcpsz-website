@@ -78,7 +78,7 @@ export default function Pricing() {
             <div className="max-w-5xl mx-auto">
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">Simple, Transparent Pricing</h1>
               <p className="text-xl text-gray-400 mb-12 text-center max-w-3xl mx-auto">
-                Choose the plan that fits your needs. From individual developers to enterprise teams, we have you covered.
+                Maximize your AI capabilities with a pricing plan that scales with your needs. Start for free and upgrade as your success grows.
               </p>
 
               <div className="grid gap-8 md:grid-cols-3">
@@ -90,7 +90,7 @@ export default function Pricing() {
                       <span className="text-4xl font-bold">$0</span>
                       <span className="text-gray-400 ml-2">/ forever</span>
                     </div>
-                    <p className="text-gray-400">Perfect for individual developers and small projects.</p>
+                    <p className="text-gray-400">Powerful essentials for developers ready to transform their AI workflow.</p>
                   </div>
                   <div className="p-6">
                     <ul className="space-y-3 mb-6">
@@ -121,7 +121,7 @@ export default function Pricing() {
                       <span className="text-4xl font-bold">$9</span>
                       <span className="text-gray-400 ml-2">/ month (billed yearly)</span>
                     </div>
-                    <p className="text-gray-400">Advanced features for professional developers.</p>
+                    <p className="text-gray-400">Enhanced capabilities for professionals who demand maximum efficiency and collaboration.</p>
                   </div>
                   <div className="p-6">
                     <ul className="space-y-3 mb-6">
@@ -150,7 +150,7 @@ export default function Pricing() {
                     <div className="flex items-baseline mb-4">
                       <span className="text-4xl font-bold">Custom</span>
                     </div>
-                    <p className="text-gray-400">For teams requiring advanced features and support.</p>
+                    <p className="text-gray-400">Tailored solutions for organizations building mission-critical AI applications at scale.</p>
                   </div>
                   <div className="p-6">
                     <ul className="space-y-3 mb-6">
@@ -174,19 +174,27 @@ export default function Pricing() {
                 <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto text-left">
                   <FaqItem 
                     question="How does the FREE plan compare to PRO?" 
-                    answer="The FREE plan includes all the essential features for individual developers, while the PRO plan adds cloud syncing, installation capabilities, AI provisioning tools, and source code access, making it ideal for professional developers and small teams."
+                    answer="The FREE plan delivers everything you need to start optimizing your AI workflow, including unlimited MCP servers, grouping, and basic analytics. The PRO plan adds cloud syncing, advanced workflow capabilities, voice control, and priority support - perfect for professionals seeking enhanced collaboration and efficiency."
                   />
                   <FaqItem 
                     question="Can I upgrade from FREE to PRO later?" 
-                    answer="Yes, you can easily upgrade from the FREE plan to the PRO plan when it becomes available. Your existing configurations and settings will be preserved."
+                    answer="Absolutely! Upgrading is seamless with zero data loss. All your configurations, groups, and settings transfer instantly to your PRO account, allowing you to continue your work without interruption while enjoying the enhanced capabilities."
                   />
                   <FaqItem 
                     question="What payment methods do you accept?" 
-                    answer="We accept all major credit cards, PayPal, and cryptocurrency payments for our paid plans."
+                    answer="We support all major credit cards through Stripe, our secure payment processor. Enterprise clients can also arrange invoicing with our finance team."
                   />
                   <FaqItem 
                     question="Is there a trial period for PRO features?" 
-                    answer="Yes, when the PRO plan launches, we'll offer a 14-day free trial so you can experience all the advanced features before committing."
+                    answer="Yes, when the PRO plan launches, you'll get a full-featured 7-day trial to experience all PRO capabilities. A credit card is required for the trial, but you won't be charged until the trial ends."
+                  />
+                  <FaqItem 
+                    question="How much can I save on token usage with mcpsx?" 
+                    answer="Our users typically report 50-70% reduction in token usage after implementing mcpsx's intelligent grouping and dynamic provisioning. This translates directly to lower API costs and faster response times."
+                  />
+                  <FaqItem 
+                    question="Can I use mcpsx in my existing projects?" 
+                    answer="Absolutely! mcpsx integrates seamlessly with your existing AI development workflow. Whether you're using Claude, GPT, or other AI models, mcpsx optimizes your MCP tool management without disrupting your current setup."
                   />
                 </div>
               </div>
@@ -203,7 +211,7 @@ export default function Pricing() {
                 <Terminal className="h-5 w-5 text-emerald-400" />
                 <span className="text-lg font-bold">mcpsx</span>
               </div>
-              <p className="text-gray-400 text-sm">A modern Context Protocol management tool designed to optimize AI interactions and reduce token usage.</p>
+              <p className="text-gray-400 text-sm">A modern Model Context Protocol management tool designed to optimize AI interactions and reduce token usage.</p>
             </div>
 
             <div>

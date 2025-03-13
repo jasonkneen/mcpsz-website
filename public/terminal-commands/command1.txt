@@ -1,17 +1,20 @@
 $ mcpsx run
-✓ Connecting to MCP clients...
-✓ Found 3 MCP servers in settings
-✓ Connected to neural-memory
-✓ Listed 9 tools from memory
-✓ Connected to prompt-master
-✓ Listed 3 tools from prompt-master
-✓ Connected to notification-server
-✓ Listed 2 tools from notification-server
-✓ Connected to 3 MCP clients
-✓ 4 Groups loaded, 3 ignored
-✓ 6 tools added by AI based on codebase and recent commits
-✓ 2 virtual servers created for current context
-✓ Tools organised by frequency of use and last used in this code base
+🔍 Scanning environment...
+✓ Found 5 MCP servers in settings
+✓ Connected to neural-memory (9 tools)
+✓ Connected to prompt-master (3 tools)
+✓ Connected to notification-server (2 tools)
+✓ Connected to code-indexer (7 tools)
+✓ Connected to file-operations (4 tools)
+🧠 Analyzing workspace...
+✓ Detected React/Next.js project
+✓ 6 tools auto-provisioned based on codebase analysis
+✓ 3 tools recommended based on recent git commits
+✓ Created virtual 'web-dev' server with optimized toolset
+✓ Loaded 5 custom groups, 2 ignored (not relevant to current context)
+📊 Optimizing token usage...
+✓ Reduced potential token usage by 63% through intelligent grouping
+✓ Tools prioritized by frequency and recency of use
 ✓ Server started successfully on stdio
-Ready to handle requests
+✨ Ready to supercharge your AI workflow!
 $

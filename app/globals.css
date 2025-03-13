@@ -14,13 +14,13 @@
   .hover-shimmer {
     position: relative;
     overflow: hidden;
-    transition: border-color 0.3s ease-out, box-shadow 0.3s ease-out;
-    animation: enter-shimmer 1s ease-out forwards;
+    transition: border-color 0.1s ease-out, box-shadow 0.1s ease-out;
+    animation: enter-shimmer 0.1s ease-out forwards;
   }
 
   /* Static hover effect for fallback */
   .hover-shimmer:hover:not(.tilt-panel) {
-    transform: perspective(1000px) rotateX(2deg) rotateY(2deg);
+    transform: perspective(1000px) rotateX(15deg) rotateY(2deg);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     border-color: rgba(16, 185, 129, 0.5);
   }

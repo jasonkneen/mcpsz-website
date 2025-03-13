@@ -91,8 +91,8 @@ export default function Docs() {
           <div className="prose prose-invert max-w-none">
             <h2 className="text-2xl font-bold mt-8 mb-4 text-emerald-400">Overview</h2>
             <p className="mb-6">
-              mcpsx CLI is a powerful command line interface for Context Protocol (MCP), 
-              designed to revolutionize how you manage, query, and interact with Context Protocol. 
+              mcpsx CLI is a powerful command line interface for Model Context Protocol (MCP), 
+              designed to revolutionize how you manage, query, and interact with Model Context Protocol. 
               At its core, mcpsx enables intelligent organization of your MCP ecosystem, 
               allowing you to create logical collections of tools that optimize both your workflow and 
               AI model interactions.
@@ -169,7 +169,7 @@ mcpsx use "My Server"</pre>
 
             <h2 className="text-2xl font-bold mt-8 mb-4 text-emerald-400">Key Features</h2>
             <p className="mb-4">
-              mcpsx CLI provides powerful capabilities for working with Context Protocol:
+              mcpsx CLI provides powerful capabilities for working with Model Context Protocol:
             </p>
             <ol className="list-decimal pl-6 mb-6 space-y-2">
               <li>
