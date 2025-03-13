@@ -24,7 +24,7 @@ The feature flags system is implemented in `features.ts`. This file exports:
 
 Currently, the following feature flags are available:
 
-- `blog`: Controls the visibility of the blog section and related links
+- `blog`: Controls the visibility of the blog section and related links (disabled by default)
 
 ## Setting Feature Flags
 
@@ -46,7 +46,7 @@ You can modify the default values in `features.ts`:
 
 ```typescript
 export const defaultFeatures: FeatureFlags = {
-  blog: false,
+  blog: true, // Change to false to disable the blog feature by default
   // Add more default values here as needed
 };
 ```

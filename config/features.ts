@@ -19,7 +19,7 @@ export interface FeatureFlags {
  * To override these values, modify the .env file or environment variables.
  */
 export const defaultFeatures: FeatureFlags = {
-  blog: true,
+  blog: false,
   // Add more default values here as needed
 };
 
