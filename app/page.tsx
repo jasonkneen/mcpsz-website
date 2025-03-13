@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, Terminal, Zap, Clock, Code2, Github } from "lucide-react"
 import { ReactNode } from "react"
 import { SoftwareApplicationJsonLd, OrganizationJsonLd, FAQPageJsonLd } from "@/components/json-ld"
+import { TiltPanel } from "@/components/tilt-panel"
 
 export default function Home() {
   return (
@@ -81,7 +82,7 @@ export default function Home() {
           </Link>
           <Button
             variant="outline"
-            className="hidden md:flex border-emerald-500 text-emerald-400 hover:bg-emerald-950 hover:text-emerald-300"
+            className="hidden md:flex border-emerald-500 bg-transparent text-emerald-400 hover:bg-emerald-950 hover:text-emerald-300"
             asChild
           >
             <Link href="/docs/#install">Get Started</Link>
@@ -110,7 +111,7 @@ export default function Home() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-emerald-500 text-white hover:bg-emerald-950 hover:text-emerald-300"
+                    className="border-emerald-500 bg-transparent text-white hover:bg-emerald-950 hover:text-emerald-300"
                   >
                     View Documentation
                   </Button>
@@ -415,7 +416,7 @@ interface FeatureCardProps {
 
 function FeatureCard({ icon, title, description, comingSoon = false }: FeatureCardProps) {
   return (
-    <div className="bg-gray-900 p-6 rounded-lg border border-gray-800 hover:border-emerald-900 transition-colors hover-shimmer">
+    <TiltPanel className="bg-gray-900 p-6 rounded-lg border border-gray-800 hover:border-emerald-900 transition-colors hover-shimmer">
       {comingSoon && (
         <div className="flex justify-end mb-2">
           <span className="inline-block px-2 py-1 text-xs font-semibold rounded-full bg-emerald-900 text-emerald-300">
@@ -426,7 +427,7 @@ function FeatureCard({ icon, title, description, comingSoon = false }: FeatureCa
       <div className="mb-4">{icon}</div>
       <h3 className="text-xl font-bold mb-2">{title}</h3>
       <p className="text-gray-400"><span className="inline">{description}</span></p>
-    </div>
+    </TiltPanel>
   )
 }
 
@@ -438,7 +439,7 @@ interface TestimonialCardProps {
 
 function TestimonialCard({ quote, author, role }: TestimonialCardProps) {
   return (
-    <div className="bg-gray-900 p-6 rounded-lg border border-gray-800 hover-shimmer">
+    <TiltPanel className="bg-gray-900 p-6 rounded-lg border border-gray-800 hover-shimmer">
       <p className="mb-4 text-gray-300">
         <span className="text-emerald-400 text-2xl">"</span>
         {quote}
@@ -448,6 +449,6 @@ function TestimonialCard({ quote, author, role }: TestimonialCardProps) {
         <p className="font-medium">{author}</p>
         <p className="text-sm text-gray-500">{role}</p>
       </div>
-    </div>
+    </TiltPanel>
   )
 }

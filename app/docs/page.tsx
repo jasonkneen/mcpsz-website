@@ -69,7 +69,7 @@ export default function Docs() {
           </Link>
           <Button
             variant="outline"
-            className="hidden md:flex border-emerald-500 text-emerald-400 hover:bg-emerald-950 hover:text-emerald-300"
+            className="hidden md:flex border-emerald-500 bg-transparent text-emerald-400 hover:bg-emerald-950 hover:text-emerald-300"
             asChild
           >
             <Link href="#install">Get Started</Link>

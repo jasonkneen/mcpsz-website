@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, Check, Terminal } from "lucide-react"
+import { TiltPanel } from "@/components/tilt-panel"
 
 export default function Pricing() {
   return (
@@ -56,7 +57,7 @@ export default function Pricing() {
           </Link>
           <Button
             variant="outline"
-            className="hidden md:flex border-emerald-500 text-emerald-400 hover:bg-emerald-950 hover:text-emerald-300"
+            className="hidden md:flex border-emerald-500 bg-transparent text-emerald-400 hover:bg-emerald-950 hover:text-emerald-300"
             asChild
           >
             <Link href="/docs/#install">Get Started</Link>
@@ -82,7 +83,7 @@ export default function Pricing() {
 
               <div className="grid gap-8 md:grid-cols-3">
                 {/* FREE Plan */}
-                <div className="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden hover-shimmer">
+                <TiltPanel className="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden hover-shimmer">
                   <div className="p-6 border-b border-gray-800">
                     <h2 className="text-2xl font-bold mb-1">FREE</h2>
                     <div className="flex items-baseline mb-4">
@@ -105,10 +106,10 @@ export default function Pricing() {
                       Get Started Now
                     </Button>
                   </div>
-                </div>
+                </TiltPanel>
 
                 {/* PRO Plan */}
-                <div className="bg-gray-900 rounded-xl border border-emerald-600 overflow-hidden hover-shimmer relative transform scale-105 shadow-xl">
+                <TiltPanel className="bg-gray-900 rounded-xl border border-emerald-600 overflow-hidden hover-shimmer relative transform scale-105 shadow-xl">
                   <div className="absolute top-0 right-0 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg shadow-md">
                     COMING SOON
                   </div>
@@ -134,10 +135,10 @@ export default function Pricing() {
                       Coming Soon
                     </Button>
                   </div>
-                </div>
+                </TiltPanel>
 
                 {/* ENTERPRISE Plan */}
-                <div className="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden hover-shimmer">
+                <TiltPanel className="bg-gray-900 rounded-xl border border-gray-800 overflow-hidden hover-shimmer">
                   <div className="absolute top-0 right-0 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg shadow-md">
                     COMING SOON
                   </div>
@@ -162,7 +163,7 @@ export default function Pricing() {
                       Contact Sales
                     </Button>
                   </div>
-                </div>
+                </TiltPanel>
               </div>
 
               <div className="mt-16 text-center">
