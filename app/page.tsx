@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Terminal, Zap, Clock, Code2, Github } from "lucide-react"
@@ -9,6 +11,14 @@ import { features } from "@/config/features"
 import { TiltPanel } from "@/components/tilt-panel"
 
 export default function Home() {
+  // State to track the current media type
+  const [currentMediaType, setCurrentMediaType] = useState<'terminal' | 'image'>('terminal');
+  
+  // Handler for media change events
+  const handleMediaChange = (mediaItem: { type: 'terminal' | 'image', src?: string, alt?: string }, index: number) => {
+    setCurrentMediaType(mediaItem.type);
+  };
+  
   return (
     <div className="flex min-h-screen flex-col text-white">
       {/* Structured Data for SEO */}
@@ -104,31 +114,104 @@ export default function Home() {
         {/* Hero Section */}
         <section className="container mx-auto px-4 py-10 md:py-32">
           <div className="grid gap-8 md:grid-cols-2 md:gap-12 items-center">
-            <div className="space-y-6">
-              <h1 className="text-3xl md:text-6xl font-bold leading-tight">
-                Unlock the Full Power of <span className="text-emerald-400">the Model Context Protocol</span>
-              </h1>
-              <p className="text-lg md:text-xl text-gray-400 max-w-md">
-                The intelligent CLI that transforms how you work with AI. Organize your MCP tools into purpose-driven groups, slash token usage by up to 70%, and get faster, more accurate AI responses while reducing costs.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="https://www.npmjs.com/package/mcpsx" target="_blank" rel="noopener noreferrer">
-                  <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
-                  Download Now
-                  </Button>
-                </Link>
-                <Link href="/docs/#install">                  
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-emerald-500 bg-transparent text-white hover:bg-emerald-950 hover:text-emerald-300"
+            {/* Flex container for the left side with proper alignment */}
+            <div className="flex flex-col h-[400px] md:h-[450px] justify-between">
+              <div className="space-y-6 flex-grow">
+                {/* Title section */}
+                <div className="mb-4">
+                  <div 
+                    className={`transition-all duration-700 ease-in-out transform ${
+                      currentMediaType === 'terminal' 
+                        ? 'opacity-100 translate-y-0 block' 
+                        : 'opacity-0 hidden'
+                    }`}
                   >
-                    Documentation
-                  </Button>
-                </Link>
+                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                      Unlock the Full Power of <span className="text-emerald-400 block md:inline">the Model Context Protocol</span>
+                    </h1>
+                  </div>
+                  <div 
+                    className={`transition-all duration-700 ease-in-out transform ${
+                      currentMediaType === 'image' 
+                        ? 'opacity-100 translate-y-0 block' 
+                        : 'opacity-0 hidden'
+                    }`}
+                  >
+                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                      Supercharge <span className="text-emerald-400 block md:inline">Copilot</span> with MCP Tools
+                    </h1>
+                  </div>
+                </div>
+                
+                {/* Description section */}
+                <div className="mt-6 mb-8">
+                  <div 
+                    className={`transition-all duration-700 ease-in-out transform ${
+                      currentMediaType === 'terminal' 
+                        ? 'opacity-100 translate-y-0 block' 
+                        : 'opacity-0 hidden'
+                    }`}
+                  >
+                    <p className="text-base md:text-lg lg:text-xl text-gray-400 max-w-md">
+                      The intelligent CLI that transforms how you work with AI. Organize your MCP tools into purpose-driven groups, slash token usage by up to 70%, and get faster, more accurate AI responses while reducing costs.
+                    </p>
+                  </div>
+                  <div 
+                    className={`transition-all duration-700 ease-in-out transform ${
+                      currentMediaType === 'image' 
+                        ? 'opacity-100 translate-y-0 block' 
+                        : 'opacity-0 hidden'
+                    }`}
+                  >
+                    <p className="text-base md:text-lg lg:text-xl text-gray-400 max-w-md">
+                      Enable MCPs with Github Copilot and add thousands of tools from the MCP community into your favourite Copilot workflows.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bottom-aligned buttons */}
+              <div className="flex flex-col sm:flex-row gap-3 mt-auto">
+                {/* Install CLI Button */}
+                <div className="w-full sm:w-auto">
+                  <Link href="https://www.npmjs.com/package/mcpsx" target="_blank" rel="noopener noreferrer" className="block w-full">
+                    <Button 
+                      size="lg" 
+                      className="bg-emerald-600 hover:bg-emerald-700 text-white w-full"
+                    >
+                      Install CLI
+                    </Button>
+                  </Link>
+                </div>
+
+                {/* Extension Button */}
+                <div className="w-full sm:w-auto">
+                  <Link href="https://marketplace.visualstudio.com/items?itemName=jasonkneen.mcpsx-run" target="_blank" rel="noopener noreferrer" className="block w-full">                  
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-emerald-500 bg-transparent text-white hover:bg-emerald-950 hover:text-emerald-300 w-full"
+                    >
+                      Extension
+                    </Button>
+                  </Link>
+                </div>
+
+                {/* Docs Button */}
+                <div className="w-full sm:w-auto">
+                  <Link href="/docs/#install" className="block w-full">                  
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-gray-700 bg-transparent text-white hover:bg-gray-900 w-full"
+                    >
+                      Docs
+                    </Button>
+                  </Link>
+                </div>
               </div>         
             </div>
-            <div className="relative rounded-lg border border-gray-800 bg-gray-950 p-2 shadow-2xl">
+            <div className="relative rounded-lg border border-gray-800 bg-gray-950 p-2 shadow-2xl lg:min-h-[500px]">
               <MediaCarousel 
                 mediaItems={[
                   { type: 'terminal' }, 
@@ -139,6 +222,7 @@ export default function Home() {
                 autoRotateInterval={5000}
                 initialAutoRotate={true}
                 showHeader={true}
+                onMediaChange={handleMediaChange}
                 className="border-t border-gray-800"
               />
             </div>
@@ -242,19 +326,19 @@ export default function Home() {
 
             <div className="grid gap-8 md:grid-cols-3">
               <TestimonialCard
-                quote="Our team was drowning in MCP configuration complexity. mcpsx transformed our workflow overnight, cutting our token costs by 65% and eliminating hours of manual configuration. It's become essential infrastructure for us."
-                author="Sarah"
-                role="AI Engineer"
-              />
-              <TestimonialCard
-                quote="As a solo developer working with multiple AI systems, I was skeptical another tool would help. mcpsx proved me wrong. The grouping feature alone has made my development process 3x more efficient and significantly reduced my API costs."
-                author="Michael"
+                quote="mcpsx is a revolution in MCP usage! Its dynamic token optimization and chat interface are a must-have for any developer."
+                author="@FutbolmeAI"
                 role="AI Developer"
               />
               <TestimonialCard
-                quote="We integrated mcpsx into our enterprise AI platform and saw immediate improvements. Token usage dropped by 72%, response quality improved dramatically, and our team adoption rate hit 100% within a week. It's rare to find a tool this impactful."
-                author="Jennifer"
-                role="AI Agent Developer"
+                quote="I'm really excited to see the MCP ecosystem developing. This really is going to be the year of AI tool-driven skills driving real agentic AI."
+                author="Martin"
+                role="AI Developer"
+              />
+              <TestimonialCard
+                quote="Congratulations to @jasonkneen, the Godfather of MCPs!!! He was the first person to talk about MCPs in this space (when everyone was still sleeping on it) & never stopped exploring the use cases for them. "
+                author="Lianna"
+                role="Entreprenuer"
               />
             </div>
           </div>

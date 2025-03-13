@@ -16,6 +16,7 @@ interface MediaCarouselProps {
   showHeader?: boolean;
   autoRotateInterval?: number;
   initialAutoRotate?: boolean;
+  onMediaChange?: (mediaItem: MediaItem, index: number) => void;
 }
 
 export function MediaCarousel({
@@ -23,6 +24,7 @@ export function MediaCarousel({
   mediaItems,
   showHeader = true,
   autoRotateInterval = 5000,
+  onMediaChange,
   initialAutoRotate = true,
 }: MediaCarouselProps) {
   const [activeMediaIndex, setActiveMediaIndex] = useState(0);
@@ -62,6 +64,12 @@ export function MediaCarousel({
     };
   }, [isAutoRotating, mediaItems.length, autoRotateInterval]);
   
+  // Call onMediaChange when activeMediaIndex changes
+  useEffect(() => {
+    if (onMediaChange && mediaItems[activeMediaIndex]) {
+      onMediaChange(mediaItems[activeMediaIndex], activeMediaIndex);
+    }
+  }, [activeMediaIndex, mediaItems, onMediaChange]);
   // Handle carousel navigation
   const handleCarouselNav = (index: number) => {
     const oldIndex = activeMediaIndex;
@@ -131,8 +139,8 @@ export function MediaCarousel({
               key={index}
               className={`absolute inset-0 w-full h-full transition-all duration-1000 ease-in-out ${
                 activeMediaIndex === index 
-                  ? 'opacity-100 z-10 transform-none' 
-                  : 'opacity-0 z-0' 
+                  ? 'opacity-100 z-10 transform-none visible' 
+                  : 'opacity-0 z-0 invisible' 
               }`}
               style={{
                 backfaceVisibility: 'hidden',

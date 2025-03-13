@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowLeft, Terminal, Calendar, User, Clock, ArrowRight, Github, ChevronUp, ChevronDown } from "lucide-react"
 import { AnimatedTerminal } from "@/components/animated-terminal"
 import { MediaCarousel } from "@/components/media-carousel"
+import { features } from "@/config/features"
 import { TiltPanel } from "@/components/tilt-panel"
 
 // Define types for our timeline items
@@ -184,11 +185,13 @@ export default function Roadmap() {
                 Pricing
               </Link>
             </li>
-            <li>
-              <Link href="/blog" className="hover:text-emerald-400 transition-colors">
-                Blog
-              </Link>
-            </li>
+            {features.blog && (
+              <li>
+                <Link href="/blog" className="hover:text-emerald-400 transition-colors">
+                  Blog
+                </Link>
+              </li>
+            )}
             <li>
               <Link href="https://github.com/jasonkneen/mcpsx/discussions/" className="hover:text-emerald-400 transition-colors">
                 Community
@@ -225,7 +228,7 @@ export default function Roadmap() {
             </span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">mcpsx Product Roadmap</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">Product Roadmap</h1>
           
           <p className="text-xl text-gray-400 mb-12 max-w-3xl">
             Explore our product roadmap to see what we've delivered and what's coming next. We're constantly working to improve mcpsx with new features and enhancements.
