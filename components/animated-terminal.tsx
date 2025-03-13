@@ -20,21 +20,19 @@ export function AnimatedTerminal({ className = '' }: AnimatedTerminalProps) {
   const commandSets = [
     // Command set 1 (from command1.txt)
     [
-      '$ mcpsx run',
-      '✓ Connecting to MCP clients...',
+      '$ mcpsx list',
       '✓ Found 3 MCP servers in settings',
       '✓ Connected to neural-memory',
-      '✓ Listed 9 tools from memory',
+      '✓ Listed 9 tools from neural-memory',
       '✓ Connected to prompt-master',
       '✓ Listed 3 tools from prompt-master',
       '✓ Connected to notification-server',
       '✓ Listed 2 tools from notification-server',
-      '✓ Connected to 3 MCP clients',
       '✓ 4 Groups loaded, 3 ignored',
-      '✓ 6 tools added by AI based on codebase and recent commits',
-      '✓ 2 virtual servers created for current context',
-      '✓ Tools organised by frequency of use and last used in this code base',
-      '✓ Server started successfully on stdio',
+      '✓ 6 tools based on recent commits',
+      '✓ 2 servers and 6 tools added based on current error reports',
+      '✓ Sorting by importance / frequency',
+      '✓ MCP Server started successfully on stdio',
       'Ready to handle requests',
       '$'
     ],
@@ -71,10 +69,10 @@ export function AnimatedTerminal({ className = '' }: AnimatedTerminalProps) {
     ],
     // Command set 3 (from command3.txt)
     [
-      '$ mcpsx create-group web-dev',
+      '$ mcpsx groups add "web-dev" ["code-indexer","file-operations","web-tools"]',
       '✓ Creating new group: web-dev',
       '✓ Group created successfully',
-      '✓ Adding tools to group...',
+      '✓ Adding servers to group...',
       '✓ Added 3 tools from \'code-indexer\'',
       '✓ Added 2 tools from \'file-operations\'',
       '✓ Added 4 tools from \'web-tools\'',
@@ -84,9 +82,9 @@ export function AnimatedTerminal({ className = '' }: AnimatedTerminalProps) {
       '│ Available Groups                        │',
       '├─────────────────────────────────────────┤',
       '│ default                                 │',
-      '│ memory                                  │',
-      '│ prompts                                 │',
-      '│ notifications                           │',
+      '│ react                                   │',
+      '│ python                                  │',
+      '│ design                                  │',
       '│ web-dev                                 │',
       '└─────────────────────────────────────────┘',
       '$'
