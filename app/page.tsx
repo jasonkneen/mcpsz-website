@@ -64,6 +64,11 @@ export default function Home() {
               </Link>
             </li>
             <li>
+              <Link href="/pricing" className="hover:text-emerald-400 transition-colors">
+                Pricing
+              </Link>
+            </li>
+            <li>
               <Link href="https://github.com/jasonkneen/mcpsx/discussions/" className="hover:text-emerald-400 transition-colors">
                 Community
               </Link>
@@ -137,7 +142,15 @@ export default function Home() {
                 <p className="text-white mt-2">Ready to handle requests</p>
                 <p className="text-white-400 mt-2">
                   $ <span className="animate-pulse">█</span>
-                </p>
+                </p>                
+                <div className="mt-4 flex justify-center">
+                  <div className="bg-gradient-to-r from-emerald-600 to-emerald-400 text-white text-xs font-bold px-3 py-1.5 rounded-full flex items-center shadow-lg">
+                    <svg className="w-3 h-3 mr-1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor" />
+                    </svg>
+                    Co-pilot Ready
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -178,11 +191,13 @@ export default function Home() {
                 icon={<Terminal className="h-6 w-6 text-emerald-400" />}
                 title="Talk to your MCP Servers"
                 description="Chat and test with your MCPs in a gorgeous, interactive chat interface and chain and test workflows in a sandboxed environment."
+                comingSoon={true}
               />
               <FeatureCard
                 icon={<ArrowRight className="h-6 w-6 text-emerald-400" />}
                 title="MCPs as agents"
                 description="Use our built-in (and downloadable) Workflow MCPs that can fit between MCP tools providing powerful workflows."
+                comingSoon={true}
               />
             </div>
           </div>
@@ -254,12 +269,44 @@ export default function Home() {
             </div>
 
             <div className="mt-16 text-center">
-              <div className="flex flex-wrap justify-center gap-8 items-center opacity-70">
-                <div className="text-xl font-bold">GitHub</div>
-                <div className="text-xl font-bold">Vercel</div>
-                <div className="text-xl font-bold">Netlify</div>
-                <div className="text-xl font-bold">Stripe</div>
-                <div className="text-xl font-bold">Microsoft</div>
+              <div className="flex flex-wrap justify-center gap-12 items-center opacity-70">
+                {/* GitHub Logo */}
+                <div className="h-10 w-32 flex items-center justify-center">
+                  <svg width="120" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white opacity-80">
+                    <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017C2 16.442 4.865 20.197 8.839 21.521C9.339 21.613 9.521 21.304 9.521 21.038C9.521 20.801 9.513 20.17 9.508 19.335C6.726 19.94 6.139 17.992 6.139 17.992C5.685 16.834 5.029 16.526 5.029 16.526C4.121 15.906 5.098 15.918 5.098 15.918C6.101 15.988 6.629 16.95 6.629 16.95C7.521 18.48 8.97 18.038 9.539 17.782C9.631 17.135 9.889 16.694 10.175 16.444C7.955 16.191 5.62 15.331 5.62 11.493C5.62 10.4 6.01 9.505 6.649 8.805C6.546 8.552 6.203 7.533 6.747 6.155C6.747 6.155 7.587 5.885 9.497 7.181C10.3 6.95 11.15 6.835 12 6.831C12.85 6.835 13.7 6.95 14.503 7.181C16.413 5.885 17.253 6.155 17.253 6.155C17.797 7.533 17.454 8.552 17.351 8.805C17.99 9.505 18.38 10.4 18.38 11.493C18.38 15.341 16.045 16.191 13.825 16.444C14.177 16.753 14.497 17.364 14.497 18.299C14.497 19.637 14.485 20.718 14.485 21.038C14.485 21.306 14.667 21.615 15.167 21.521C19.141 20.197 22.006 16.442 22.006 12.017C22.006 6.484 17.529 2 12.006 2H12Z" fill="currentColor"/>
+                  </svg>
+                </div>
+                
+                {/* Vercel Logo */}
+                <div className="h-10 w-32 flex items-center justify-center">
+                  <svg width="120" height="32" viewBox="0 0 116 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white opacity-80">
+                    <path fillRule="evenodd" clipRule="evenodd" d="M57.5 0L115 100H0L57.5 0Z" fill="currentColor"/>
+                  </svg>
+                </div>
+                
+                {/* Netlify Logo */}
+                <div className="h-10 w-32 flex items-center justify-center">
+                  <svg width="120" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white opacity-80">
+                    <path d="M22.579 11.36c.151.119.36.16.552.1l2.813-.9c.043-.1.073-.3.103-.5.03-.3.06-.7.086-.11a.39.39 0 00-.06-.46l-1.044-1.044-.01-.01-1.796-1.795a.39.39 0 00-.46-.06c-.04.026-.07.056-.1.086-.2.03-.4.06-.5.103l-.9 2.813c-.6.192-.2.401.1.552l.716.716zm-5.25 10.02l2.455 2.455a.391.391 0 00.551 0l9.225-9.225a.391.391 0 000-.551l-2.455-2.455a.391.391 0 00-.551 0l-9.225 9.225a.391.391 0 000 .551zm-3.97-3.636c-.15-.119-.36-.16-.552-.1l-2.813.9c-.043.01-.073.03-.103.05-.3.03-.6.07-.86.11a.39.39 0 00.6.46l2.85 2.85c.14.14.36.17.46.06.04-.26.07-.56.1-.086.02-.3.04-.6.05-.103l.9-2.813c.06-.192.02-.401-.1-.552l-.766-.766zm13.03-13.03l-2.85-2.85a.39.39 0 00-.46-.06c-.4.026-.7.056-.1.086-.2.03-.4.06-.5.103l-.9 2.813c-.6.192-.2.401.1.552l.766.766c.15.119.36.16.552.1l2.813-.9c.043-.1.073-.3.103-.5.03-.3.06-.7.086-.11a.39.39 0 00-.06-.46zM15.321 25.578a.391.391 0 01-.551 0l-.766-.766c-.119-.15-.16-.36-.1-.552l.9-2.813c.01-.43.03-.73.05-.103.03-.3.07-.6.11-.086a.39.39 0 01.46.06l2.85 2.85a.39.39 0 01.6.46c-.026.04-.56.07-.86.1-.3.02-.6.04-.103.05l-2.813.9a.391.391 0 01-.552-.1h.001zm-5.7-5.7l-.766-.766c-.15-.119-.36-.16-.552-.1l-2.813.9c-.43.01-.73.03-.103.05-.3.03-.6.07-.86.11a.39.39 0 00.6.46l2.85 2.85c.14.14.36.17.46.06.04-.26.07-.56.1-.086.02-.3.04-.6.05-.103l.9-2.813a.391.391 0 00-.1-.552zm-4.52-2.892a.39.39 0 00-.46-.06c-.4.026-.7.056-.1.086-.2.03-.4.06-.5.103l-.9 2.813c-.6.192-.2.401.1.552l.766.766c.15.119.36.16.552.1l2.813-.9c.043-.1.073-.3.103-.5.03-.3.06-.7.086-.11a.39.39 0 00-.06-.46l-2.85-2.85zm20.41-3.215l-.9 2.813c-.6.192-.2.401.1.552l.766.766c.15.119.36.16.552.1l2.813-.9c.043-.1.073-.3.103-.5.03-.3.06-.7.086-.11a.39.39 0 00-.06-.46l-2.85-2.85a.39.39 0 00-.46-.06c-.4.026-.7.056-.1.086-.2.03-.4.06-.5.103zm-2.1-2.1l-.9 2.813c-.6.192-.2.401.1.552l.766.766c.15.119.36.16.552.1l2.813-.9c.043-.1.073-.3.103-.5.03-.3.06-.7.086-.11a.39.39 0 00-.06-.46l-2.85-2.85a.39.39 0 00-.46-.06c-.4.026-.7.056-.1.086-.2.03-.4.06-.5.103zm-13.03 13.03l-.9 2.813c-.6.192-.2.401.1.552l.766.766c.15.119.36.16.552.1l2.813-.9c.043-.1.073-.3.103-.5.03-.3.06-.7.086-.11a.39.39 0 00-.06-.46l-2.85-2.85a.39.39 0 00-.46-.06c-.4.026-.7.056-.1.086-.2.03-.4.06-.5.103zm-2.1-2.1l-.9 2.813c-.6.192-.2.401.1.552l.766.766c.15.119.36.16.552.1l2.813-.9c.043-.1.073-.3.103-.5.03-.3.06-.7.086-.11a.39.39 0 00-.06-.46l-2.85-2.85a.39.39 0 00-.46-.06c-.4.026-.7.056-.1.086-.2.03-.4.06-.5.103zm-2.1-2.1l-.9 2.813c-.6.192-.2.401.1.552l.766.766c.15.119.36.16.552.1l2.813-.9c.043-.1.073-.3.103-.5.03-.3.06-.7.086-.11a.39.39 0 00-.06-.46l-2.85-2.85a.39.39 0 00-.46-.06c-.4.026-.7.056-.1.086-.2.03-.4.06-.5.103zm17.15-1.76l.766.766c.15.119.36.16.552.1l2.813-.9c.043-.1.073-.3.103-.5.03-.3.06-.7.086-.11a.39.39 0 00-.06-.46l-2.85-2.85a.39.39 0 00-.46-.06c-.4.026-.7.056-.1.086-.2.03-.4.06-.5.103l-.9 2.813c-.6.192-.2.401.1.552zm-2.1-2.1l.766.766c.15.119.36.16.552.1l2.813-.9c.043-.1.073-.3.103-.5.03-.3.06-.7.086-.11a.39.39 0 00-.06-.46l-2.85-2.85a.39.39 0 00-.46-.06c-.4.026-.7.056-.1.086-.2.03-.4.06-.5.103l-.9 2.813c-.6.192-.2.401.1.552z" fill="currentColor"/>
+                  </svg>
+                </div>
+                
+                {/* Stripe Logo */}
+                <div className="h-10 w-32 flex items-center justify-center">
+                  <svg width="120" height="32" viewBox="0 0 60 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white opacity-80">
+                    <path d="M59.64 14.28h-8.06v-1.4h8.05v1.4h.01zm-8.05-5.88h8.05v1.4h-8.05v-1.4zm-3.03 9.56h2.36v-13.2h-2.36v13.2zm-4.91-5.09c0-1.85 1.33-2.98 3.48-2.98.66 0 1.13.08 1.5.2v-3.13c-.36-.09-.87-.15-1.33-.15-1.3 0-2.4.56-3.13 1.87l-.13-1.65h-2.17v11.73h2.78v-5.89zm-5.81 3.03c.7 0 3.03-.27 3.03-3.76 0-3.5-2.34-3.76-3.03-3.76-.7 0-3.04.27-3.04 3.76s2.34 3.76 3.04 3.76zm0-9.56c3.58 0 5.91 2.14 5.91 5.8 0 3.68-2.33 5.8-5.9 5.8-3.6 0-5.92-2.12-5.92-5.8 0-3.66 2.33-5.8 5.91-5.8zm-8.97 9.56c.7 0 3.03-.27 3.03-3.76 0-3.5-2.33-3.76-3.03-3.76-.7 0-3.03.27-3.03 3.76s2.33 3.76 3.03 3.76zm0-9.56c3.58 0 5.91 2.14 5.91 5.8 0 3.68-2.33 5.8-5.9 5.8-3.6 0-5.92-2.12-5.92-5.8 0-3.66 2.32-5.8 5.91-5.8zM17.01 5.09h-4.6v11.73h2.36v-4.41l2.24 4.42h2.9L17 11.93c1.08-.4 1.92-1.3 1.92-3.05 0-2.36-1.65-3.8-3.8-3.8h-2.9v11.73h2.8V5.1zm-.85 5.02h-1.4V7.08h1.4c.9 0 1.42.51 1.42 1.51 0 1.02-.52 1.52-1.42 1.52zM6.86 5.09H4.51v7.83c0 1.28-.98 1.7-1.61 1.7-.66 0-1.37-.42-1.37-1.64V5.09H0v8.15c0 2.19 1.27 3.8 3.65 3.8 2.36 0 3.63-1.61 3.63-3.8V5.09h-.42z" fill="currentColor"/>
+                  </svg>
+                </div>
+                
+                {/* Microsoft Logo */}
+                <div className="h-10 w-32 flex items-center justify-center">
+                  <svg width="120" height="32" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white opacity-80">
+                    <path d="M0 0h10.931v10.931H0V0z" fill="currentColor"/>
+                    <path d="M12.069 0H23v10.931H12.069V0z" fill="currentColor"/>
+                    <path d="M0 12.069h10.931V23H0V12.069z" fill="currentColor"/>
+                    <path d="M12.069 12.069H23V23H12.069V12.069z" fill="currentColor"/>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -415,11 +462,19 @@ interface FeatureCardProps {
   icon: ReactNode;
   title: string;
   description: string;
+  comingSoon?: boolean;
 }
 
-function FeatureCard({ icon, title, description }: FeatureCardProps) {
+function FeatureCard({ icon, title, description, comingSoon = false }: FeatureCardProps) {
   return (
-    <div className="bg-gray-900 p-6 rounded-lg border border-gray-800 hover:border-emerald-900 transition-colors">
+    <div className="bg-gray-900 p-6 rounded-lg border border-gray-800 hover:border-emerald-900 transition-colors hover-shimmer">
+      {comingSoon && (
+        <div className="flex justify-end mb-2">
+          <span className="inline-block px-2 py-1 text-xs font-semibold rounded-full bg-emerald-900 text-emerald-300">
+            Coming Soon
+          </span>
+        </div>
+      )}
       <div className="mb-4">{icon}</div>
       <h3 className="text-xl font-bold mb-2">{title}</h3>
       <p className="text-gray-400">{description}</p>
@@ -435,19 +490,23 @@ interface TestimonialCardProps {
 
 function TestimonialCard({ quote, author, role }: TestimonialCardProps) {
   return (
-    <div className="bg-gray-900 p-6 rounded-lg border border-gray-800">
-      <div className="mb-4 text-emerald-400">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M9.59 4.59A2 2 0 1 1 11 8H9.5C8.12 8 7 9.12 7 10.5V16h8v-5.5a2.5 2.5 0 0 0-2.5-2.5H11l2.7-2.7A2 2 0 0 1 9.59 4.59z"
-            fill="currentColor"
-          />
-        </svg>
-      </div>
-      <p className="mb-4 text-gray-300">{quote}</p>
-      <div>
-        <p className="font-medium">{author}</p>
-        <p className="text-sm text-gray-500">{role}</p>
+    <div className="bg-gray-900 p-6 rounded-lg border border-gray-800 hover-shimmer">
+      <div className="flex items-start mb-4">
+        <div className="text-emerald-400 mr-4 flex-shrink-0">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="transform scale-150">
+            <path
+              d="M9.59 4.59A2 2 0 1 1 11 8H9.5C8.12 8 7 9.12 7 10.5V16h8v-5.5a2.5 2.5 0 0 0-2.5-2.5H11l2.7-2.7A2 2 0 0 1 9.59 4.59z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+        <div className="flex-1">
+          <p className="mb-4 text-gray-300">{quote}</p>
+          <div>
+            <p className="font-medium">{author}</p>
+            <p className="text-sm text-gray-500">{role}</p>
+          </div>
+        </div>
       </div>
     </div>
   )

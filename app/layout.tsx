@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
+import { CursorEffectWrapper } from '@/components/cursor-effect-wrapper'
 
 export const metadata: Metadata = {
   title: 'mcpsx CLI | Context Protocol Tools',
@@ -81,6 +82,7 @@ export default function RootLayout({
       <body className="antialiased">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           {children}
+          <CursorEffectWrapper />
         </ThemeProvider>
       </body>
     </html>

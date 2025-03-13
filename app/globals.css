@@ -14,6 +14,64 @@ body {
   .animate-glow {
     animation: glow 2s ease-in-out infinite alternate;
   }
+
+  .hover-shimmer {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-out, border-color 0.3s ease-out;
+    animation: enter-shimmer 1s ease-out forwards;
+  }
+
+  .hover-shimmer:hover {
+    transform: perspective(1000px) rotateX(2deg) rotateY(2deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: rgba(16, 185, 129, 0.5);
+  }
+
+  .hover-shimmer::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      to bottom right,
+      rgba(16, 185, 129, 0) 0%,
+      rgba(16, 185, 129, 0.05) 50%,
+      rgba(16, 185, 129, 0) 100%
+    );
+    transform: rotate(30deg);
+    opacity: 1;
+    pointer-events: none;
+    animation: shimmer 2s forwards;
+  }
+
+  @keyframes enter-shimmer {
+    0% {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      opacity: 0;
+      transform: translateX(-150%) rotate(30deg);
+    }
+    50% {
+      opacity: 1;
+      transform: translateX(-50%) rotate(30deg);
+    }
+    100% {
+      transform: translateX(100%) rotate(30deg);
+      opacity: 0;
+    }
+  }
   
   @keyframes glow {
     from {
