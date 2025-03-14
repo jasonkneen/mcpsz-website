@@ -127,7 +127,7 @@ export function MediaCarousel({
           </div>
         </div>
       )}
-      <div className="relative aspect-video">
+      <div className="relative" style={{ height: '400px' }}>
         <div className="perspective-container" style={{ 
           perspective: '2000px', 
           height: '100%', 
@@ -159,7 +159,7 @@ export function MediaCarousel({
                 </div>
               ) : ( 
                 <div className="w-full h-full bg-gray-950 overflow-hidden">
-                  <AnimatedTerminal className="h-full" />
+                  <AnimatedTerminal className="h-full w-full" />
                 </div>
               )}
             </div>

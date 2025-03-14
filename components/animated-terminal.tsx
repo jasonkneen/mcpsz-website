@@ -221,7 +221,7 @@ export function AnimatedTerminal({ className = '' }: AnimatedTerminalProps) {
   return (
     <div 
       ref={containerRef}
-      className={`font-mono p-4 text-sm h-[25rem] overflow-y-auto ${className}`}
+      className={`font-mono p-4 text-sm overflow-y-auto ${className}`}
       style={{ scrollBehavior: 'smooth' }}
     >
       <div>

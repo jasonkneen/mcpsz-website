@@ -211,7 +211,7 @@ export default function Home() {
                 </div>
               </div>         
             </div>
-            <div className="relative rounded-lg border border-gray-800 bg-gray-950 p-2 shadow-2xl lg:min-h-[500px]">
+            <div className="relative rounded-lg border border-gray-800 bg-gray-950 p-2 shadow-2xl">
               <MediaCarousel 
                 mediaItems={[
                   { type: 'terminal' }, 
