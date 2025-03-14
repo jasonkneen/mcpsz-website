@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build:vercel",
+  "outputDirectory": ".next",
+  "rewrites": [
+    { "source": "/discover/:path*", "destination": "/discover/:path*" },
+    { "source": "/api/:path*", "destination": "/api/:path*" },
+    { "source": "/:path*", "destination": "/:path*" }
+  ]
+}

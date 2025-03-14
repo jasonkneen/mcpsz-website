@@ -7,8 +7,9 @@ import { ReactNode, useEffect, useState } from "react"
 import { SoftwareApplicationJsonLd, OrganizationJsonLd, FAQPageJsonLd } from "@/components/json-ld"
 import { AnimatedTerminal } from "@/components/animated-terminal"
 import { MediaCarousel } from "@/components/media-carousel"
-import { features } from "@/config/features"
+import { features, getFeatureUrl, deploymentTarget } from "@/config/features"
 import { TiltPanel } from "@/components/tilt-panel"
+import { HybridLink } from "@/components/hybrid-link"
 
 export default function Home() {
   // State to track the current media type
@@ -82,27 +83,30 @@ export default function Home() {
                 Pricing
               </Link>
             </li>
-            {features.blog && (
-              <li>
-                <Link href="/blog" className="hover:text-emerald-400 transition-colors">
-                  Blog
-                </Link>
+            <li>
+              <HybridLink 
+                feature="blog" 
+                className="hover:text-emerald-400 transition-colors"
+              >
+                Blog
+              </HybridLink>
+            </li>
+            <li>
+              <HybridLink 
+                feature="roadmap" 
+                className="hover:text-emerald-400 transition-colors"
+              >
+                Roadmap
+              </HybridLink>
+            </li>
+            <li>
+              <HybridLink 
+                feature="discover" 
+                className="hover:text-emerald-400 transition-colors"
+              >
+                Discover
+              </HybridLink>
               </li>
-            )}
-            {features.roadmap && (
-              <li>
-                <Link href="/roadmap" className="hover:text-emerald-400 transition-colors">
-                  Roadmap
-                </Link>
-              </li>
-            )}
-            {features.discover && (
-              <li>
-                <Link href="/discover" className="hover:text-emerald-400 transition-colors">
-                  Discover
-                </Link>
-              </li>
-            )}
             <li>
               <Link href="https://github.com/jasonkneen/mcpsx/discussions/" className="hover:text-emerald-400 transition-colors">
                 Community
@@ -412,27 +416,27 @@ export default function Home() {
                     Pricing
                   </Link>
                 </li>
-                {features.blog && (
                 <li>
-                  <Link href="/blog/changelog" className="hover:text-emerald-400">
+                  <HybridLink 
+                    feature="blog" 
+                    className="hover:text-emerald-400"
+                  >
                     Changelog
-                  </Link>
+                  </HybridLink>
                 </li>
-                )}
-                {features.blog && (
                 <li>
-                  <Link href="/blog/roadmap" className="hover:text-emerald-400">
+                  <HybridLink 
+                    feature="blog" 
+                    className="hover:text-emerald-400"
+                  >
                     Roadmap
-                  </Link>
+                  </HybridLink>
                 </li>
-                )}
-                {features.roadmap && (
                 <li>
-                  <Link href="/roadmap" className="hover:text-emerald-400">
+                  <HybridLink feature="roadmap" className="hover:text-emerald-400">
                     Roadmap
-                  </Link>
+                  </HybridLink>
                 </li>
-                )}
               </ul>
             </div>
 
