@@ -5,9 +5,10 @@ import React, { useState, useRef, useEffect } from 'react'
 interface TiltPanelProps {
   className?: string
   children: React.ReactNode
+  onClick?: () => void
 }
 
-export function TiltPanel({ className = '', children }: TiltPanelProps) {
+export function TiltPanel({ className = '', children, onClick }: TiltPanelProps) {
   const panelRef = useRef<HTMLDivElement>(null)
   const [isHovering, setIsHovering] = useState(false)
   const [tiltStyle, setTiltStyle] = useState<React.CSSProperties>({})
@@ -73,6 +74,7 @@ export function TiltPanel({ className = '', children }: TiltPanelProps) {
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={onClick}
       data-tilt="true"
     >
       {children}

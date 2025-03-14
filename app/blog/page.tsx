@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, Terminal, Calendar, User, Clock, Github } from "lucide-react"
+import { features } from "@/config/features"
 
 export default function Blog() {
   return (
@@ -37,6 +38,13 @@ export default function Blog() {
                 Blog
               </Link>
             </li>
+            {features.roadmap && (
+              <li>
+                <Link href="/roadmap" className="hover:text-emerald-400 transition-colors">
+                  Roadmap
+                </Link>
+              </li>
+            )}
           </ul>
         </nav>
         <div className="flex items-center space-x-4">
@@ -198,9 +206,13 @@ export default function Blog() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/blog/roadmap" className="hover:text-emerald-400">
-                    Roadmap
-                  </Link>
+                  {features.roadmap ? (
+                    <Link href="/roadmap" className="hover:text-emerald-400">
+                      Roadmap
+                    </Link>
+                  ) : (
+                    <span className="text-gray-600">Roadmap</span>
+                  )}
                 </li>
               </ul>
             </div>

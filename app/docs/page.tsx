@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowLeft, Terminal } from "lucide-react"
 import { ReactNode } from "react"
 import { FAQPageJsonLd } from "@/components/json-ld"
+import { features } from "@/config/features"
 
 export default function Docs() {
   return (
@@ -50,6 +51,25 @@ export default function Docs() {
                 Docs
               </Link>
             </li>
+            <li>
+              <Link href="/pricing" className="hover:text-emerald-400 transition-colors">
+                Pricing
+              </Link>
+            </li>
+            {features.blog && (
+              <li>
+                <Link href="/blog" className="hover:text-emerald-400 transition-colors">
+                  Blog
+                </Link>
+              </li>
+            )}
+            {features.roadmap && (
+              <li>
+                <Link href="/roadmap" className="hover:text-emerald-400 transition-colors">
+                  Roadmap
+                </Link>
+              </li>
+            )}
             <li>
               <Link href="/#community" className="hover:text-emerald-400 transition-colors">
                 Community
@@ -404,7 +424,7 @@ mcpsx run --tools="ai-models,custom-tool,predict"</pre>
       <footer className="bg-gray-950 py-12 border-t border-gray-800">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-gray-500">© {new Date().getFullYear()} mcpsx. All rights reserved.</p>
+            <p className="text-sm text-gray-500">© {new Date().getFullYear()} Synthience.ai. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="https://github.com/jasonkneen/mcpsx" className="text-gray-400 hover:text-emerald-400">
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

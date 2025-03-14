@@ -23,6 +23,12 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL('/', request.url));
   }
 
+  // Check if the path starts with /discover and the discover feature is disabled
+  if (pathname.startsWith('/discover') && !features.discover) {
+    // If the discover feature is disabled, redirect to the home page
+    return NextResponse.redirect(new URL('/', request.url));
+  }
+
   // Add more feature flag checks here as needed
   // Example:
   // if (pathname.startsWith('/pricing') && !features.pricing) {
@@ -43,6 +49,7 @@ export const config = {
   matcher: [
     '/blog/:path*',
     '/roadmap/:path*',
+    '/discover/:path*',
     // Add more paths here as needed
     // '/pricing/:path*',
   ],

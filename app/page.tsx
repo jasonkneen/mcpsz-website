@@ -89,6 +89,20 @@ export default function Home() {
                 </Link>
               </li>
             )}
+            {features.roadmap && (
+              <li>
+                <Link href="/roadmap" className="hover:text-emerald-400 transition-colors">
+                  Roadmap
+                </Link>
+              </li>
+            )}
+            {features.discover && (
+              <li>
+                <Link href="/discover" className="hover:text-emerald-400 transition-colors">
+                  Discover
+                </Link>
+              </li>
+            )}
             <li>
               <Link href="https://github.com/jasonkneen/mcpsx/discussions/" className="hover:text-emerald-400 transition-colors">
                 Community
@@ -408,6 +422,13 @@ export default function Home() {
                 {features.blog && (
                 <li>
                   <Link href="/blog/roadmap" className="hover:text-emerald-400">
+                    Roadmap
+                  </Link>
+                </li>
+                )}
+                {features.roadmap && (
+                <li>
+                  <Link href="/roadmap" className="hover:text-emerald-400">
                     Roadmap
                   </Link>
                 </li>

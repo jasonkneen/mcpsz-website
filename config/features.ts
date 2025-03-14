@@ -7,6 +7,8 @@
 
 export interface FeatureFlags {
   blog: boolean;
+  roadmap: boolean;
+  discover: boolean;
   // Add more feature flags here as needed
   // Example: pricing: boolean;
   // Example: docs: boolean;
@@ -20,6 +22,8 @@ export interface FeatureFlags {
  */
 export const defaultFeatures: FeatureFlags = {
   blog: false,
+  roadmap: true,
+  discover: false,
   // Add more default values here as needed
 };
 
@@ -37,6 +41,12 @@ export function getFeatures(): FeatureFlags {
   if (typeof process !== 'undefined' && process.env) {
     if (process.env.NEXT_PUBLIC_FEATURE_BLOG !== undefined) {
       features.blog = process.env.NEXT_PUBLIC_FEATURE_BLOG === 'true';
+    }
+    if (process.env.NEXT_PUBLIC_FEATURE_ROADMAP !== undefined) {
+      features.roadmap = process.env.NEXT_PUBLIC_FEATURE_ROADMAP === 'true';
+    }
+    if (process.env.NEXT_PUBLIC_FEATURE_DISCOVER !== undefined) {
+      features.discover = process.env.NEXT_PUBLIC_FEATURE_DISCOVER === 'true';
     }
     // Add more environment variable overrides here as needed
   }

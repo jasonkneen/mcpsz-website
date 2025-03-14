@@ -51,6 +51,13 @@ export default function Pricing() {
                 </Link>
               </li>
             )}
+            {features.roadmap && (
+              <li>
+                <Link href="/roadmap" className="hover:text-emerald-400 transition-colors">
+                  Roadmap
+                </Link>
+              </li>
+            )}
             <li>
               <Link href="https://github.com/jasonkneen/mcpsx/discussions/" className="hover:text-emerald-400 transition-colors">
                 Community
@@ -244,7 +251,14 @@ export default function Pricing() {
                 )}
                 {features.blog && (
                 <li>
-                  <Link href="#" className="hover:text-emerald-400">
+                  <Link href="/blog/roadmap" className="hover:text-emerald-400">
+                    Roadmap
+                  </Link>
+                </li>
+                )}
+                {features.roadmap && !features.blog && (
+                <li>
+                  <Link href="/roadmap" className="hover:text-emerald-400">
                     Roadmap
                   </Link>
                 </li>
