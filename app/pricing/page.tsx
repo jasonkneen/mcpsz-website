@@ -114,7 +114,7 @@ export default function Pricing() {
                       <FeatureItem text="Fully local" />
                       <FeatureItem text="Command-line interface" />
                       <FeatureItem text="Chat with MCPs (your keys)" />
-                      <FeatureItem text="VSCode extension" />
+                      <FeatureItem text="Open Source VSCode extension" />
                       <FeatureItem text="Basic analytics" />
                       <FeatureItem text="Community support" />
                     </ul>
@@ -144,7 +144,7 @@ export default function Pricing() {
                       <FeatureItem text="Workflows & MCP Agents" />
                       <FeatureItem text="Unlimited chat with MCPs" />
                       <FeatureItem text="Voice control" />
-                      <FeatureItem text="Source code access with annual plans" />
+                      <FeatureItem text="CLI source code access with annual plans" />
                       <FeatureItem text="Priority support with annual plans" />
                       <FeatureItem text="Advanced Analytics & usage" />
                       <FeatureItem text="or $15 per month " />

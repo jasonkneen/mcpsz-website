@@ -198,12 +198,7 @@ export default function Roadmap() {
                   Roadmap
                 </Link>
               </li>
-            )}
-            <li>
-              <Link href="https://github.com/jasonkneen/mcpsx/discussions/" className="hover:text-emerald-400 transition-colors">
-                Community
-              </Link>
-            </li>
+            )}            
           </ul>
         </nav>
         <div className="flex items-center space-x-4">
@@ -355,7 +350,7 @@ export default function Roadmap() {
               <p className="text-sm text-gray-500">© {new Date().getFullYear()} CyberFish Ltd. All rights reserved.</p>
             </div>
             <div className="flex space-x-4 mt-4 md:mt-0">
-              <Link href="https://github.com/jasonkneen/mcpsx" className="text-gray-400 hover:text-emerald-400">
+              <Link href="https://github.com/jasonkneen/mcpsx" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-emerald-400">
                 <Github className="h-5 w-5" />
               </Link>
             </div>
