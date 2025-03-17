@@ -29,7 +29,7 @@ export interface FeatureFlags {
  */
 export const defaultFeatures: FeatureFlags = {
   blog: false,
-  roadmap: true,
+  roadmap: false,
   discover: false,
   docs: true,
   pricing: true,
