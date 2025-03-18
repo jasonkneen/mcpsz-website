@@ -182,4 +182,47 @@
   body {
     @apply bg-background text-foreground;
   }
+  
+  /* Set headings to use Exo 2 font */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-exo2);
+  }
+  
+  /* Define Honk font class for the logo */
+  .honk {
+    font-family: 'Honk', cursive;
+    color: white;
+  }
+
+  .honk-metallic {
+    /* Basic settings */
+    font-size: 40px;
+    text-align: start;
+    transition-property: opacity, transform;
+    font-family: "Honk";
+    font-weight: 400;
+    font-variant-numeric: 3;
+    font-style: normal;
+    
+    font-variation-settings: "MORF" 15, "SHLN" 50;
+    
+    opacity: 0.9;
+    line-height: initial;
+    transition-duration: 350ms;
+    
+    /* Metallic gradient effect */
+    background: linear-gradient(to bottom, 
+      #f8d866 0%,     /* Light gold */
+      #e7a44b 20%,    /* Gold */
+      #d97b65 40%,    /* Copper */
+      #c45d87 60%,    /* Rose/pink */
+      #a9548a 80%,    /* Purple/magenta */
+      #9a5098 100%    /* Deep purple */
+    );
+    color: transparent;
+    clip: text;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.0), 0 0 0 rgba(255,255,255,0.3);
+    
+    -webkit-text-stroke: 0.2px rgba(255,0,0,0);
+  }
 }

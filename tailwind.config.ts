@@ -11,7 +11,8 @@ const config: Config = {
   theme: {
   	extend: {
       fontFamily: {
-        sans: ['var(--font-inter)', 'sans-serif'],
+				sans: ['var(--font-exo2)', 'sans-serif'],
+				exo2: ['var(--font-exo2)', 'sans-serif'],
       },
   		colors: {
   			background: 'hsl(var(--background))',

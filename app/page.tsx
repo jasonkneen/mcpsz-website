@@ -59,7 +59,7 @@ export default function Home() {
       <header className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center space-x-2">
           <Terminal className="h-6 w-6 text-emerald-400" />
-          <span className="text-2xl font-bold honk-metallic">mcpz</span>
+          <span className="text-6xl font-bold honk-metallic text-white">mcpz</span>
         </div>
         <nav className="hidden md:block">
           <ul className="flex space-x-8">
@@ -398,7 +398,7 @@ export default function Home() {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <Terminal className="h-5 w-5 text-emerald-400" />
-                <span className="text-lg font-bold honk-metallic">mcpz</span>
+                <span className="text-lg font-bold honk text-white">mcpz</span>
               </div>
               <p className="text-gray-400 text-sm">The intelligent Model Context Protocol management platform that optimizes AI interactions, reduces token usage by up to 70%, and transforms how developers work with AI tools.</p>
             </div>
