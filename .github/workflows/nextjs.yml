@@ -33,7 +33,7 @@ jobs:
       - name: Build project
         run: pnpm build
         env:
-          NEXT_PUBLIC_BASE_PATH: /mcpsx
+          NEXT_PUBLIC_BASE_PATH: /mcpz
 
       - name: Prepare for deployment
         run: |

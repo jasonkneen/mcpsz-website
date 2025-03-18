@@ -1,22 +1,38 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Inter, Quantico } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
 import { CursorEffectWrapper } from '@/components/cursor-effect-wrapper'
 import { AnimatedBackground } from '@/components/animated-background'
 
-// Define the font
+// Google Fonts import for direct CSS usage
+export const fontImport = `
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Armata&family=Bungee+Tint&family=Honk&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Orbitron:wght@400..900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Russo+One&family=Tektur:wght@400..900&display=swap');
+</style>
+`
+
+// Define the fonts
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter',
 })
 
+
+const quantico = Quantico({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  display: 'swap',
+  variable: '--font-quantico',
+})
+
 export const metadata: Metadata = {
-  title: 'mcpsx CLI | Model Context Protocol Tools',
+  title: 'mcpz.run | Model Context Protocol Tools',
   description: 'A powerful CLI tool for managing Model Context Protocol (MCP), creating logical groups of tools, and optimizing token usage when interacting with AI models.',
   generator: 'Next.js',
-  metadataBase: new URL('https://mcpsx.run'),
+  metadataBase: new URL('https://mcpz.run'),
   keywords: 'MCP, Model Context Protocol, CLI, tools, AI models, token optimization, developer tools',
   authors: [{ name: 'mcpsx Team' }],
   creator: 'mcpsx',
@@ -27,16 +43,16 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: 'mcpsx CLI | Model Context Protocol Tools',
+    title: 'mcpz.run | Model Context Protocol Tools',
     description: 'A powerful CLI tool for managing Model Context Protocol (MCP), creating logical groups of tools, and optimizing token usage when interacting with AI models.',
-    url: 'https://mcpsx.run',
-    siteName: 'mcpsx CLI',
+    url: 'https://mcpz.run',
+    siteName: 'mcpz.run',
     images: [
       {
-        url: 'https://mcpsx.run/og-image.jpg',
+        url: 'https://mcpz.run/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'mcpsx CLI - Model Context Protocol Tools',
+        alt: 'mcpz.run - Model Context Protocol Tools',
       },
     ],
     locale: 'en_US',
@@ -44,9 +60,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'mcpsx CLI | Model Context Protocol Tools',
+    title: 'mcpz.run | Model Context Protocol Tools',
     description: 'A powerful CLI tool for managing Model Context Protocol (MCP), creating logical groups of tools, and optimizing token usage when interacting with AI models.',
-    images: ['https://mcpsx.run/og-image.jpg'],
+    images: ['https://mcpz.run/og-image.jpg'],
     creator: '@mcpsx',
   },
   robots: {
@@ -61,7 +77,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://mcpsx.run',
+    canonical: 'https://mcpz.run',
   },
   manifest: '/manifest.json',
   icons: {
@@ -75,7 +91,7 @@ export const metadata: Metadata = {
     google: 'google-site-verification-code',
   },
   appleWebApp: {
-    title: 'mcpsx CLI',
+    title: 'mcpz.run',
     statusBarStyle: 'black-translucent',
     capable: true,
   },
@@ -87,7 +103,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" dir="ltr" suppressHydrationWarning className={inter.variable}>
+    <html lang="en" dir="ltr" suppressHydrationWarning className={`${inter.variable} ${quantico.variable}`}>
       <body className="antialiased font-sans">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <AnimatedBackground />

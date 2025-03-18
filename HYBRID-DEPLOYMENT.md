@@ -1,10 +1,10 @@
-# Hybrid Deployment for mcpsx Website
+# Hybrid Deployment for mcpz Website
 
-This document explains how to deploy the mcpsx website to both GitHub Pages (static) and Vercel (dynamic) in a hybrid deployment model.
+This document explains how to deploy the mcpz website to both GitHub Pages (static) and Vercel (dynamic) in a hybrid deployment model.
 
 ## Overview
 
-The mcpsx website is configured to support a hybrid deployment model:
+The mcpz website is configured to support a hybrid deployment model:
 
 1. **GitHub Pages** - For static content (main website, docs, pricing, roadmap)
 2. **Vercel** - For dynamic features (discover, blog, API endpoints)
@@ -77,17 +77,17 @@ NEXT_PUBLIC_FEATURE_DISCOVER=true
 
 ### GitHub Pages
 
-- Main site: `https://mcpsx.run`
-- Docs: `https://mcpsx.run/docs`
-- Pricing: `https://mcpsx.run/pricing`
-- Roadmap: `https://mcpsx.run/roadmap`
-- Blog: `https://news.mcpsx.run` (subdomain pointing to Vercel)
-- Discover: `https://discover.mcpsx.run` (subdomain pointing to Vercel)
+- Main site: `https://mcpz.run`
+- Docs: `https://mcpz.run/docs`
+- Pricing: `https://mcpz.run/pricing`
+- Roadmap: `https://mcpz.run/roadmap`
+- Blog: `https://news.mcpz.run` (subdomain pointing to Vercel)
+- Discover: `https://discover.mcpz.run` (subdomain pointing to Vercel)
 
 ### Vercel
 
-- Main site: `https://mcpsx.vercel.app`
-- All features: `https://mcpsx.vercel.app/[feature]`
+- Main site: `https://mcpz.vercel.app`
+- All features: `https://mcpz.vercel.app/[feature]`
 
 ## Hybrid Navigation
 
@@ -122,7 +122,7 @@ npm run dev
 
 To set up the subdomains:
 
-1. Configure DNS for `discover.mcpsx.run` and `news.mcpsx.run` to point to the Vercel deployment
+1. Configure DNS for `discover.mcpz.run` and `news.mcpz.run` to point to the Vercel deployment
 2. Add these domains in the Vercel project settings
 3. Verify the domains in Vercel
 

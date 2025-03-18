@@ -1,4 +1,4 @@
-$ mcpsx run
+$ mcpz run
 ✓ Connecting to MCP clients...
 ✓ Found 3 MCP servers in settings
 ✓ Connected to neural-memory

@@ -8,7 +8,7 @@ export default function TermsConditions() {
       <header className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center space-x-2">
           <Terminal className="h-6 w-6 text-emerald-400" />
-          <span className="text-xl font-bold">mcpsx</span>
+          <span className="text-xl font-bold">mcpz</span>
         </div>
         <nav className="hidden md:block">
           <ul className="flex space-x-8">
@@ -33,14 +33,14 @@ export default function TermsConditions() {
               </Link>
             </li>
             <li>
-              <Link href="https://github.com/jasonkneen/mcpsx/discussions/" className="hover:text-emerald-400 transition-colors">
+              <Link href="https://github.com/jasonkneen/mcpz/discussions/" className="hover:text-emerald-400 transition-colors">
                 Community
               </Link>
             </li>
           </ul>
         </nav>
         <div className="flex items-center space-x-4">
-          <Link href="https://github.com/jasonkneen/mcpsx" target="_blank" rel="noopener noreferrer">
+          <Link href="https://github.com/jasonkneen/mcpz" target="_blank" rel="noopener noreferrer">
             <Github className="h-5 w-5 text-gray-400 hover:text-white transition-colors" />
           </Link>
           <Button
@@ -70,12 +70,12 @@ export default function TermsConditions() {
               <div className="prose prose-invert max-w-none space-y-6">
                 <h2 className="text-2xl font-semibold mt-8 mb-4">Introduction</h2>
                 <p className="mb-4">
-                  These Terms and Conditions ("Terms") govern your use of the mcpsx website and services (collectively, the "Service") operated by Synthience.ai ("we," "us," or "our"). By accessing or using the Service, you agree to be bound by these Terms. If you disagree with any part of the Terms, you may not access the Service.
+                  These Terms and Conditions ("Terms") govern your use of the mcpz website and services (collectively, the "Service") operated by Synthience.ai ("we," "us," or "our"). By accessing or using the Service, you agree to be bound by these Terms. If you disagree with any part of the Terms, you may not access the Service.
                 </p>
                 
                 <h2 className="text-2xl font-semibold mt-8 mb-4">Use License</h2>
                 <p className="mb-4">
-                  The mcpsx CLI tool is licensed under the terms of the license specified in the GitHub repository. For the free version, permission is granted to use the software for personal and commercial purposes. For paid versions, additional terms may apply.
+                  The mcpz CLI tool is licensed under the terms of the license specified in the GitHub repository. For the free version, permission is granted to use the software for personal and commercial purposes. For paid versions, additional terms may apply.
                 </p>
                 <p className="mb-2">
                   This license does not include:
@@ -93,7 +93,7 @@ export default function TermsConditions() {
                 
                 <h2 className="text-2xl font-semibold mt-8 mb-4">Accuracy of Materials</h2>
                 <p className="mb-6">
-                  The materials appearing on the mcpsx website could include technical, typographical, or photographic errors. We do not warrant that any of the materials on the website are accurate, complete, or current. We may make changes to the materials contained on the website at any time without notice.
+                  The materials appearing on the mcpz website could include technical, typographical, or photographic errors. We do not warrant that any of the materials on the website are accurate, complete, or current. We may make changes to the materials contained on the website at any time without notice.
                 </p>
                 
                 <h2 className="text-2xl font-semibold mt-8 mb-4">Links</h2>
@@ -142,7 +142,7 @@ export default function TermsConditions() {
                 </p>
                 <ul className="list-disc pl-6 mb-6 space-y-1">
                   <li>By email: <a href="mailto:hello@Synthience.ai" className="text-emerald-400 hover:text-emerald-300">hello@Synthience.ai</a></li>
-                  <li>By visiting our GitHub discussions page: <a href="https://github.com/jasonkneen/mcpsx/discussions/" className="text-emerald-400 hover:text-emerald-300">https://github.com/jasonkneen/mcpsx/discussions/</a></li>
+                  <li>By visiting our GitHub discussions page: <a href="https://github.com/jasonkneen/mcpz/discussions/" className="text-emerald-400 hover:text-emerald-300">https://github.com/jasonkneen/mcpz/discussions/</a></li>
                 </ul>
               </div>
             </div>
@@ -156,7 +156,7 @@ export default function TermsConditions() {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <Terminal className="h-5 w-5 text-emerald-400" />
-                <span className="text-lg font-bold">mcpsx</span>
+                <span className="text-lg font-bold">mcpz</span>
               </div>
               <p className="text-gray-400 text-sm">The intelligent Model Context Protocol management platform that optimizes AI interactions, reduces token usage by up to 70%, and transforms how developers work with AI tools.</p>
             </div>
@@ -194,7 +194,7 @@ export default function TermsConditions() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://github.com/jasonkneen/mcpsx/issues" className="hover:text-emerald-400">
+                  <Link href="https://github.com/jasonkneen/mcpz/issues" className="hover:text-emerald-400">
                     Support
                   </Link>
                 </li>
@@ -221,7 +221,7 @@ export default function TermsConditions() {
           <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-gray-500">© {new Date().getFullYear()} Synthience.ai. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="https://github.com/jasonkneen/mcpsx" className="text-gray-400 hover:text-emerald-400">
+              <Link href="https://github.com/jasonkneen/mcpz" className="text-gray-400 hover:text-emerald-400">
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </Link>

@@ -35,7 +35,7 @@ const timelineItems: TimelineItem[] = [
     version: 'v1.0',
     date: 'January 15, 2025',
     status: 'past',
-    description: 'First public release of mcpsx CLI',
+    description: 'First public release of mcpz CLI',
     features: [
       'Basic MCP server management',
       'Tool listing and filtering',
@@ -161,7 +161,7 @@ export default function Roadmap() {
       <header className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center space-x-2">
           <Terminal className="h-6 w-6 text-emerald-400" />
-          <span className="text-xl font-bold">mcpsx</span>
+          <span className="text-xl font-bold">mcpz</span>
         </div>
         <nav className="hidden md:block">
           <ul className="flex space-x-8">
@@ -193,14 +193,14 @@ export default function Roadmap() {
               </li>
             )}
             <li>
-              <Link href="https://github.com/jasonkneen/mcpsx/discussions/" className="hover:text-emerald-400 transition-colors">
+              <Link href="https://github.com/jasonkneen/mcpz/discussions/" className="hover:text-emerald-400 transition-colors">
                 Community
               </Link>
             </li>
           </ul>
         </nav>
         <div className="flex items-center space-x-4">
-          <Link href="https://github.com/jasonkneen/mcpsx" target="_blank" rel="noopener noreferrer">
+          <Link href="https://github.com/jasonkneen/mcpz" target="_blank" rel="noopener noreferrer">
             <Github className="h-5 w-5 text-gray-400 hover:text-white transition-colors" />
           </Link>
           <Button
@@ -231,7 +231,7 @@ export default function Roadmap() {
           <h1 className="text-4xl md:text-6xl font-bold mb-6">Product Roadmap</h1>
           
           <p className="text-xl text-gray-400 mb-12 max-w-3xl">
-            Explore our product roadmap to see what we've delivered and what's coming next. We're constantly working to improve mcpsx with new features and enhancements.
+            Explore our product roadmap to see what we've delivered and what's coming next. We're constantly working to improve mcpz with new features and enhancements.
           </p>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -243,7 +243,7 @@ export default function Roadmap() {
                 <div className="md:col-span-1">
                   <h2 className="text-2xl md:text-3xl font-bold mb-4">Feature Releases</h2>
                   <p className="text-gray-400 mb-8">
-                    Our roadmap shows our journey so far and our plans for the future. We're committed to continuously improving mcpsx with new features and enhancements.
+                    Our roadmap shows our journey so far and our plans for the future. We're committed to continuously improving mcpz with new features and enhancements.
                   </p>
                   
                   <div className="space-y-4">
@@ -342,13 +342,13 @@ export default function Roadmap() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
               <Terminal className="h-5 w-5 text-emerald-400" />
-              <span className="font-bold">mcpsx</span>
+              <span className="font-bold">mcpz</span>
             </div>
             <div>
               <p className="text-sm text-gray-500">© {new Date().getFullYear()} CyberFish Ltd. All rights reserved.</p>
             </div>
             <div className="flex space-x-4 mt-4 md:mt-0">
-              <Link href="https://github.com/jasonkneen/mcpsx" className="text-gray-400 hover:text-emerald-400">
+              <Link href="https://github.com/jasonkneen/mcpz" className="text-gray-400 hover:text-emerald-400">
                 <Github className="h-5 w-5" />
               </Link>
             </div>

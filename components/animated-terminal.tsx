@@ -20,7 +20,7 @@ export function AnimatedTerminal({ className = '' }: AnimatedTerminalProps) {
   const commandSets = [
     // Command set 1 (from command1.txt)
     [
-      '$ mcpsx list',
+      '$ mcpz list',
       '✓ Found 3 MCP servers in settings',
       '✓ Connected to neural-memory',
       '✓ Listed 9 tools from neural-memory',
@@ -38,7 +38,7 @@ export function AnimatedTerminal({ className = '' }: AnimatedTerminalProps) {
     ],
     // Command set 2 (from command2.txt)
     [
-      '$ mcpsx list tools',
+      '$ mcpz list tools',
       '┌─────────────────────────────────────────┐',
       '│ Memory Tools                            │',
       '├─────────────────────────────────────────┤',
@@ -69,7 +69,7 @@ export function AnimatedTerminal({ className = '' }: AnimatedTerminalProps) {
     ],
     // Command set 3 (from command3.txt)
     [
-      '$ mcpsx groups add "web-dev" ["code-indexer","file-operations","web-tools"]',
+      '$ mcpz groups add "web-dev" ["code-indexer","file-operations","web-tools"]',
       '✓ Creating new group: web-dev',
       '✓ Group created successfully',
       '✓ Adding servers to group...',
@@ -77,7 +77,7 @@ export function AnimatedTerminal({ className = '' }: AnimatedTerminalProps) {
       '✓ Added 2 tools from \'file-operations\'',
       '✓ Added 4 tools from \'web-tools\'',
       '✓ Group \'web-dev\' created with 9 tools',
-      '$ mcpsx list-groups',
+      '$ mcpz list-groups',
       '┌─────────────────────────────────────────┐',
       '│ Available Groups                        │',
       '├─────────────────────────────────────────┤',

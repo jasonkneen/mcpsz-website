@@ -9,7 +9,7 @@ export default function Blog() {
       <header className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center space-x-2">
           <Terminal className="h-6 w-6 text-emerald-400" />
-          <span className="text-xl font-bold">mcpsx</span>
+          <span className="text-xl font-bold">mcpz</span>
         </div>
         <nav className="hidden md:block">
           <ul className="flex space-x-8">
@@ -48,7 +48,7 @@ export default function Blog() {
           </ul>
         </nav>
         <div className="flex items-center space-x-4">
-          <Link href="https://github.com/jasonkneen/mcpsx" target="_blank" rel="noopener noreferrer">
+          <Link href="https://github.com/jasonkneen/mcpz" target="_blank" rel="noopener noreferrer">
             <Github className="h-5 w-5 text-gray-400 hover:text-white transition-colors" />
           </Link>
           <Button
@@ -74,7 +74,7 @@ export default function Blog() {
             <div className="max-w-5xl mx-auto">
               <h1 className="text-4xl md:text-5xl font-bold mb-6">Blog & Tutorials</h1>
               <p className="text-xl text-gray-400 mb-12 max-w-3xl">
-                Discover the latest news, tutorials, and insights about mcpsx and Context Protocol optimization.
+                Discover the latest news, tutorials, and insights about mcpz and Context Protocol optimization.
               </p>
 
               <div className="grid gap-12 mb-16">
@@ -82,18 +82,18 @@ export default function Blog() {
                 
                 <div className="grid gap-8 md:grid-cols-2">
                   <BlogCard 
-                    title="Getting Started with mcpsx: A Comprehensive Guide"
-                    excerpt="Learn how to set up mcpsx, create your first tool groups, and optimize your AI workflows in this step-by-step tutorial."
+                    title="Getting Started with mcpz: A Comprehensive Guide"
+                    excerpt="Learn how to set up mcpz, create your first tool groups, and optimize your AI workflows in this step-by-step tutorial."
                     date="March 10, 2025"
                     author="Jason Kneen"
                     readTime="8 min read"
                     category="Tutorial"
-                    slug="/blog/getting-started-with-mcpsx"
+                    slug="/blog/getting-started-with-mcpz"
                     featured={true}
                   />
                   <BlogCard 
                     title="How We Reduced Token Usage by 70% with Intelligent Grouping"
-                    excerpt="A case study on how our team implemented mcpsx's grouping feature to dramatically reduce API costs while improving response quality."
+                    excerpt="A case study on how our team implemented mcpz's grouping feature to dramatically reduce API costs while improving response quality."
                     date="March 5, 2025"
                     author="Sarah Chen"
                     readTime="6 min read"
@@ -118,8 +118,8 @@ export default function Blog() {
                     slug="/blog/custom-tool-groups"
                   />
                   <BlogCard 
-                    title="Integrating mcpsx with Claude and GPT Models"
-                    excerpt="A step-by-step guide to connecting mcpsx with popular AI models for optimal performance."
+                    title="Integrating mcpz with Claude and GPT Models"
+                    excerpt="A step-by-step guide to connecting mcpz with popular AI models for optimal performance."
                     date="March 3, 2025"
                     author="Jennifer Kwon"
                     readTime="7 min read"
@@ -143,16 +143,16 @@ export default function Blog() {
                 
                 <div className="grid gap-8 md:grid-cols-3">
                   <BlogCard 
-                    title="Announcing mcpsx Pro: Enhanced Features for Teams"
+                    title="Announcing mcpz Pro: Enhanced Features for Teams"
                     excerpt="Introducing our Pro plan with cloud syncing, advanced analytics, and team collaboration features."
                     date="March 12, 2025"
                     author="Jason Kneen"
                     readTime="4 min read"
                     category="Announcement"
-                    slug="/blog/announcing-mcpsx-pro"
+                    slug="/blog/announcing-mcpz-pro"
                   />
                   <BlogCard 
-                    title="mcpsx v2.0 Release Notes"
+                    title="mcpz v2.0 Release Notes"
                     excerpt="Explore all the new features, improvements, and bug fixes in our latest major release."
                     date="February 20, 2025"
                     author="Development Team"
@@ -162,7 +162,7 @@ export default function Blog() {
                   />
                   <BlogCard 
                     title="The Future of Context Protocol Management"
-                    excerpt="Our vision for the future of MCP tools and how mcpsx is evolving to meet the changing needs of AI developers."
+                    excerpt="Our vision for the future of MCP tools and how mcpz is evolving to meet the changing needs of AI developers."
                     date="February 15, 2025"
                     author="Jason Kneen"
                     readTime="8 min read"
@@ -182,7 +182,7 @@ export default function Blog() {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <Terminal className="h-5 w-5 text-emerald-400" />
-                <span className="text-lg font-bold">mcpsx</span>
+                <span className="text-lg font-bold">mcpz</span>
               </div>
               <p className="text-gray-400 text-sm">The intelligent Context Protocol management platform that optimizes AI interactions, reduces token usage by up to 70%, and transforms how developers work with AI tools.</p>
             </div>
@@ -236,7 +236,7 @@ export default function Blog() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://github.com/jasonkneen/mcpsx/issues" className="hover:text-emerald-400">
+                  <Link href="https://github.com/jasonkneen/mcpz/issues" className="hover:text-emerald-400">
                     Support
                   </Link>
                 </li>

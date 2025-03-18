@@ -90,7 +90,7 @@ export function getBaseUrl(): string {
   if (typeof process !== 'undefined' && process.env && process.env.NEXT_PUBLIC_BASE_URL) {
     return process.env.NEXT_PUBLIC_BASE_URL;
   }
-  return 'https://mcpsx.run';
+  return 'https://mcpz.run';
 }
 
 /**
@@ -108,9 +108,9 @@ export function getFeatureUrl(feature: keyof FeatureFlags): string {
   if (deploymentTarget === 'github') {
     switch (feature) {
       case 'discover':
-        return process.env.NEXT_PUBLIC_DISCOVER_URL || 'https://discover.mcpsx.run';
+        return process.env.NEXT_PUBLIC_DISCOVER_URL || 'https://discover.mcpz.run';
       case 'blog':
-        return process.env.NEXT_PUBLIC_NEWS_URL || 'https://news.mcpsx.run';
+        return process.env.NEXT_PUBLIC_NEWS_URL || 'https://news.mcpz.run';
       default:
         return `${baseUrl}/${feature}`;
     }

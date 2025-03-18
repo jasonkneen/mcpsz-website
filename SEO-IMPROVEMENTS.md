@@ -1,6 +1,6 @@
-# SEO Improvements for mcpsx.run
+# SEO Improvements for mcpz.run
 
-This document outlines the SEO improvements implemented for the mcpsx.run website.
+This document outlines the SEO improvements implemented for the mcpz.run website.
 
 ## Meta Tags and Metadata
 
@@ -27,7 +27,7 @@ This document outlines the SEO improvements implemented for the mcpsx.run websit
 
 Created a JSON-LD component (`components/json-ld.tsx`) with support for:
 - SoftwareApplication schema for the CLI tool
-- Organization schema for mcpsx
+- Organization schema for mcpz
 - FAQPage schema for frequently asked questions
 
 Implemented structured data on:
@@ -64,7 +64,7 @@ Implemented structured data on:
 - Updated command examples to use "run" instead of "stdio"
 - Changed references from "servers" to "tools" throughout the site
 - Updated all examples and code snippets to reflect the new terminology
-- Ensured consistent capitalization of "mcpsx" (lowercase) throughout the site
+- Ensured consistent capitalization of "mcpz" (lowercase) throughout the site
 
 ## Hydration Error Fixes
 
@@ -76,7 +76,7 @@ Implemented structured data on:
 ## Future Considerations
 
 - Create and add the icon files referenced in the manifest and metadata
-- Update all GitHub links to point to https://github.com/jasonkneen/mcpsx
+- Update all GitHub links to point to https://github.com/jasonkneen/mcpz
 - Set up proper Open Graph images for social sharing
 - Implement structured data for additional pages as they are created
 - Consider implementing a blog for additional content and SEO opportunities

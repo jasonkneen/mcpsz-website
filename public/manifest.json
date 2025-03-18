@@ -1,6 +1,6 @@
 {
-  "name": "mcpsx CLI - Model Context Protocol Tools",
-  "short_name": "mcpsx",
+  "name": "mcpz CLI - Model Context Protocol Tools",
+  "short_name": "mcpz",
   "description": "A powerful CLI tool for managing Model Context Protocol (MCP), creating logical groups of tools, and optimizing token usage when interacting with AI models.",
   "start_url": "/",
   "display": "standalone",

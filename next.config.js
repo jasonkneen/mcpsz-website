@@ -28,10 +28,10 @@ const nextConfig = {
   // Conditional environment variables based on deployment target
   env: {
     NEXT_PUBLIC_BASE_URL: process.env.NEXT_PUBLIC_DEPLOYMENT_TARGET === 'vercel' 
-      ? 'https://mcpsx.vercel.app' 
-      : 'https://mcpsx.run',
-    NEXT_PUBLIC_DISCOVER_URL: 'https://discover.mcpsx.run',
-    NEXT_PUBLIC_NEWS_URL: 'https://news.mcpsx.run',
+      ? 'https://mcpz.vercel.app'
+      : 'https://mcpz.run',
+    NEXT_PUBLIC_DISCOVER_URL: 'https://discover.mcpz.run',
+    NEXT_PUBLIC_NEWS_URL: 'https://news.mcpz.run',
   },
   
   // Redirects for subdomains

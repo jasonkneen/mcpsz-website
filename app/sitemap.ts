@@ -7,7 +7,7 @@ export const dynamic = "force-static";
 export const revalidate = 3600; // Revalidate every hour
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://mcpsx.run'
+  const baseUrl = 'https://mcpz.run'
   
   return [
     {

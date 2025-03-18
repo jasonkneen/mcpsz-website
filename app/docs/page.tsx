@@ -12,19 +12,19 @@ export default function Docs() {
       <FAQPageJsonLd
         questions={[
           {
-            question: "How do I install mcpsx CLI?",
-            answer: "You can install mcpsx CLI globally using npm: npm install -g mcpsx"
+            question: "How do I install mcpz CLI?",
+            answer: "You can install mcpz CLI globally using npm: npm install -g mcpz"
           },
           {
-            question: "How do I create a tool group in mcpsx?",
-            answer: "Use the groups add command: mcpsx groups add \"python-stack\" --tools=\"python,pytorch,huggingface\""
+            question: "How do I create a tool group in mcpz?",
+            answer: "Use the groups add command: mcpz groups add \"python-stack\" --tools=\"python,pytorch,huggingface\""
           },
           {
-            question: "How does mcpsx reduce token usage?",
+            question: "How does mcpz reduce token usage?",
             answer: "By creating logical groups of tools, you can send only relevant tools to models, reducing system instruction size and minimizing token consumption and associated costs."
           },
           {
-            question: "What are the main commands in mcpsx CLI?",
+            question: "What are the main commands in mcpz CLI?",
             answer: "The main commands include run (start MCP), groups (manage tool groups), add (add a new MCP configuration), remove (remove an MCP configuration), list (list all MCP configurations), and use (use a specific MCP configuration)."
           }
         ]}
@@ -32,7 +32,7 @@ export default function Docs() {
       <header className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center space-x-2">
           <Terminal className="h-6 w-6 text-emerald-400" />
-          <span className="text-xl font-bold">mcpsx</span>
+          <span className="text-xl font-bold">mcpz</span>
         </div>
         <nav className="hidden md:block">
           <ul className="flex space-x-8">
@@ -78,7 +78,7 @@ export default function Docs() {
           </ul>
         </nav>
         <div className="flex items-center space-x-4">
-          <Link href="https://github.com/jasonkneen/mcpsx" target="_blank" rel="noopener noreferrer">
+          <Link href="https://github.com/jasonkneen/mcpz" target="_blank" rel="noopener noreferrer">
             <svg className="h-5 w-5 text-gray-400 hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path
                 fillRule="evenodd"
@@ -111,15 +111,15 @@ export default function Docs() {
           <div className="prose prose-invert max-w-none">
             <h2 className="text-2xl font-bold mt-8 mb-4 text-emerald-400">Overview</h2>
             <p className="mb-6">
-              mcpsx CLI is a powerful command line interface for Model Context Protocol (MCP), 
+              mcpz CLI is a powerful command line interface for Model Context Protocol (MCP), 
               designed to revolutionize how you manage, query, and interact with Model Context Protocol. 
-              At its core, mcpsx enables intelligent organization of your MCP ecosystem, 
+              At its core, mcpz enables intelligent organization of your MCP ecosystem, 
               allowing you to create logical collections of tools that optimize both your workflow and 
               AI model interactions.
             </p>
             
             <p className="mb-6">
-              By categorizing your tools into purpose-specific groups, mcpsx significantly reduces token usage 
+              By categorizing your tools into purpose-specific groups, mcpz significantly reduces token usage 
               when communicating with AI models. Instead of sending all available tools to the system instruction, 
               you can selectively include only the relevant tools for a specific task or context. This focused approach 
               not only improves model performance by reducing distraction, but also minimizes token consumption 
@@ -132,7 +132,7 @@ export default function Docs() {
                 <span className="text-sm font-medium">Install globally</span>
               </div>
               <div className="p-4 font-mono text-sm overflow-x-auto">
-                <pre className="text-emerald-400">npm install -g mcpsx</pre>
+                <pre className="text-emerald-400">npm install -g mcpz</pre>
               </div>
             </div>
             
@@ -141,7 +141,7 @@ export default function Docs() {
                 <span className="text-sm font-medium">Or use with npx</span>
               </div>
               <div className="p-4 font-mono text-sm overflow-x-auto">
-                <pre className="text-emerald-400">npx @mcpsx</pre>
+                <pre className="text-emerald-400">npx @mcpz</pre>
               </div>
             </div>
 
@@ -151,7 +151,7 @@ export default function Docs() {
             </p>
             <ul className="list-disc pl-6 mb-6 space-y-1">
               <li><code className="bg-gray-800 px-1 rounded">mcp</code> (primary command)</li>
-              <li><code className="bg-gray-800 px-1 rounded">mcpsx</code> (extended alias)</li>
+              <li><code className="bg-gray-800 px-1 rounded">mcpz</code> (extended alias)</li>
             </ul>
 
             <div className="rounded-lg border border-gray-800 bg-gray-950 overflow-hidden mb-6">
@@ -160,36 +160,36 @@ export default function Docs() {
               </div>
               <div className="p-4 font-mono text-sm overflow-x-auto">
                 <pre className="text-emerald-400"># Show help
-mcpsx help
+mcpz help
 
 # Start MCP
-mcpsx run
+mcpz run
 
 # Start with specific tools
-mcpsx run --tool="sleep"
-mcpsx run --tools="python,pytorch,predict"
+mcpz run --tool="sleep"
+mcpz run --tools="python,pytorch,predict"
 
 # Tool group management
-mcpsx groups add "python-stack" --tools="python,pytorch,huggingface"
-mcpsx run --tools="python-stack"
+mcpz groups add "python-stack" --tools="python,pytorch,huggingface"
+mcpz run --tools="python-stack"
 
 # Add a new MCP configuration
-mcpsx add "My Server" --command "node" --args "server.js"
+mcpz add "My Server" --command "node" --args "server.js"
 
 # List MCP configurations
-mcpsx list
+mcpz list
 
 # Remove an MCP configuration
-mcpsx remove "My Server"
+mcpz remove "My Server"
 
 # Use a specific MCP configuration
-mcpsx use "My Server"</pre>
+mcpz use "My Server"</pre>
               </div>
             </div>
 
             <h2 className="text-2xl font-bold mt-8 mb-4 text-emerald-400">Key Features</h2>
             <p className="mb-4">
-              mcpsx CLI provides powerful capabilities for working with Model Context Protocol:
+              mcpz CLI provides powerful capabilities for working with Model Context Protocol:
             </p>
             <ol className="list-decimal pl-6 mb-6 space-y-2">
               <li>
@@ -224,7 +224,7 @@ mcpsx use "My Server"</pre>
             </p>
             <div className="rounded-lg border border-gray-800 bg-gray-950 overflow-hidden mb-4">
               <div className="p-4 font-mono text-sm overflow-x-auto">
-                <pre className="text-emerald-400">mcpsx stdio [options]</pre>
+                <pre className="text-emerald-400">mcpz stdio [options]</pre>
               </div>
             </div>
             <p className="mb-2">Options:</p>
@@ -238,30 +238,30 @@ mcpsx use "My Server"</pre>
             <div className="rounded-lg border border-gray-800 bg-gray-950 overflow-hidden mb-6">
               <div className="p-4 font-mono text-sm overflow-x-auto">
                 <pre className="text-emerald-400"># Load all servers and tools
-mcpsx run
+mcpz run
 
 # Load only the 'sleep' tool
-mcpsx run --tool="sleep"
+mcpz run --tool="sleep"
 
 # Load multiple tools
-mcpsx run --tools="python,pytorch"
+mcpz run --tools="python,pytorch"
 
 # Load specific tools
-mcpsx run --tools="predict,generate"
+mcpz run --tools="predict,generate"
 
 # Use a tool group
-mcpsx run --tools="python-stack"</pre>
+mcpz run --tools="python-stack"</pre>
               </div>
             </div>
 
             <h3 className="text-xl font-bold mt-6 mb-3 text-white">groups</h3>
             <p className="mb-4">
-              Manage tool groups. Groups allow you to create collections of mcpsx tools that can be used together.
-              This is the heart of mcpsx's token optimization capability, enabling you to create purpose-specific toolsets.
+              Manage tool groups. Groups allow you to create collections of mcpz tools that can be used together.
+              This is the heart of mcpz's token optimization capability, enabling you to create purpose-specific toolsets.
             </p>
             <div className="rounded-lg border border-gray-800 bg-gray-950 overflow-hidden mb-4">
               <div className="p-4 font-mono text-sm overflow-x-auto">
-                <pre className="text-emerald-400">mcpsx groups &lt;command&gt;</pre>
+                <pre className="text-emerald-400">mcpz groups &lt;command&gt;</pre>
               </div>
             </div>
             <p className="mb-2">Subcommands:</p>
@@ -272,17 +272,17 @@ mcpsx run --tools="python-stack"</pre>
             </p>
             <div className="rounded-lg border border-gray-800 bg-gray-950 overflow-hidden mb-4">
               <div className="p-4 font-mono text-sm overflow-x-auto">
-                <pre className="text-emerald-400">mcpsx groups add &lt;n&gt; --tools="tool1,tool2,..."</pre>
+                <pre className="text-emerald-400">mcpz groups add &lt;n&gt; --tools="tool1,tool2,..."</pre>
               </div>
             </div>
             <p className="mb-2">Example:</p>
             <div className="rounded-lg border border-gray-800 bg-gray-950 overflow-hidden mb-6">
               <div className="p-4 font-mono text-sm overflow-x-auto">
                 <pre className="text-emerald-400"># Create a 'python-stack' group containing multiple tools
-mcpsx groups add "python-stack" --tools="python,pytorch,huggingface"
+mcpz groups add "python-stack" --tools="python,pytorch,huggingface"
 
 # Create a 'favorites' group
-mcpsx groups add "favorites" --tools="openai,anthropic"</pre>
+mcpz groups add "favorites" --tools="openai,anthropic"</pre>
               </div>
             </div>
 
@@ -292,7 +292,7 @@ mcpsx groups add "favorites" --tools="openai,anthropic"</pre>
             </p>
             <div className="rounded-lg border border-gray-800 bg-gray-950 overflow-hidden mb-4">
               <div className="p-4 font-mono text-sm overflow-x-auto">
-                <pre className="text-emerald-400">mcpsx groups remove &lt;n&gt;</pre>
+                <pre className="text-emerald-400">mcpz groups remove &lt;n&gt;</pre>
               </div>
             </div>
 
@@ -302,13 +302,13 @@ mcpsx groups add "favorites" --tools="openai,anthropic"</pre>
             </p>
             <div className="rounded-lg border border-gray-800 bg-gray-950 overflow-hidden mb-4">
               <div className="p-4 font-mono text-sm overflow-x-auto">
-                <pre className="text-emerald-400">mcpsx groups list</pre>
+                <pre className="text-emerald-400">mcpz groups list</pre>
               </div>
             </div>
 
             <h3 className="text-xl font-bold mt-6 mb-3 text-white">Tool Groups</h3>
             <p className="mb-4">
-              Groups are at the core of mcpsx's efficiency strategy. They allow you to create collections of mcpsx tools 
+              Groups are at the core of mcpz's efficiency strategy. They allow you to create collections of mcpz tools 
               that can be used together. This is particularly valuable for organizing related tools by project type, 
               technology stack, or specific workflows—while significantly reducing token usage when interacting with AI models.
             </p>
@@ -321,14 +321,14 @@ mcpsx groups add "favorites" --tools="openai,anthropic"</pre>
             <div className="rounded-lg border border-gray-800 bg-gray-950 overflow-hidden mb-6">
               <div className="p-4 font-mono text-sm overflow-x-auto">
                 <pre className="text-emerald-400"># Create groups for different use cases
-mcpsx groups add "ai-models" --tools="openai,anthropic,llama"
-mcpsx groups add "data-tools" --tools="pandas,numpy,sklearn"
+mcpz groups add "ai-models" --tools="openai,anthropic,llama"
+mcpz groups add "data-tools" --tools="pandas,numpy,sklearn"
 
 # Use a specific group
-mcpsx run --tools="ai-models"
+mcpz run --tools="ai-models"
 
 # Combine groups with individual tools
-mcpsx run --tools="ai-models,custom-tool,predict"</pre>
+mcpz run --tools="ai-models,custom-tool,predict"</pre>
               </div>
             </div>
 
@@ -338,7 +338,7 @@ mcpsx run --tools="ai-models,custom-tool,predict"</pre>
             </p>
             <div className="rounded-lg border border-gray-800 bg-gray-950 overflow-hidden mb-4">
               <div className="p-4 font-mono text-sm overflow-x-auto">
-                <pre className="text-emerald-400">mcpsx add &lt;n&gt; [options]</pre>
+                <pre className="text-emerald-400">mcpz add &lt;n&gt; [options]</pre>
               </div>
             </div>
             <p className="mb-2">Options:</p>
@@ -350,7 +350,7 @@ mcpsx run --tools="ai-models,custom-tool,predict"</pre>
             <p className="mb-2">Example:</p>
             <div className="rounded-lg border border-gray-800 bg-gray-950 overflow-hidden mb-6">
               <div className="p-4 font-mono text-sm overflow-x-auto">
-                <pre className="text-emerald-400">mcpsx add "GPT Server" --command "node" --args "server.js,--port=3000" --env "API_KEY=abc123,DEBUG=true"</pre>
+                <pre className="text-emerald-400">mcpz add "GPT Server" --command "node" --args "server.js,--port=3000" --env "API_KEY=abc123,DEBUG=true"</pre>
               </div>
             </div>
 
@@ -360,7 +360,7 @@ mcpsx run --tools="ai-models,custom-tool,predict"</pre>
             </p>
             <div className="rounded-lg border border-gray-800 bg-gray-950 overflow-hidden mb-4">
               <div className="p-4 font-mono text-sm overflow-x-auto">
-                <pre className="text-emerald-400">mcpsx remove &lt;n&gt;</pre>
+                <pre className="text-emerald-400">mcpz remove &lt;n&gt;</pre>
               </div>
             </div>
 
@@ -370,7 +370,7 @@ mcpsx run --tools="ai-models,custom-tool,predict"</pre>
             </p>
             <div className="rounded-lg border border-gray-800 bg-gray-950 overflow-hidden mb-4">
               <div className="p-4 font-mono text-sm overflow-x-auto">
-                <pre className="text-emerald-400">mcpsx list</pre>
+                <pre className="text-emerald-400">mcpz list</pre>
               </div>
             </div>
 
@@ -380,7 +380,7 @@ mcpsx run --tools="ai-models,custom-tool,predict"</pre>
             </p>
             <div className="rounded-lg border border-gray-800 bg-gray-950 overflow-hidden mb-4">
               <div className="p-4 font-mono text-sm overflow-x-auto">
-                <pre className="text-emerald-400">mcpsx use &lt;n&gt;</pre>
+                <pre className="text-emerald-400">mcpz use &lt;n&gt;</pre>
               </div>
             </div>
 
@@ -390,19 +390,19 @@ mcpsx run --tools="ai-models,custom-tool,predict"</pre>
             </p>
             <div className="rounded-lg border border-gray-800 bg-gray-950 overflow-hidden mb-4">
               <div className="p-4 font-mono text-sm overflow-x-auto">
-                <pre className="text-emerald-400">mcpsx help</pre>
+                <pre className="text-emerald-400">mcpz help</pre>
               </div>
             </div>
 
             <h2 className="text-2xl font-bold mt-8 mb-4 text-emerald-400">Configuration</h2>
             <p className="mb-6">
-              mcpsx CLI uses the configuration file located at <code className="bg-gray-800 px-1 rounded">~/.mcpsx/config.json</code>. 
+              mcpz CLI uses the configuration file located at <code className="bg-gray-800 px-1 rounded">~/.mcpz/config.json</code>. 
               This file is shared with the MCP VSCode extension, ensuring consistent configuration across your entire development environment.
             </p>
 
             <h2 className="text-2xl font-bold mt-8 mb-4 text-emerald-400">Token Optimization Strategy</h2>
             <p className="mb-6">
-              One of mcpsx's most powerful features is its ability to optimize token usage when interacting with AI models. 
+              One of mcpz's most powerful features is its ability to optimize token usage when interacting with AI models. 
               By creating logical groups of tools, you can:
             </p>
             <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -414,7 +414,7 @@ mcpsx run --tools="ai-models,custom-tool,predict"</pre>
             </ul>
             <p className="mb-6">
               This approach is particularly valuable when working with large numbers of tools across different domains. 
-              Instead of overwhelming your models with all available tools, mcpsx lets you provide just the tools needed 
+              Instead of overwhelming your models with all available tools, mcpz lets you provide just the tools needed 
               for the current context, resulting in more efficient and cost-effective AI interactions.
             </p>
           </div>
@@ -426,7 +426,7 @@ mcpsx run --tools="ai-models,custom-tool,predict"</pre>
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-gray-500">© {new Date().getFullYear()} Synthience.ai. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="https://github.com/jasonkneen/mcpsx" className="text-gray-400 hover:text-emerald-400">
+              <Link href="https://github.com/jasonkneen/mcpz" className="text-gray-400 hover:text-emerald-400">
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path
                     fillRule="evenodd"

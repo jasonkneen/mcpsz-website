@@ -1,6 +1,6 @@
 # Feature Flags Configuration
 
-This directory contains configuration files for feature flags in the mcpsx website.
+This directory contains configuration files for feature flags in the mcpz website.
 
 ## Overview
 

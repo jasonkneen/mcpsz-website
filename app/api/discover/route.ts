@@ -87,7 +87,7 @@ const repositories: Record<string, RepositoryItem[]> = {
       id: 'mcp-server-template',
       name: 'MCP Server Template',
       description: 'A starter template for creating MCP servers with TypeScript.',
-      author: 'mcpsx-team',
+      author: 'mcpz-team',
       type: 'MCP',
       technologies: ['TypeScript', 'Node.js', 'MCP'],
       activity: {
@@ -95,13 +95,13 @@ const repositories: Record<string, RepositoryItem[]> = {
         commits: 47,
         lastUpdated: '2025-02-28'
       },
-      url: 'https://github.com/mcpsx-team/mcp-server-template'
+      url: 'https://github.com/mcpz-team/mcp-server-template'
     },
     {
       id: 'mcp-client-sdk',
       name: 'MCP Client SDK',
       description: 'A client SDK for interacting with MCP servers.',
-      author: 'mcpsx-team',
+      author: 'mcpz-team',
       type: 'MCP',
       technologies: ['TypeScript', 'Node.js', 'MCP'],
       activity: {
@@ -109,7 +109,7 @@ const repositories: Record<string, RepositoryItem[]> = {
         commits: 73,
         lastUpdated: '2025-03-08'
       },
-      url: 'https://github.com/mcpsx-team/mcp-client-sdk'
+      url: 'https://github.com/mcpz-team/mcp-client-sdk'
     },
     {
       id: 'slop-weather-api',

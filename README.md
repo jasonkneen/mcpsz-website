@@ -1,4 +1,4 @@
-# mcpsx-Web
+# mcpz-Web
 
 This is a Next.js project built with React 19 and Tailwind CSS, featuring a comprehensive UI component library based on Radix UI.
 
@@ -30,7 +30,7 @@ This project is configured for automatic deployment to GitHub Pages:
 
 1. Push your changes to the main branch
 2. GitHub Actions will automatically build and deploy the site
-3. Your site will be available at https://yourusername.github.io/mcpsx-web/
+3. Your site will be available at https://yourusername.github.io/mcpz-web/
 
 ### Vercel (Dynamic)
 

@@ -181,7 +181,7 @@ const roadmapItems: TimelineItem[] = [
   {
     id: 'v1.0',
     title: 'Initial Release',
-    description: 'First public release of mcpsx CLI',
+    description: 'First public release of mcpz CLI',
     date: '2025-01-15',
     status: 'past',
     features: [

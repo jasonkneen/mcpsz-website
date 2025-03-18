@@ -11,7 +11,7 @@ export default function Pricing() {
         <div className="flex items-center space-x-2">
           <Terminal className="h-6 w-6 text-emerald-400" />
           <div className="flex items-center">
-            <span className="text-xl font-bold">mcpsx</span>
+            <span className="text-xl font-bold">mcpz</span>
             <div className="ml-3 flex items-center">
              {/*  <div className="bg-gradient-to-r from-emerald-600 to-emerald-400 text-white text-xs font-bold px-2 py-1 rounded-full flex items-center shadow-lg">
                 <svg className="w-3 h-3 mr-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -59,14 +59,14 @@ export default function Pricing() {
               </li>
             )}
             <li>
-              <Link href="https://github.com/jasonkneen/mcpsx/discussions/" className="hover:text-emerald-400 transition-colors">
+              <Link href="https://github.com/jasonkneen/mcpz/discussions/" className="hover:text-emerald-400 transition-colors">
                 Community
               </Link>
             </li>
           </ul>
         </nav>
         <div className="flex items-center space-x-4">
-          <Link href="https://github.com/jasonkneen/mcpsx" target="_blank" rel="noopener noreferrer">
+          <Link href="https://github.com/jasonkneen/mcpz" target="_blank" rel="noopener noreferrer">
             <Github className="h-5 w-5 text-gray-400 hover:text-white transition-colors" />
           </Link>
           <Button
@@ -204,12 +204,12 @@ export default function Pricing() {
                     answer="Yes, when the PRO plan launches, you'll get a full-featured 7-day trial to experience all PRO capabilities. A credit card is required for the trial, but you won't be charged until the trial ends."
                   />
                   <FaqItem 
-                    question="How much can I save on token usage with mcpsx?" 
-                    answer="Our users typically report 50-70% reduction in token usage after implementing mcpsx's intelligent grouping and dynamic provisioning. This translates directly to lower API costs and faster response times."
+                    question="How much can I save on token usage with mcpz?" 
+                    answer="Our users typically report 50-70% reduction in token usage after implementing mcpz's intelligent grouping and dynamic provisioning. This translates directly to lower API costs and faster response times."
                   />
                   <FaqItem 
-                    question="Can I use mcpsx in my existing projects?" 
-                    answer="Absolutely! mcpsx integrates seamlessly with your existing AI development workflow. Whether you're using Claude, GPT, or other AI models, mcpsx optimizes your MCP tool management without disrupting your current setup."
+                    question="Can I use mcpz in my existing projects?" 
+                    answer="Absolutely! mcpz integrates seamlessly with your existing AI development workflow. Whether you're using Claude, GPT, or other AI models, mcpz optimizes your MCP tool management without disrupting your current setup."
                   />
                 </div>
               </div>
@@ -224,7 +224,7 @@ export default function Pricing() {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <Terminal className="h-5 w-5 text-emerald-400" />
-                <span className="text-lg font-bold">mcpsx</span>
+                <span className="text-lg font-bold">mcpz</span>
               </div>
               <p className="text-gray-400 text-sm">A modern Model Context Protocol management tool designed to optimize AI interactions and reduce token usage.</p>
             </div>
@@ -323,7 +323,7 @@ export default function Pricing() {
           <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-gray-500">© {new Date().getFullYear()} Synthience.ai. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="https://github.com/jasonkneen/mcpsx" className="text-gray-400 hover:text-emerald-400">
+              <Link href="https://github.com/jasonkneen/mcpz" className="text-gray-400 hover:text-emerald-400">
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </Link>

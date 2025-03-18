@@ -1,20 +1,20 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'mcpsx Documentation | Model Context Protocol Tools',
-  description: 'Comprehensive documentation for the mcpsx CLI tool, including commands, features, and token optimization strategies for Model Context Protocol (MCP).',
-  keywords: 'mcpsx documentation, MCP documentation, CLI documentation, token optimization, Model Context Protocol, developer tools documentation',
+  title: 'mcpz Documentation | Model Context Protocol Tools',
+  description: 'Comprehensive documentation for the mcpz CLI tool, including commands, features, and token optimization strategies for Model Context Protocol (MCP).',
+  keywords: 'mcpz documentation, MCP documentation, CLI documentation, token optimization, Model Context Protocol, developer tools documentation',
   openGraph: {
-    title: 'mcpsx Documentation | Model Context Protocol Tools',
-    description: 'Comprehensive documentation for the mcpsx CLI tool, including commands, features, and token optimization strategies for Model Context Protocol (MCP).',
-    url: 'https://mcpsx.run/docs',
-    siteName: 'mcpsx CLI',
+    title: 'mcpz Documentation | Model Context Protocol Tools',
+    description: 'Comprehensive documentation for the mcpz CLI tool, including commands, features, and token optimization strategies for Model Context Protocol (MCP).',
+    url: 'https://mcpz.run/docs',
+    siteName: 'mcpz CLI',
     images: [
       {
-        url: 'https://mcpsx.run/docs-og-image.jpg',
+        url: 'https://mcpz.run/docs-og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'mcpsx Documentation',
+        alt: 'mcpz Documentation',
       },
     ],
     locale: 'en_US',
@@ -22,12 +22,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'mcpsx Documentation | Model Context Protocol Tools',
-    description: 'Comprehensive documentation for the mcpsx CLI tool, including commands, features, and token optimization strategies for Model Context Protocol (MCP).',
-    images: ['https://mcpsx.run/docs-og-image.jpg'],
+    title: 'mcpz Documentation | Model Context Protocol Tools',
+    description: 'Comprehensive documentation for the mcpz CLI tool, including commands, features, and token optimization strategies for Model Context Protocol (MCP).',
+    images: ['https://mcpz.run/docs-og-image.jpg'],
   },
   alternates: {
-    canonical: 'https://mcpsx.run/docs',
+    canonical: 'https://mcpz.run/docs',
   },
 }
 

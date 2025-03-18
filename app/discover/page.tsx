@@ -77,7 +77,7 @@ const sampleRepositories: RepositoryItem[] = [
     id: 'mcp-server-template',
     name: 'MCP Server Template',
     description: 'A starter template for creating MCP servers with TypeScript.',
-    author: 'mcpsx-team',
+    author: 'mcpz-team',
     type: 'MCP',
     technologies: ['TypeScript', 'Node.js', 'MCP'],
     activity: {
@@ -85,7 +85,7 @@ const sampleRepositories: RepositoryItem[] = [
       commits: 47,
       lastUpdated: '2025-02-28'
     },
-    url: 'https://github.com/mcpsx-team/mcp-server-template'
+    url: 'https://github.com/mcpz-team/mcp-server-template'
   },
   {
     id: 'slop-weather-api',
@@ -225,7 +225,7 @@ export default function DiscoverPage() {
       <header className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center space-x-2">
           <Terminal className="h-6 w-6 text-emerald-400" />
-          <span className="text-xl font-bold">mcpsx</span>
+          <span className="text-xl font-bold">mcpz</span>
         </div>
         <nav className="hidden md:block">
           <ul className="flex space-x-8">
@@ -271,14 +271,14 @@ export default function DiscoverPage() {
               </li>
             )}
             <li>
-              <Link href="https://github.com/jasonkneen/mcpsx/discussions/" className="hover:text-emerald-400 transition-colors">
+              <Link href="https://github.com/jasonkneen/mcpz/discussions/" className="hover:text-emerald-400 transition-colors">
                 Community
               </Link>
             </li>
           </ul>
         </nav>
         <div className="flex items-center space-x-4">
-          <Link href="https://github.com/jasonkneen/mcpsx" target="_blank" rel="noopener noreferrer">
+          <Link href="https://github.com/jasonkneen/mcpz" target="_blank" rel="noopener noreferrer">
             <Github className="h-5 w-5 text-gray-400 hover:text-white transition-colors" />
           </Link>
           <Button
@@ -486,13 +486,13 @@ export default function DiscoverPage() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
               <Terminal className="h-5 w-5 text-emerald-400" />
-              <span className="font-bold">mcpsx</span>
+              <span className="font-bold">mcpz</span>
             </div>
             <div>
               <p className="text-sm text-gray-500">© {new Date().getFullYear()} CyberFish Ltd. All rights reserved.</p>
             </div>
             <div className="flex space-x-4 mt-4 md:mt-0">
-              <Link href="https://github.com/jasonkneen/mcpsx" className="text-gray-400 hover:text-emerald-400">
+              <Link href="https://github.com/jasonkneen/mcpz" className="text-gray-400 hover:text-emerald-400">
                 <Github className="h-5 w-5" />
               </Link>
             </div>
