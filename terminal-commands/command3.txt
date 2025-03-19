@@ -1,4 +1,4 @@
-$ mcpsx create-group react-project --smart
+$ mcpz create-group react-project --smart
 🔍 Analyzing project structure...
 ✓ Detected React/Next.js project with TypeScript
 🧠 Recommending optimal tool selection...
@@ -13,7 +13,7 @@ $ mcpsx create-group react-project --smart
 📊 Token usage optimization: 71% reduction compared to sending all tools
 ✓ Group 'react-project' created with 11 tools
 
-$ mcpsx list-groups --details
+$ mcpz list-groups --details
 ┌───────────────────────────────────────────────────────────────────┐
 │ 📦 Available Groups                                               │
 ├───────────────────────────────────────────────────────────────────┤
@@ -25,8 +25,8 @@ $ mcpsx list-groups --details
 │ react-project    │ React tools (11)    │ React/Next.js optimized  │
 └───────────────────────────────────────────────────────────────────┘
 
-$ mcpsx run --group react-project
-✓ Starting mcpsx with 'react-project' group (11 tools)
+$ mcpz run --group react-project
+✓ Starting mcpz with 'react-project' group (11 tools)
 ✓ Connected to all required MCP servers
 ✓ Server started successfully on stdio
 ✨ Ready! Using optimized toolset for React development

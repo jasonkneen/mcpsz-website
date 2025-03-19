@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://mcpsx.run/sitemap.xml
+Sitemap: https://mcpz.tools/sitemap.xml

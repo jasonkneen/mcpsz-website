@@ -1,4 +1,4 @@
-$ mcpsx run
+$ mcpz run
 🔍 Scanning environment...
 ✓ Found 5 MCP servers in settings
 ✓ Connected to neural-memory (9 tools)
