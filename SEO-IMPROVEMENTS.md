@@ -1,6 +1,6 @@
-# SEO Improvements for mcpz.run
+# SEO Improvements for mcpz.tools
 
-This document outlines the SEO improvements implemented for the mcpz.run website.
+This document outlines the SEO improvements implemented for the mcpz.tools website.
 
 ## Meta Tags and Metadata
 

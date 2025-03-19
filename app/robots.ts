@@ -12,6 +12,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://mcpz.run/sitemap.xml',
+    sitemap: 'https://mcpz.tools/sitemap.xml',
   }
 }

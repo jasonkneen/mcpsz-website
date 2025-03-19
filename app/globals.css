@@ -191,7 +191,20 @@
   /* Define Honk font class for the logo */
   .honk {
     font-family: 'Honk', cursive;
-    color: white;
+    color:'#0A9669';
+    font-variation-settings: "MORF" 15, "SHLN" 0;
+  }
+
+  .mcpz-text {
+    /* Use your desired fill color or gradient */
+    /* background: rgb(109, 182, 255); */
+    /* Clip the background to the text shape */
+    -webkit-background-clip: text;
+    background-clip: text;
+  
+    /* Make the text itself transparent so the clipped background is visible */
+    -webkit-text-fill-color: transparent;
+    color: transparent;
   }
 
   .honk-metallic {
@@ -201,28 +214,29 @@
     transition-property: opacity, transform;
     font-family: "Honk";
     font-weight: 400;
-    font-variant-numeric: 3;
+    font-feature-settings:blwf;
     font-style: normal;
     
-    font-variation-settings: "MORF" 15, "SHLN" 50;
+    font-variation-settings: "MORF" 15, "SHLN" 0;
     
-    opacity: 0.9;
+    opacity: 1;
     line-height: initial;
     transition-duration: 350ms;
     
     /* Metallic gradient effect */
-    background: linear-gradient(to bottom, 
-      #f8d866 0%,     /* Light gold */
-      #e7a44b 20%,    /* Gold */
+    background: linear-gradient(to bottom,
+      #66f897 0%,     /* Light gold */
+      #ffffff 20%,    /* Gold */
       #d97b65 40%,    /* Copper */
       #c45d87 60%,    /* Rose/pink */
       #a9548a 80%,    /* Purple/magenta */
-      #9a5098 100%    /* Deep purple */
+      #7c509a 100%    /* Deep purple */
     );
     color: transparent;
-    clip: text;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.0), 0 0 0 rgba(255,255,255,0.3);
+    -webkit-background-clip: text;
+    background-clip: text;
     
-    -webkit-text-stroke: 0.2px rgba(255,0,0,0);
+    /* Add slight text stroke for better definition */
+    
   }
 }

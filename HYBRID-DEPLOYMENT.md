@@ -77,12 +77,12 @@ NEXT_PUBLIC_FEATURE_DISCOVER=true
 
 ### GitHub Pages
 
-- Main site: `https://mcpz.run`
-- Docs: `https://mcpz.run/docs`
-- Pricing: `https://mcpz.run/pricing`
-- Roadmap: `https://mcpz.run/roadmap`
-- Blog: `https://news.mcpz.run` (subdomain pointing to Vercel)
-- Discover: `https://discover.mcpz.run` (subdomain pointing to Vercel)
+- Main site: `https://mcpz.tools`
+- Docs: `https://mcpz.tools/docs`
+- Pricing: `https://mcpz.tools/pricing`
+- Roadmap: `https://mcpz.tools/roadmap`
+- Blog: `https://news.mcpz.tools` (subdomain pointing to Vercel)
+- Discover: `https://discover.mcpz.tools` (subdomain pointing to Vercel)
 
 ### Vercel
 
@@ -122,7 +122,7 @@ npm run dev
 
 To set up the subdomains:
 
-1. Configure DNS for `discover.mcpz.run` and `news.mcpz.run` to point to the Vercel deployment
+1. Configure DNS for `discover.mcpz.tools` and `news.mcpz.tools` to point to the Vercel deployment
 2. Add these domains in the Vercel project settings
 3. Verify the domains in Vercel
 

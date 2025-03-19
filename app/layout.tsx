@@ -37,11 +37,11 @@ export const metadata: Metadata = {
   title: 'mcpz | Model Context Protocol Tools',
   description: 'A powerful CLI tool for managing Model Context Protocol (MCP), creating logical groups of tools, and optimizing token usage when interacting with AI models.',
   generator: 'Next.js',
-  metadataBase: new URL('https://mcpz.run'),
+  metadataBase: new URL('https://mcpz.tools'),
   keywords: 'MCP, Model Context Protocol, CLI, tools, AI models, token optimization, developer tools',
-  authors: [{ name: 'mcpsx Team' }],
-  creator: 'mcpsx',
-  publisher: 'mcpsx',
+  authors: [{ name: 'mcpz Team' }],
+  creator: 'mcpz',
+  publisher: 'mcpz',
   formatDetection: {
     email: false,
     address: false,
@@ -50,11 +50,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'mcpz | Model Context Protocol Tools',
     description: 'A powerful CLI tool for managing Model Context Protocol (MCP), creating logical groups of tools, and optimizing token usage when interacting with AI models.',
-    url: 'https://mcpz.run',
+    url: 'https://mcpz.tools',
     siteName: 'mcpz',
     images: [
       {
-        url: 'https://mcpz.run/og-image.jpg',
+        url: 'https://mcpz.tools/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'mcpz - Model Context Protocol Tools',
@@ -67,8 +67,8 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'mcpz | Model Context Protocol Tools',
     description: 'A powerful CLI tool for managing Model Context Protocol (MCP), creating logical groups of tools, and optimizing token usage when interacting with AI models.',
-    images: ['https://mcpz.run/og-image.jpg'],
-    creator: '@mcpsx',
+    images: ['https://mcpz.tools/og-image.jpg'],
+    creator: '@mcpz',
   },
   robots: {
     index: true,
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://mcpz.run',
+    canonical: 'https://mcpz.tools',
   },
   manifest: '/manifest.json',
   icons: {

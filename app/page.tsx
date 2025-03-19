@@ -24,42 +24,43 @@ export default function Home() {
     <div className="flex min-h-screen flex-col text-white">
       {/* Structured Data for SEO */}
       <SoftwareApplicationJsonLd
-        name="mcpsx CLI"
+        name="mcpz CLI"
         description="A powerful CLI tool for managing Model Context Protocol (MCP), creating logical groups of tools, and optimizing token usage when interacting with AI models."
         applicationCategory="DeveloperApplication"
         operatingSystem="Windows, macOS, Linux, Web, Cross-platform"
-        url="https://mcpz.run"
+        url="https://mcpz.tools"
         offers={{
           price: "9",
           priceCurrency: "USD"
         }}
       />
       <OrganizationJsonLd
-        name="mcpsx"
-        url="https://mcpz.run"
-        logo="https://mcpz.run/logo.png"
-        sameAs={["https://github.com/jasonkneen/mcpsx"]}
+        name="mcpz"
+        url="https://mcpz.tools"
+        logo="https://mcpz.tools/logo.png"
+        sameAs={["https://github.com/jasonkneen/mcpz"]}
       />
       <FAQPageJsonLd
         questions={[
           {
-            question: "What is mcpsx CLI?",
-            answer: "mcpsx CLI is a powerful command line interface for managing Model Context Protocol (MCP), creating logical groups of tools, and optimizing token usage when interacting with AI models."
+            question: "What is mcpz CLI?",
+            answer: "mcpz CLI is a powerful command line interface for managing Model Context Protocol (MCP), creating logical groups of tools, and optimizing token usage when interacting with AI models."
           },
           {
-            question: "How does mcpsx optimize token usage?",
-            answer: "By categorizing your tools into purpose-specific groups, mcpsx significantly reduces token usage when communicating with AI models. Instead of sending all available tools to the system instruction, you can selectively include only the relevant tools for a specific task or context."
+            question: "How does mcpz optimize token usage?",
+            answer: "By categorizing your tools into purpose-specific groups, mcpz significantly reduces token usage when communicating with AI models. Instead of sending all available tools to the system instruction, you can selectively include only the relevant tools for a specific task or context."
           },
           {
-            question: "What operating systems does mcpsx support?",
-            answer: "mcpsx is available for macOS, Linux, and Windows."
+            question: "What operating systems does mcpz support?",
+            answer: "mcpz is available for macOS, Linux, and Windows."
           }
         ]}
       />
       <header className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center space-x-2">
-          <Terminal className="h-6 w-6 text-emerald-400" />
-          <span className="text-6xl font-bold honk-metallic text-white">mcpz</span>
+          <Terminal className="text-emerald-500" />
+          <span className="text-7xl font-bold honk text-white">mcpz</span>
+          <span className="text-7xl font-bold honk text-emerald-500">tools</span>
         </div>
         <nav className="hidden md:block">
           <ul className="flex space-x-8">
@@ -108,14 +109,14 @@ export default function Home() {
               </HybridLink>
               </li>
             <li>
-              <Link href="https://github.com/jasonkneen/mcpsx/discussions/" className="hover:text-emerald-400 transition-colors">
+              <Link href="https://github.com/jasonkneen/mcpz/discussions/" className="hover:text-emerald-400 transition-colors">
                 Community
               </Link>
             </li>
           </ul>
         </nav>
         <div className="flex items-center space-x-4">
-          <Link href="https://github.com/jasonkneen/mcpsx" target="_blank" rel="noopener noreferrer">
+          <Link href="https://github.com/jasonkneen/mcpz" target="_blank" rel="noopener noreferrer">
             <Github className="h-5 w-5 text-gray-400 hover:text-white transition-colors" />
           </Link>
           <Button
@@ -192,7 +193,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-3 mt-auto">
                 {/* Install CLI Button */}
                 <div className="w-full sm:w-auto">
-                  <Link href="https://www.npmjs.com/package/mcpsx" target="_blank" rel="noopener noreferrer" className="block w-full">
+                  <Link href="https://www.npmjs.com/package/mcpz" target="_blank" rel="noopener noreferrer" className="block w-full">
                     <Button 
                       size="lg" 
                       className="bg-emerald-600 hover:bg-emerald-700 text-white w-full"
@@ -204,7 +205,7 @@ export default function Home() {
 
                 {/* Extension Button */}
                 <div className="w-full sm:w-auto">
-                  <Link href="https://marketplace.visualstudio.com/items?itemName=jasonkneen.mcpsx-run" target="_blank" rel="noopener noreferrer" className="block w-full">                  
+                  <Link href="https://marketplace.visualstudio.com/items?itemName=jasonkneen.mcpz-run" target="_blank" rel="noopener noreferrer" className="block w-full">                  
                     <Button
                       size="lg"
                       variant="outline"
@@ -253,7 +254,7 @@ export default function Home() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-glow">Powerful Features for MCP Servers</h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
-                mcpsx comes packed with everything you need to streamline your Model Context Protocol workflow, intelligently organize your tools, and optimize model interactions.
+                mcpz comes packed with everything you need to streamline your Model Context Protocol workflow, intelligently organize your tools, and optimize model interactions.
               </p>
             </div>
 
@@ -306,7 +307,7 @@ export default function Home() {
                     <span className="text-sm font-medium">Using npm</span>
                   </div>
                   <div className="p-4 font-mono text-sm overflow-x-auto">
-                    <pre className="text-emerald-400">npm install -g mcpsx</pre>
+                    <pre className="text-emerald-400">npm install -g mcpz</pre>
                   </div>
                 </div>
                 
@@ -319,7 +320,7 @@ export default function Home() {
                     <span className="text-sm font-medium">Using npx (installed or not)</span>
                   </div>
                   <div className="p-4 font-mono text-sm overflow-x-auto">
-                    <pre className="text-emerald-400">npx -y mcpsx run</pre>
+                    <pre className="text-emerald-400">npx -y mcpz run</pre>
                   </div>
                 </div>
                 
@@ -344,7 +345,7 @@ export default function Home() {
 
             <div className="grid gap-8 md:grid-cols-3">
               <TestimonialCard
-                quote="mcpsx is a revolution in MCP usage! Its dynamic token optimization and chat interface are a must-have for any developer."
+                quote="mcpz is a revolution in MCP usage! Its dynamic token optimization and chat interface are a must-have for any developer."
                 author="@FutbolmeAI"
                 role="AI Developer"
               />
@@ -371,7 +372,7 @@ export default function Home() {
                 Join thousands of AI developers who have seen their MCP workflows transformed, reducing tokens, optimising context and saving money.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Link href="https://www.npmjs.com/package/mcpsx" target="_blank" rel="noopener noreferrer">
+                <Link href="https://www.npmjs.com/package/mcpz" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
                   Download Now
                   </Button>
@@ -381,7 +382,7 @@ export default function Home() {
                     View Documentation
                   </Button>
                 </Link>
-                <Link href="https://github.com/jasonkneen/mcpsx" target="_blank" rel="noopener noreferrer">
+                <Link href="https://github.com/jasonkneen/mcpz" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" variant="outline" className="border-gray-700 bg-transparent text-white hover:bg-gray-900">
                     Star on GitHub
                   </Button>
@@ -396,9 +397,8 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid gap-8 md:grid-cols-4">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <Terminal className="h-5 w-5 text-emerald-400" />
-                <span className="text-lg font-bold honk text-white">mcpz</span>
+              <div className="flex items-center space-x-2 mb-2">
+                <Terminal className="mt-2 h-5 w-5 text-white" /> <span className="font-bold text-2xl" >mcpz run</span>
               </div>
               <p className="text-gray-400 text-sm">The intelligent Model Context Protocol management platform that optimizes AI interactions, reduces token usage by up to 70%, and transforms how developers work with AI tools.</p>
             </div>
@@ -460,7 +460,7 @@ export default function Home() {
                 </li>
                 {/* Support link */}
                 <li>
-                  <Link href="https://github.com/jasonkneen/mcpsx/issues" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400">
+                  <Link href="https://github.com/jasonkneen/mcpz/issues" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400">
                     Support
                   </Link>
                 </li>
@@ -496,7 +496,7 @@ export default function Home() {
           <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-gray-500">© {new Date().getFullYear()} Synthience.ai. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="https://github.com/jasonkneen/mcpsx" className="text-gray-400 hover:text-emerald-400">
+              <Link href="https://github.com/jasonkneen/mcpz" className="text-gray-400 hover:text-emerald-400">
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </Link>
