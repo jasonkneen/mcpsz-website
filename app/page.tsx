@@ -89,7 +89,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-3 mt-auto">
                 {/* Install CLI Button */}
                 <div className="w-full sm:w-auto">
-                  <Link href="https://www.npmjs.com/package/mcpz" target="_blank" rel="noopener noreferrer" className="block w-full">
+                  <Link href="https://www.npmjs.com/package/@mcpz/cli" target="_blank" rel="noopener noreferrer" className="block w-full">
                     <Button 
                       size="lg" 
                       className="bg-emerald-600 hover:bg-emerald-700 text-white w-full text-lg"
@@ -101,7 +101,7 @@ export default function Home() {
 
                 {/* Extension Button */}
                 <div className="w-full sm:w-auto">
-                  <Link href="https://marketplace.visualstudio.com/items?itemName=jasonkneen.mcpz-run" target="_blank" rel="noopener noreferrer" className="block w-full">                  
+                  <Link href="https://marketplace.visualstudio.com/items?itemName=jasonkneen.mcpsx-run" target="_blank" rel="noopener noreferrer" className="block w-full">                  
                     <Button
                       size="lg"
                       variant="outline"
@@ -134,7 +134,7 @@ export default function Home() {
                 autoRotateInterval={5000}
                 initialAutoRotate={true}
                 showHeader={false}
-                  
+
                 className="border-t border-gray-800"
               />
             </div>
