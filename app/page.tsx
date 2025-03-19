@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Terminal, Zap, Clock, Code2, Github } from "lucide-react"
 import { ReactNode, useEffect, useState } from "react"
@@ -59,8 +60,8 @@ export default function Home() {
       <header className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center space-x-2">
           <Terminal className="text-emerald-500" />
-          <span className="text-7xl font-bold honk text-white">mcpz</span>
-          <span className="text-7xl font-bold honk text-emerald-500">tools</span>
+          <span className="text-3xl font-bold honk text-white">mcpz</span>
+          <span className="text-3xl font-bold honk text-emerald-500">it!</span>
         </div>
         <nav className="hidden md:block">
           <ul className="flex space-x-8">
@@ -135,6 +136,7 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-2 md:gap-12 items-center">
             {/* Flex container for the left side with proper alignment */}
             <div className="flex flex-col h-[400px] md:h-[450px] justify-between">
+              
               <div className="space-y-6 flex-grow">
                 {/* Title section */}
                 <div className="mb-4">
@@ -145,9 +147,21 @@ export default function Home() {
                         : 'opacity-0 hidden'
                     }`}
                   >
-                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                      Unlock the Full Power of <span className="text-emerald-400 block md:inline">the Model Context Protocol</span>
+                    
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+                      Unlock the full power of your AI Coding and <span className="text-emerald-400 block md:inline">MCPs</span>
                     </h1>
+                    {/* mcpz.it Logo */}
+                  <div className="mb-7 mt-8">
+                    <Image 
+                      src="/logos/mcpzit.png" 
+                      alt="mcpz.it" 
+                      width={500} 
+                      height={180} 
+                      className="object-contain" 
+                      priority
+                    />
+                  </div>
                   </div>
                   <div 
                     className={`transition-all duration-700 ease-in-out transform ${
@@ -156,10 +170,21 @@ export default function Home() {
                         : 'opacity-0 hidden'
                     }`}
                   >
-                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                      Supercharge <span className="text-emerald-400 block md:inline">Copilot</span> with MCP Tools
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+                      Supercharge <span className="text-emerald-400 block md:inline">Copilot</span> and add the power of MCPs
                     </h1>
+                    <div className="mb-7 mt-8">
+                <Image 
+                  src="/logos/mcpzit.png" 
+                  alt="mcpz.it" 
+                  width={500} 
+                  height={180} 
+                  className="object-contain" 
+                  priority
+                />
+              </div>
                   </div>
+                  
                 </div>
                 
                 {/* Description section */}
@@ -397,9 +422,11 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid gap-8 md:grid-cols-4">
             <div>
-              <div className="flex items-center space-x-2 mb-2">
-                <Terminal className="mt-2 h-5 w-5 text-white" /> <span className="font-bold text-2xl" >mcpz run</span>
-              </div>
+            <div className="flex items-center space-x-2">
+          <Terminal className="text-emerald-500" />
+          <span className="text-3xl font-bold honk text-white">mcpz</span>
+          <span className="text-3xl font-bold honk text-emerald-500">it!</span>
+        </div>
               <p className="text-gray-400 text-sm">The intelligent Model Context Protocol management platform that optimizes AI interactions, reduces token usage by up to 70%, and transforms how developers work with AI tools.</p>
             </div>
 
