@@ -29,8 +29,8 @@ export default function Home() {
       />
       <OrganizationJsonLd
         name="mcpz"
-        url="https://mcpz.tools"
-        logo="https://mcpz.tools/logo.png"
+        url="https://mcpz.it"
+        logo="https://mcpz.it/logo.png"
         sameAs={["https://github.com/jasonkneen/mcpz"]}
       />
       <FAQPageJsonLd
@@ -128,15 +128,13 @@ export default function Home() {
             </div>
             <div className="relative rounded-lg border border-gray-800 bg-gray-950 p-2 shadow-2xl">
               <MediaCarousel 
-                mediaItems={[
-                  { type: 'terminal' }, 
-                  { type: 'image', src: '/vscode1.png', alt: 'VSCode Screenshot 1' }, 
-                  { type: 'terminal' }, 
-                  { type: 'image', src: '/vscode2.png', alt: 'VSCode Screenshot 2' } 
+                mediaItems={[                  
+                  { type: 'terminal' }                
                 ]}
                 autoRotateInterval={5000}
                 initialAutoRotate={true}
-                showHeader={true}
+                showHeader={false}
+                  
                 className="border-t border-gray-800"
               />
             </div>

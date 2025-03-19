@@ -24,7 +24,7 @@ export default function TermsConditions() {
               <div className="prose prose-invert max-w-none space-y-6">
                 <h2 className="text-2xl font-semibold mt-8 mb-4">Introduction</h2>
                 <p className="mb-4">
-                  These Terms and Conditions ("Terms") govern your use of the mcpz website and services (collectively, the "Service") operated by Synthience.ai ("we," "us," or "our"). By accessing or using the Service, you agree to be bound by these Terms. If you disagree with any part of the Terms, you may not access the Service.
+                  These Terms and Conditions ("Terms") govern your use of the mcpz website and services (collectively, the "Service") operated by mcpz.it ("we," "us," or "our"). By accessing or using the Service, you agree to be bound by these Terms. If you disagree with any part of the Terms, you may not access the Service.
                 </p>
                 
                 <h2 className="text-2xl font-semibold mt-8 mb-4">Use License</h2>
@@ -95,7 +95,7 @@ export default function TermsConditions() {
                   If you have any questions about these Terms, please contact us:
                 </p>
                 <ul className="list-disc pl-6 mb-6 space-y-1">
-                  <li>By email: <a href="mailto:hello@Synthience.ai" className="text-emerald-400 hover:text-emerald-300">hello@Synthience.ai</a></li>
+                  <li>By email: <a href="mailto:hello@mcpz.it" className="text-emerald-400 hover:text-emerald-300">hello@mcpz.it</a></li>
                   <li>By visiting our GitHub discussions page: <a href="https://github.com/jasonkneen/mcpz/discussions/" className="text-emerald-400 hover:text-emerald-300">https://github.com/jasonkneen/mcpz/discussions/</a></li>
                 </ul>
               </div>

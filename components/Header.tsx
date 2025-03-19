@@ -19,9 +19,8 @@ export function Header() {
   return (
     <header className="container mx-auto flex h-16 items-center justify-between px-4">
       <div className="flex items-center space-x-2">
-        <Terminal className="text-emerald-500" />
-        <span className="text-3xl font-bold honk text-white">mcpz</span>
-        <span className="text-3xl font-bold honk text-emerald-500">it!</span>
+        <Terminal className="text-white" />
+        <span className="text-3xl font-bold honk text-white">mcpz it!</span>        
       </div>
       <nav className="hidden md:block">
         <ul className="flex space-x-8">

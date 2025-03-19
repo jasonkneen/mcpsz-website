@@ -11,9 +11,8 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-4">
           <div>
             <div className="flex items-center space-x-2">
-              <Terminal className="text-emerald-500" />
-              <span className="text-3xl font-bold honk text-white">mcpz</span>
-              <span className="text-3xl font-bold honk text-emerald-500">it!</span>
+              <Terminal className="text-white" />
+              <span className="text-3xl font-bold honk text-white">mcpz it!</span>              
             </div>
             <p className="text-gray-400 text-sm">The intelligent Model Context Protocol management platform that optimizes AI interactions, reduces token usage by up to 70%, and transforms how developers work with AI tools.</p>
           </div>
@@ -108,7 +107,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-gray-500">© {new Date().getFullYear()} Synthience.ai. All rights reserved.</p>
+          <p className="text-sm text-gray-500">© {new Date().getFullYear()} mcpz.it. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="https://github.com/jasonkneen/mcpz" className="text-gray-400 hover:text-emerald-400">
               <Github className="h-5 w-5" />

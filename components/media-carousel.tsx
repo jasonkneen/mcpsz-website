@@ -14,6 +14,7 @@ interface MediaCarouselProps {
   className?: string;
   mediaItems: MediaItem[];
   showHeader?: boolean;
+  showFooter?: boolean;
   autoRotateInterval?: number;
   initialAutoRotate?: boolean;
   onMediaChange?: (mediaItem: MediaItem, index: number) => void;
@@ -23,6 +24,7 @@ export function MediaCarousel({
   className = '',
   mediaItems,
   showHeader = true,
+  showFooter = false,
   autoRotateInterval = 5000,
   onMediaChange,
   initialAutoRotate = true,
@@ -168,6 +170,7 @@ export function MediaCarousel({
       </div>
       
       {/* Carousel Navigation */}
+      {showHeader && (
       <div className="flex justify-center p-4 bg-gray-950 border-t border-gray-800">
         <div className="flex space-x-2">
           {mediaItems.map((_, index) => (
@@ -193,6 +196,9 @@ export function MediaCarousel({
           {isAutoRotating ? 'Auto-rotate: On' : 'Auto-rotate: Off'}
         </button>
       </div>
+      )}
     </div>
+
+              
   );
 }
