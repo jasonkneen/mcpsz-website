@@ -157,65 +157,10 @@ export default function Roadmap() {
   };
   
   return (
-    <div className="flex min-h-screen flex-col text-white">
-      <header className="container mx-auto flex h-16 items-center justify-between px-4">
-        <div className="flex items-center space-x-2">
-          <Terminal className="h-6 w-6 text-emerald-400" />
-          <span className="text-xl font-bold">mcpz</span>
-        </div>
-        <nav className="hidden md:block">
-          <ul className="flex space-x-8">
-            <li>
-              <Link href="/#features" className="hover:text-emerald-400 transition-colors">
-                Features
-              </Link>
-            </li>
-            <li>
-              <Link href="/#install" className="hover:text-emerald-400 transition-colors">
-                Install
-              </Link>
-            </li>
-            <li>
-              <Link href="/docs/" className="hover:text-emerald-400 transition-colors">
-                Docs
-              </Link>
-            </li>
-            <li>
-              <Link href="/pricing" className="hover:text-emerald-400 transition-colors">
-                Pricing
-              </Link>
-            </li>
-            {features.blog && (
-              <li>
-                <Link href="/blog" className="hover:text-emerald-400 transition-colors">
-                  Blog
-                </Link>
-              </li>
-            )}
-            {features.roadmap && (
-              <li>
-                <Link href="/roadmap" className="text-emerald-400 transition-colors">
-                  Roadmap
-                </Link>
-              </li>
-            )}            
-          </ul>
-        </nav>
-        <div className="flex items-center space-x-4">
-          <Link href="https://github.com/jasonkneen/mcpz" target="_blank" rel="noopener noreferrer">
-            <Github className="h-5 w-5 text-gray-400 hover:text-white transition-colors" />
-          </Link>
-          <Button
-            variant="outline"
-            className="hidden md:flex border-emerald-500 bg-transparent text-emerald-400 hover:bg-emerald-950 hover:text-emerald-300"
-            asChild
-          >
-            <Link href="/#install">Get Started</Link>
-          </Button>
-        </div>
-      </header>
+    <div>
 
-      <main className="flex-1">
+
+
         <div className="container mx-auto px-4 py-8">
           <div className="mb-8">
             <Link href="/" className="inline-flex items-center text-emerald-400 hover:text-emerald-300 transition-colors">
@@ -337,26 +282,7 @@ export default function Roadmap() {
             </div>
           </div>
         </div>
-      </main>
-      
-      <footer className="bg-gray-950 py-8 border-t border-gray-800">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <Terminal className="h-5 w-5 text-emerald-400" />
-              <span className="font-bold">mcpz</span>
-            </div>
-            <div>
-              <p className="text-sm text-gray-500">© {new Date().getFullYear()} CyberFish Ltd. All rights reserved.</p>
-            </div>
-            <div className="flex space-x-4 mt-4 md:mt-0">
-              <Link href="https://github.com/jasonkneen/mcpz" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-emerald-400">
-                <Github className="h-5 w-5" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
+
     </div>
   )
 }

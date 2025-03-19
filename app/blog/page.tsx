@@ -5,63 +5,10 @@ import { features } from "@/config/features"
 
 export default function Blog() {
   return (
-    <div className="flex min-h-screen flex-col text-white">
-      <header className="container mx-auto flex h-16 items-center justify-between px-4">
-        <div className="flex items-center space-x-2">
-          <Terminal className="h-6 w-6 text-emerald-400" />
-          <span className="text-xl font-bold">mcpz</span>
-        </div>
-        <nav className="hidden md:block">
-          <ul className="flex space-x-8">
-            <li>
-              <Link href="/#features" className="hover:text-emerald-400 transition-colors">
-                Features
-              </Link>
-            </li>
-            <li>
-              <Link href="/#install" className="hover:text-emerald-400 transition-colors">
-                Install
-              </Link>
-            </li>
-            <li>
-              <Link href="/docs/" className="hover:text-emerald-400 transition-colors">
-                Docs
-              </Link>
-            </li>
-            <li>
-              <Link href="/pricing" className="hover:text-emerald-400 transition-colors">
-                Pricing
-              </Link>
-            </li>
-            <li>
-              <Link href="/blog" className="text-emerald-400 transition-colors">
-                Blog
-              </Link>
-            </li>
-            {features.roadmap && (
-              <li>
-                <Link href="/roadmap" className="hover:text-emerald-400 transition-colors">
-                  Roadmap
-                </Link>
-              </li>
-            )}
-          </ul>
-        </nav>
-        <div className="flex items-center space-x-4">
-          <Link href="https://github.com/jasonkneen/mcpz" target="_blank" rel="noopener noreferrer">
-            <Github className="h-5 w-5 text-gray-400 hover:text-white transition-colors" />
-          </Link>
-          <Button
-            variant="outline"
-            className="hidden md:flex border-emerald-500 bg-transparent text-emerald-400 hover:bg-emerald-950 hover:text-emerald-300"
-            asChild
-          >
-            <Link href="/docs/#install">Get Started</Link>
-          </Button>
-        </div>
-      </header>
+    <div>
 
-      <main className="flex-1">
+
+
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="mb-8">
@@ -174,107 +121,7 @@ export default function Blog() {
             </div>
           </div>
         </section>
-      </main>
 
-      <footer className="bg-gray-950 py-12 border-t border-gray-800">
-        <div className="container mx-auto px-4">
-          <div className="grid gap-8 md:grid-cols-4">
-            <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <Terminal className="h-5 w-5 text-emerald-400" />
-                <span className="text-lg font-bold">mcpz</span>
-              </div>
-              <p className="text-gray-400 text-sm">The intelligent Context Protocol management platform that optimizes AI interactions, reduces token usage by up to 70%, and transforms how developers work with AI tools.</p>
-            </div>
-
-            <div>
-              <h3 className="font-medium mb-4">Product</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>
-                  <Link href="/#features" className="hover:text-emerald-400">
-                    Features
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/pricing" className="hover:text-emerald-400">
-                    Pricing
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/blog/changelog" className="hover:text-emerald-400">
-                    Changelog
-                  </Link>
-                </li>
-                <li>
-                  {features.roadmap ? (
-                    <Link href="/roadmap" className="hover:text-emerald-400">
-                      Roadmap
-                    </Link>
-                  ) : (
-                    <span className="text-gray-600">Roadmap</span>
-                  )}
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-medium mb-4">Resources</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>
-                  <Link href="/docs" className="hover:text-emerald-400">
-                    Documentation
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/docs/tutorials" className="hover:text-emerald-400">
-                    Tutorials
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/blog" className="hover:text-emerald-400">
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link href="https://github.com/jasonkneen/mcpz/issues" className="hover:text-emerald-400">
-                    Support
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-medium mb-4">Company</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>
-                  <Link href="/blog/about" className="hover:text-emerald-400">
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/blog/careers" className="hover:text-emerald-400">
-                    Careers
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/blog/contact" className="hover:text-emerald-400">
-                    Contact
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/blog/privacy" className="hover:text-emerald-400">
-                    Privacy
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-gray-500">© {new Date().getFullYear()} Jason Kneen. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }

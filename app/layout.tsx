@@ -4,6 +4,8 @@ import { Inter, Quantico, Exo_2 } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
 import { CursorEffectWrapper } from '@/components/cursor-effect-wrapper'
 import { AnimatedBackground } from '@/components/animated-background'
+import { Header } from '@/components/Header'
+import { Footer } from '@/components/Footer'
 
 // Google Fonts import for direct CSS usage
 export const fontImport = `
@@ -112,7 +114,13 @@ export default function RootLayout({
       <body className="antialiased font-sans font-exo2">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <AnimatedBackground />
-          {children}
+          <div className="flex min-h-screen flex-col text-white">
+            <Header />
+            <main className="flex-1">
+              {children}
+            </main>
+            <Footer />
+          </div>
           <CursorEffectWrapper />
         </ThemeProvider>
       </body>

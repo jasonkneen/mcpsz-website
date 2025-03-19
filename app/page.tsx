@@ -4,7 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Terminal, Zap, Clock, Code2, Github } from "lucide-react"
-import { ReactNode, useEffect, useState } from "react"
+import { ReactNode } from "react"
 import { SoftwareApplicationJsonLd, OrganizationJsonLd, FAQPageJsonLd } from "@/components/json-ld"
 import { AnimatedTerminal } from "@/components/animated-terminal"
 import { MediaCarousel } from "@/components/media-carousel"
@@ -13,16 +13,8 @@ import { TiltPanel } from "@/components/tilt-panel"
 import { HybridLink } from "@/components/hybrid-link"
 
 export default function Home() {
-  // State to track the current media type
-  const [currentMediaType, setCurrentMediaType] = useState<'terminal' | 'image'>('terminal');
-  
-  // Handler for media change events
-  const handleMediaChange = (mediaItem: { type: 'terminal' | 'image', src?: string, alt?: string }, index: number) => {
-    setCurrentMediaType(mediaItem.type);
-  };
-  
   return (
-    <div className="flex min-h-screen flex-col text-white">
+    <div>
       {/* Structured Data for SEO */}
       <SoftwareApplicationJsonLd
         name="mcpz CLI"
@@ -57,80 +49,7 @@ export default function Home() {
           }
         ]}
       />
-      <header className="container mx-auto flex h-16 items-center justify-between px-4">
-        <div className="flex items-center space-x-2">
-          <Terminal className="text-emerald-500" />
-          <span className="text-3xl font-bold honk text-white">mcpz</span>
-          <span className="text-3xl font-bold honk text-emerald-500">it!</span>
-        </div>
-        <nav className="hidden md:block">
-          <ul className="flex space-x-8">
-            <li>
-              <Link href="#features" className="hover:text-emerald-400 transition-colors">
-                Features
-              </Link>
-            </li>
-            <li>
-              <Link href="#install" className="hover:text-emerald-400 transition-colors">
-                Install
-              </Link>
-            </li>
-            <li>
-              <Link href="/docs/" className="hover:text-emerald-400 transition-colors">
-                Docs
-              </Link>
-            </li>
-            <li>
-              <Link href="/pricing" className="hover:text-emerald-400 transition-colors">
-                Pricing
-              </Link>
-            </li>
-            <li>
-              <HybridLink 
-                feature="blog" 
-                className="hover:text-emerald-400 transition-colors"
-              >
-                Blog
-              </HybridLink>
-            </li>
-            <li>
-              <HybridLink 
-                feature="roadmap" 
-                className="hover:text-emerald-400 transition-colors"
-              >
-                Roadmap
-              </HybridLink>
-            </li>
-            <li>
-              <HybridLink 
-                feature="discover" 
-                className="hover:text-emerald-400 transition-colors"
-              >
-                Discover
-              </HybridLink>
-              </li>
-            <li>
-              <Link href="https://github.com/jasonkneen/mcpz/discussions/" className="hover:text-emerald-400 transition-colors">
-                Community
-              </Link>
-            </li>
-          </ul>
-        </nav>
-        <div className="flex items-center space-x-4">
-          <Link href="https://github.com/jasonkneen/mcpz" target="_blank" rel="noopener noreferrer">
-            <Github className="h-5 w-5 text-gray-400 hover:text-white transition-colors" />
-          </Link>
-          <Button
-            variant="outline"
-            className="hidden md:flex border-emerald-500 bg-transparent text-emerald-400 hover:bg-emerald-950 hover:text-emerald-300"
-            asChild
-          >
-            <Link href="/docs/#install">Get Started</Link>
-          </Button>
-        </div>
-      </header>
 
-      <main className="flex-1">
         {/* Hero Section */}
         <section className="container mx-auto px-4 py-10 md:py-32">
           <div className="grid gap-8 md:grid-cols-2 md:gap-12 items-center">
@@ -140,77 +59,29 @@ export default function Home() {
               <div className="space-y-6 flex-grow">
                 {/* Title section */}
                 <div className="mb-4">
-                  <div 
-                    className={`transition-all duration-700 ease-in-out transform ${
-                      currentMediaType === 'terminal' 
-                        ? 'opacity-100 translate-y-0 block' 
-                        : 'opacity-0 hidden'
-                    }`}
-                  >
-                    
+                  <div>
                     <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
                       Unlock the full power of your AI Coding and <span className="text-emerald-400 block md:inline">MCPs</span>
                     </h1>
                     {/* mcpz.it Logo */}
-                  <div className="mb-7 mt-8">
-                    <Image 
-                      src="/logos/mcpzit.png" 
-                      alt="mcpz.it" 
-                      width={500} 
-                      height={180} 
-                      className="object-contain" 
-                      priority
-                    />
-                  </div>
-                  </div>
-                  <div 
-                    className={`transition-all duration-700 ease-in-out transform ${
-                      currentMediaType === 'image' 
-                        ? 'opacity-100 translate-y-0 block' 
-                        : 'opacity-0 hidden'
-                    }`}
-                  >
-                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-                      Supercharge <span className="text-emerald-400 block md:inline">Copilot</span> and add the power of MCPs
-                    </h1>
                     <div className="mb-7 mt-8">
-                <Image 
-                  src="/logos/mcpzit.png" 
-                  alt="mcpz.it" 
-                  width={500} 
-                  height={180} 
-                  className="object-contain" 
-                  priority
-                />
-              </div>
+                      <Image 
+                        src="/logos/mcpzit.png" 
+                        alt="mcpz.it" 
+                        width={500} 
+                        height={180} 
+                        className="object-contain" 
+                        priority
+                      />
+                    </div>
                   </div>
-                  
                 </div>
                 
                 {/* Description section */}
                 <div className="mt-6 mb-8">
-                  <div 
-                    className={`transition-all duration-700 ease-in-out transform ${
-                      currentMediaType === 'terminal' 
-                        ? 'opacity-100 translate-y-0 block' 
-                        : 'opacity-0 hidden'
-                    }`}
-                  >
-                    <p className="text-base md:text-lg lg:text-xl text-gray-400 max-w-md">
-                      The intelligent CLI that transforms how you work with AI. Organize your MCP tools into purpose-driven groups, slash token usage by up to 70%, and get faster, more accurate AI responses while reducing costs.
-                    </p>
-                  </div>
-                  <div 
-                    className={`transition-all duration-700 ease-in-out transform ${
-                      currentMediaType === 'image' 
-                        ? 'opacity-100 translate-y-0 block' 
-                        : 'opacity-0 hidden'
-                    }`}
-                  >
-                    <p className="text-base md:text-lg lg:text-xl text-gray-400 max-w-md">
-                      Enable MCPs with Github Copilot and add thousands of tools from the MCP community into your favourite Copilot workflows.
-                    </p>
-                  </div>
+                  <p className="text-base md:text-lg lg:text-xl text-gray-400 max-w-md mb-8">
+                    The intelligent CLI that transforms how you work with AI. Organize your MCP tools into purpose-driven groups, slash token usage by up to 70%, and get faster, more accurate AI responses while reducing costs.
+                  </p>
                 </div>
               </div>
 
@@ -221,7 +92,7 @@ export default function Home() {
                   <Link href="https://www.npmjs.com/package/mcpz" target="_blank" rel="noopener noreferrer" className="block w-full">
                     <Button 
                       size="lg" 
-                      className="bg-emerald-600 hover:bg-emerald-700 text-white w-full"
+                      className="bg-emerald-600 hover:bg-emerald-700 text-white w-full text-lg"
                     >
                       Install CLI
                     </Button>
@@ -234,7 +105,7 @@ export default function Home() {
                     <Button
                       size="lg"
                       variant="outline"
-                      className="border-emerald-500 bg-transparent text-white hover:bg-emerald-950 hover:text-emerald-300 w-full"
+                      className="border-emerald-500 bg-transparent text-white hover:bg-emerald-950 hover:text-emerald-300 w-full text-lg"
                     >
                       Extension
                     </Button>
@@ -247,7 +118,7 @@ export default function Home() {
                     <Button
                       size="lg"
                       variant="outline"
-                      className="border-gray-700 bg-transparent text-white hover:bg-gray-900 w-full"
+                      className="border-gray-700 bg-transparent text-white hover:bg-gray-900 w-full text-lg"
                     >
                       Docs
                     </Button>
@@ -266,7 +137,6 @@ export default function Home() {
                 autoRotateInterval={5000}
                 initialAutoRotate={true}
                 showHeader={true}
-                onMediaChange={handleMediaChange}
                 className="border-t border-gray-800"
               />
             </div>
@@ -285,33 +155,33 @@ export default function Home() {
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               <FeatureCard
-                icon={<Zap className="h-6 w-6 text-emerald-400 inline-block mr-2" />}
+                icon=""
                 title="Lightning Fast"
                 description="Instantly access and organize hundreds of MCP tools. Our optimized engine delivers 5x faster tool retrieval and intelligent categorization that adapts to your workflow."
               />
               <FeatureCard
-                icon={<Code2 className="h-6 w-6 text-emerald-400 inline-block mr-2" />}
+                icon=""
                 title="One-stop MCP Management"
                 description="Eliminate configuration headaches with our unified management hub. Seamlessly sync your custom toolsets across all your environments with zero friction."
               />
-              <FeatureCard
-                icon={<Clock className="h-6 w-6 text-emerald-400 inline-block mr-2" />}
+              <FeatureCard icon=""                 
                 title="Grouping, Tagging, Organising"
                 description="Boost productivity with smart tool organization. Create project-specific toolsets that deliver exactly what you need, when you need it, reducing cognitive load and streamlining your workflow."
               />
               <FeatureCard
-                icon={<Github className="h-6 w-6 text-emerald-400 inline-block mr-2" />}
+               icon=""
                 title="Ad-hoc and dynamic tooling"
                 description="Save up to 70% on token usage with intelligent tool provisioning. Our AI-powered system analyzes your codebase and usage patterns to recommend and deploy only the tools you actually need."
+                comingSoon={true}
               />
               <FeatureCard
-                icon={<Terminal className="h-6 w-6 text-emerald-400 inline-block mr-2" />}
+                icon=""
                 title="Talk to your MCP Servers"
                 description="Experience seamless AI interaction with our intuitive chat interface. Test, chain, and optimize your MCP workflows in a secure sandbox environment before deployment."
                 comingSoon={true}
               />
               <FeatureCard
-                icon={<ArrowRight className="h-6 w-6 text-emerald-400 inline-block mr-2" />}
+                icon=""
                 title="MCPs as agents"
                 description="Transform your AI capabilities with agent-driven workflows. Connect and orchestrate MCP tools into powerful automation sequences that solve complex problems with minimal oversight."
                 comingSoon={true}
@@ -416,133 +286,13 @@ export default function Home() {
             </div>
           </div>
         </section>
-      </main>
 
-      <footer className="bg-gray-950 py-12 border-t border-gray-800">
-        <div className="container mx-auto px-4">
-          <div className="grid gap-8 md:grid-cols-4">
-            <div>
-            <div className="flex items-center space-x-2">
-          <Terminal className="text-emerald-500" />
-          <span className="text-3xl font-bold honk text-white">mcpz</span>
-          <span className="text-3xl font-bold honk text-emerald-500">it!</span>
-        </div>
-              <p className="text-gray-400 text-sm">The intelligent Model Context Protocol management platform that optimizes AI interactions, reduces token usage by up to 70%, and transforms how developers work with AI tools.</p>
-            </div>
-
-            <div>
-              <h3 className="font-medium mb-4">Product</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>
-                  <Link href="#features" className="hover:text-emerald-400">
-                    Features
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/pricing" className="hover:text-emerald-400">
-                    Pricing
-                  </Link>
-                </li>
-                <li>
-                  <HybridLink 
-                    feature="blog" 
-                    className="hover:text-emerald-400"
-                  >
-                    Changelog
-                  </HybridLink>
-                </li>
-                <li>
-                  <HybridLink 
-                    feature="blog" 
-                    className="hover:text-emerald-400"
-                  >
-                    Roadmap
-                  </HybridLink>
-                </li>
-                <li>
-                  <HybridLink feature="roadmap" className="hover:text-emerald-400">
-                    Roadmap
-                  </HybridLink>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-medium mb-4">Resources</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                {/* Documentation link */}
-                <li>
-                  <Link href="/docs" className="hover:text-emerald-400">
-                    Documentation
-                  </Link>
-                </li>
-                {/* Tutorials with Coming Soon badge */}
-                <li>
-                  <Link href="#" className="hover:text-emerald-400">
-                    <span className="flex items-center">
-                      Tutorials
-                      <span className="ml-2 px-2 py-0.5 text-xs bg-gray-800 rounded-full">Coming Soon</span>
-                    </span>
-                  </Link>
-                </li>
-                {/* Support link */}
-                <li>
-                  <Link href="https://github.com/jasonkneen/mcpz/issues" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400">
-                    Support
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-medium mb-4">Company</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>
-                  <Link href="#" className="hover:text-emerald-400">
-                    <span className="flex items-center">
-                      About
-                      <span className="ml-2 px-2 py-0.5 text-xs bg-gray-800 rounded-full">Coming Soon</span>
-                    </span>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/legal/privacy-policy" className="hover:text-emerald-400">
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/legal/terms-conditions" className="hover:text-emerald-400">
-                    Terms & Conditions
-                  </Link>
-                </li>
-                
-              </ul>
-            </div>
-          </div>
-
-          <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-gray-500">© {new Date().getFullYear()} Synthience.ai. All rights reserved.</p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="https://github.com/jasonkneen/mcpz" className="text-gray-400 hover:text-emerald-400">
-                <Github className="h-5 w-5" />
-                <span className="sr-only">GitHub</span>
-              </Link>
-              <Link href="https://x.com/jasonkneen" className="text-gray-400 hover:text-emerald-400">
-                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-                </svg>
-                <span className="sr-only">Twitter</span>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }
 
 interface FeatureCardProps {
-  icon: ReactNode;
+  icon?: ReactNode;
   title: string;
   description: string;
   comingSoon?: boolean;
@@ -550,17 +300,18 @@ interface FeatureCardProps {
 
 function FeatureCard({ icon, title, description, comingSoon = false }: FeatureCardProps) {
   return (
-    <TiltPanel className="bg-gray-900 p-6 rounded-lg border border-gray-800 hover:border-emerald-900 transition-colors hover-shimmer">
+    <TiltPanel className="bg-gray-900 p-4 rounded-lg border border-gray-800 hover:border-emerald-900 transition-colors hover-shimmer">
       {comingSoon && (
-        <div className="flex justify-end mb-2">
-          <span className="inline-block px-2 py-1 text-xs font-semibold rounded-full bg-emerald-900 text-emerald-300">
-            Coming Soon
+        <div className="align-middle mb-4">
+          <span className="bottom-0 inline-block px-2 py-1 text-xs font-semibold rounded-full bg-emerald-900 text-emerald-300">
+            COMING SOON
           </span>
         </div>
       )}
-      <div className="mb-4">{icon}</div>
-      <h3 className="text-xl font-bold mb-2">{title}</h3>
+      <div className="mb-0">{icon}</div>
+      <h3 className="text-2xl font-bold mb-2">{title}</h3>
       <p className="text-gray-400"><span className="inline">{description}</span></p>
+      
     </TiltPanel>
   )
 }
