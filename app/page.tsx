@@ -266,17 +266,17 @@ export default function Home() {
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link href="https://www.npmjs.com/package/mcpz" target="_blank" rel="noopener noreferrer">
-                  <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
+                  <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white text-lg">
                   Download Now
                   </Button>
                 </Link>
                 <Link href="/docs/">
-                  <Button size="lg" variant="outline" className="border-emerald-500 bg-transparent text-white hover:bg-emerald-950 hover:text-emerald-300">
+                  <Button size="lg" variant="outline" className="border-emerald-500 bg-transparent text-white hover:bg-emerald-950 hover:text-emerald-300 text-white text-lg">
                     View Documentation
                   </Button>
                 </Link>
                 <Link href="https://github.com/jasonkneen/mcpz" target="_blank" rel="noopener noreferrer">
-                  <Button size="lg" variant="outline" className="border-gray-700 bg-transparent text-white hover:bg-gray-900">
+                  <Button size="lg" variant="outline" className="border-gray-700 bg-transparent text-white hover:bg-gray-900 text-white text-lg">
                     Star on GitHub
                   </Button>
                 </Link>
