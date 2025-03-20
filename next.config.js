@@ -29,9 +29,9 @@ const nextConfig = {
   env: {
     NEXT_PUBLIC_BASE_URL: process.env.NEXT_PUBLIC_DEPLOYMENT_TARGET === 'vercel' 
       ? 'https://mcpz.vercel.app'
-      : 'https://mcpz.tools',
-    NEXT_PUBLIC_DISCOVER_URL: 'https://discover.mcpz.tools',
-    NEXT_PUBLIC_NEWS_URL: 'https://news.mcpz.tools',
+      : 'https://mcpz.it',
+    NEXT_PUBLIC_DISCOVER_URL: 'https://mcpz.it',
+    NEXT_PUBLIC_NEWS_URL: 'https://mcpz.it',
   },
   
   // Redirects for subdomains

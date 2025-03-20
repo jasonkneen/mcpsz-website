@@ -265,7 +265,7 @@ export default function Home() {
                 Join thousands of AI developers who have seen their MCP workflows transformed, reducing tokens, optimising context and saving money.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Link href="https://www.npmjs.com/package/mcpz" target="_blank" rel="noopener noreferrer">
+                <Link href="https://www.npmjs.com/package/@mcpz/cli" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white text-lg">
                   Download Now
                   </Button>
