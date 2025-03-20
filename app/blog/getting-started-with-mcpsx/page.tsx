@@ -107,7 +107,7 @@ export default function BlogPost() {
                 </p>
 
                 <pre className="bg-gray-950 p-4 rounded-md overflow-x-auto mb-6">
-                  <code className="text-emerald-400">npm install -g mcpz</code>
+                  <code className="text-emerald-400">npm install -g @mcpz/cli</code>
                 </pre>
 
                 <p>

@@ -200,7 +200,7 @@ export default function Home() {
                     <span className="text-sm font-medium">Using npm</span>
                   </div>
                   <div className="p-4 font-mono text-sm overflow-x-auto">
-                    <pre className="text-emerald-400">npm install -g mcpz</pre>
+                    <pre className="text-emerald-400">npm install -g @mcpz/cli</pre>
                   </div>
                 </div>
                 

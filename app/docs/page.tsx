@@ -13,7 +13,7 @@ export default function Docs() {
         questions={[
           {
             question: "How do I install mcpz CLI?",
-            answer: "You can install mcpz CLI globally using npm: npm install -g mcpz"
+            answer: "You can install mcpz CLI globally using npm: npm install -g @mcpz/cli"
           },
           {
             question: "How do I create a tool group in mcpz?",
@@ -66,7 +66,7 @@ export default function Docs() {
                 <span className="text-sm font-medium">Install globally</span>
               </div>
               <div className="p-4 font-mono text-sm overflow-x-auto">
-                <pre className="text-emerald-400">npm install -g mcpz</pre>
+                <pre className="text-emerald-400">npm install -g @mcpz/cli</pre>
               </div>
             </div>
             
@@ -75,7 +75,7 @@ export default function Docs() {
                 <span className="text-sm font-medium">Or use with npx</span>
               </div>
               <div className="p-4 font-mono text-sm overflow-x-auto">
-                <pre className="text-emerald-400">npx @mcpz</pre>
+                <pre className="text-emerald-400">npx -y @mcpz/cli</pre>
               </div>
             </div>
 
@@ -95,29 +95,45 @@ export default function Docs() {
               <div className="p-4 font-mono text-sm overflow-x-auto">
                 <pre className="text-emerald-400"># Show help
 mcpz help
-
+<br/>
 # Start MCP
+<br/>
 mcpz run
-
+<br/>
+<br/>
 # Start with specific tools
+<br/>
 mcpz run --tool="sleep"
+<br/>
 mcpz run --tools="python,pytorch,predict"
-
+<br/>
+<br/>
 # Tool group management
+<br/>
 mcpz groups add "python-stack" --tools="python,pytorch,huggingface"
+<br/>
 mcpz run --tools="python-stack"
-
+<br/>
+<br/>
 # Add a new MCP configuration
+<br/>
 mcpz add "My Server" --command "node" --args "server.js"
-
+<br/>
+<br/>
 # List MCP configurations
+<br/>
 mcpz list
-
+<br/>
+<br/>
 # Remove an MCP configuration
+<br/>
 mcpz remove "My Server"
-
+<br/>
+<br/>
 # Use a specific MCP configuration
-mcpz use "My Server"</pre>
+<br/>
+mcpz use "My Server"<br/>
+            </pre>
               </div>
             </div>
 
@@ -163,28 +179,30 @@ mcpz use "My Server"</pre>
             </div>
             <p className="mb-2">Options:</p>
             <ul className="list-disc pl-6 mb-4 space-y-1">
-              <li><code className="bg-gray-800 px-1 rounded">-s, --tool &lt;n&gt;</code> - Load only a specific tool</li>
+              <li><code className="bg-gray-800 px-1 rounded">-s, --tool &lt;name&gt;</code> - Load only a specific tool</li>
               <li><code className="bg-gray-800 px-1 rounded">-S, --tools &lt;names&gt;</code> - Load only specific tools (comma-separated)</li>
-              <li><code className="bg-gray-800 px-1 rounded">-t, --tool &lt;n&gt;</code> - Load only a specific tool</li>
+              <li><code className="bg-gray-800 px-1 rounded">-t, --tool &lt;name&gt;</code> - Load only a specific tool</li>
               <li><code className="bg-gray-800 px-1 rounded">-T, --tools &lt;names&gt;</code> - Load only specific tools (comma-separated)</li>
             </ul>
             <p className="mb-2">Examples:</p>
             <div className="rounded-lg border border-gray-800 bg-gray-950 overflow-hidden mb-6">
               <div className="p-4 font-mono text-sm overflow-x-auto">
                 <pre className="text-emerald-400"># Load all servers and tools
-mcpz run
-
-# Load only the 'sleep' tool
-mcpz run --tool="sleep"
-
-# Load multiple tools
-mcpz run --tools="python,pytorch"
-
-# Load specific tools
-mcpz run --tools="predict,generate"
-
-# Use a tool group
-mcpz run --tools="python-stack"</pre>
+mcpz run<br/>
+<br/>
+<br/>
+# Load only the 'sleep' tool<br/>
+mcpz run --tool="sleep"<br/>
+<br/><br/>
+# Load multiple tools<br/>
+mcpz run --tools="python,pytorch"<br/>
+<br/><br/>
+# Load specific tools<br/>
+mcpz run --tools="predict,generate"<br/>
+<br/><br/>
+# Use a tool group<br/>
+mcpz run --tools="python-stack"
+<br/></pre>
               </div>
             </div>
 
@@ -206,16 +224,18 @@ mcpz run --tools="python-stack"</pre>
             </p>
             <div className="rounded-lg border border-gray-800 bg-gray-950 overflow-hidden mb-4">
               <div className="p-4 font-mono text-sm overflow-x-auto">
-                <pre className="text-emerald-400">mcpz groups add &lt;n&gt; --tools="tool1,tool2,..."</pre>
+                <pre className="text-emerald-400">mcpz groups add &lt;name&gt; --tools="tool1,tool2,..."</pre>
               </div>
             </div>
             <p className="mb-2">Example:</p>
             <div className="rounded-lg border border-gray-800 bg-gray-950 overflow-hidden mb-6">
               <div className="p-4 font-mono text-sm overflow-x-auto">
-                <pre className="text-emerald-400"># Create a 'python-stack' group containing multiple tools
+                <pre className="text-emerald-400"># Create a 'python-stack' group containing multiple tools<br/>
 mcpz groups add "python-stack" --tools="python,pytorch,huggingface"
-
+<br/>
+<br/>
 # Create a 'favorites' group
+<br/>
 mcpz groups add "favorites" --tools="openai,anthropic"</pre>
               </div>
             </div>
@@ -226,7 +246,7 @@ mcpz groups add "favorites" --tools="openai,anthropic"</pre>
             </p>
             <div className="rounded-lg border border-gray-800 bg-gray-950 overflow-hidden mb-4">
               <div className="p-4 font-mono text-sm overflow-x-auto">
-                <pre className="text-emerald-400">mcpz groups remove &lt;n&gt;</pre>
+                <pre className="text-emerald-400">mcpz groups remove &lt;name&gt;</pre>
               </div>
             </div>
 
@@ -254,15 +274,15 @@ mcpz groups add "favorites" --tools="openai,anthropic"</pre>
             <p className="mb-2">Example workflow:</p>
             <div className="rounded-lg border border-gray-800 bg-gray-950 overflow-hidden mb-6">
               <div className="p-4 font-mono text-sm overflow-x-auto">
-                <pre className="text-emerald-400"># Create groups for different use cases
-mcpz groups add "ai-models" --tools="openai,anthropic,llama"
-mcpz groups add "data-tools" --tools="pandas,numpy,sklearn"
-
-# Use a specific group
-mcpz run --tools="ai-models"
-
-# Combine groups with individual tools
-mcpz run --tools="ai-models,custom-tool,predict"</pre>
+                <pre className="text-emerald-400"># Create groups for different use cases<br/>
+                  mcpz groups add "ai-models" --tools="openai,anthropic,llama"<br/>
+                  mcpz groups add "data-tools" --tools="pandas,numpy,sklearn"<br/>
+                  <br/><br/>
+                  # Use a specific group<br/>
+                  mcpz run --tools="ai-models"<br/>
+                  <br/><br/>
+                  # Combine groups with individual tools<br/>
+                  mcpz run --tools="ai-models,custom-tool,predict"<br/></pre>
               </div>
             </div>
 
@@ -272,7 +292,7 @@ mcpz run --tools="ai-models,custom-tool,predict"</pre>
             </p>
             <div className="rounded-lg border border-gray-800 bg-gray-950 overflow-hidden mb-4">
               <div className="p-4 font-mono text-sm overflow-x-auto">
-                <pre className="text-emerald-400">mcpz add &lt;n&gt; [options]</pre>
+                <pre className="text-emerald-400">mcpz add &lt;name&gt; [options]</pre>
               </div>
             </div>
             <p className="mb-2">Options:</p>
@@ -284,7 +304,7 @@ mcpz run --tools="ai-models,custom-tool,predict"</pre>
             <p className="mb-2">Example:</p>
             <div className="rounded-lg border border-gray-800 bg-gray-950 overflow-hidden mb-6">
               <div className="p-4 font-mono text-sm overflow-x-auto">
-                <pre className="text-emerald-400">mcpz add "GPT Server" --command "node" --args "server.js,--port=3000" --env "API_KEY=abc123,DEBUG=true"</pre>
+                <pre className="text-emerald-400">mcpz add "myserver" --command "node" --args "server.js,--port=3232" --env "API_KEY=abc123,DEBUG=true"</pre>
               </div>
             </div>
 
@@ -294,7 +314,7 @@ mcpz run --tools="ai-models,custom-tool,predict"</pre>
             </p>
             <div className="rounded-lg border border-gray-800 bg-gray-950 overflow-hidden mb-4">
               <div className="p-4 font-mono text-sm overflow-x-auto">
-                <pre className="text-emerald-400">mcpz remove &lt;n&gt;</pre>
+                <pre className="text-emerald-400">mcpz remove &lt;name&gt;</pre>
               </div>
             </div>
 
@@ -314,7 +334,7 @@ mcpz run --tools="ai-models,custom-tool,predict"</pre>
             </p>
             <div className="rounded-lg border border-gray-800 bg-gray-950 overflow-hidden mb-4">
               <div className="p-4 font-mono text-sm overflow-x-auto">
-                <pre className="text-emerald-400">mcpz use &lt;n&gt;</pre>
+                <pre className="text-emerald-400">mcpz use &lt;name&gt;</pre>
               </div>
             </div>
 
