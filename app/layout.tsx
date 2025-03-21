@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { Inter, Quantico, Exo_2 } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
-import { CursorEffectWrapper } from '@/components/cursor-effect-wrapper'
+// Custom cursor removed
 import { AnimatedBackground } from '@/components/animated-background'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
@@ -121,7 +121,7 @@ export default function RootLayout({
             </main>
             <Footer />
           </div>
-          <CursorEffectWrapper />
+          {/* Custom cursor removed */}
         </ThemeProvider>
       </body>
     </html>

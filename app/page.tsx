@@ -145,17 +145,17 @@ export default function Home() {
         <section id="features" className="bg-gray-950 py-10">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-glow">Powerful Features for MCP Servers</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-glow">Intelligent, Open-Source<br/>MCP Servers & Tooling</h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
-                mcpz comes packed with everything you need to streamline your Model Context Protocol workflow, intelligently organize your tools, and optimize model interactions.
+                First MCP tooling which intelligently organises your MCP servers and tools, selecting the right toolbox for the task in hand, saving you money and tokens AND reducing hallunciations.
               </p>
             </div>
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               <FeatureCard
                 icon=""
-                title="Lightning Fast"
-                description="Instantly access and organize hundreds of MCP tools. Our optimized engine delivers 5x faster tool retrieval and intelligent categorization that adapts to your workflow."
+                title="100% Open Source"
+                description="Fully open-source under GNU GPLv3 -- use for personal or non-commercial use and contribute with PRs."
               />
               <FeatureCard
                 icon=""
