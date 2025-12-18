@@ -3,14 +3,9 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Terminal, Zap, Clock, Code2, Github } from "lucide-react"
-import { ReactNode } from "react"
 import { SoftwareApplicationJsonLd, OrganizationJsonLd, FAQPageJsonLd } from "@/components/json-ld"
-import { AnimatedTerminal } from "@/components/animated-terminal"
 import { MediaCarousel } from "@/components/media-carousel"
-import { features, getFeatureUrl, deploymentTarget } from "@/config/features"
 import { TiltPanel } from "@/components/tilt-panel"
-import { HybridLink } from "@/components/hybrid-link"
 
 export default function Home() {
   return (
@@ -90,8 +85,8 @@ export default function Home() {
                 {/* Install CLI Button */}
                 <div className="w-full sm:w-auto">
                   <Link href="https://www.npmjs.com/package/@mcpz/cli" target="_blank" rel="noopener noreferrer" className="block w-full">
-                    <Button 
-                      size="lg" 
+                    <Button
+                      size="lg"
                       className="bg-emerald-600 hover:bg-emerald-700 text-white w-full text-lg"
                     >
                       Install CLI
@@ -99,26 +94,13 @@ export default function Home() {
                   </Link>
                 </div>
 
-                {/* Extension Button */}
+                {/* Docs Button */}
                 <div className="w-full sm:w-auto">
-                  <Link href="https://marketplace.visualstudio.com/items?itemName=jasonkneen.mcpsx-run" target="_blank" rel="noopener noreferrer" className="block w-full">                  
+                  <Link href="/docs/#install" className="block w-full">
                     <Button
                       size="lg"
                       variant="outline"
                       className="border-emerald-500 bg-transparent text-white hover:bg-emerald-950 hover:text-emerald-300 w-full text-lg"
-                    >
-                      Extension
-                    </Button>
-                  </Link>
-                </div>
-
-                {/* Docs Button */}
-                <div className="w-full sm:w-auto">
-                  <Link href="/docs/#install" className="block w-full">                  
-                    <Button
-                      size="lg"
-                      variant="outline"
-                      className="border-gray-700 bg-transparent text-white hover:bg-gray-900 w-full text-lg"
                     >
                       Docs
                     </Button>
@@ -153,33 +135,28 @@ export default function Home() {
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               <FeatureCard
-                icon=""
                 title="100% Open Source"
                 description="Fully open-source under GNU GPLv3 -- use for personal or non-commercial use and contribute with PRs."
               />
               <FeatureCard
-                icon=""
                 title="One-stop MCP Management"
                 description="Eliminate configuration headaches with our unified management hub. Seamlessly sync your custom toolsets across all your environments with zero friction."
               />
-              <FeatureCard icon=""                 
+              <FeatureCard
                 title="Grouping, Tagging, Organising"
                 description="Boost productivity with smart tool organization. Create project-specific toolsets that deliver exactly what you need, when you need it, reducing cognitive load and streamlining your workflow."
               />
               <FeatureCard
-               icon=""
                 title="Ad-hoc and dynamic tooling"
                 description="Save up to 70% on token usage with intelligent tool provisioning. Our AI-powered system analyzes your codebase and usage patterns to recommend and deploy only the tools you actually need."
                 comingSoon={true}
               />
               <FeatureCard
-                icon=""
                 title="Talk to your MCP Servers"
                 description="Experience seamless AI interaction with our intuitive chat interface. Test, chain, and optimize your MCP workflows in a secure sandbox environment before deployment."
                 comingSoon={true}
               />
               <FeatureCard
-                icon=""
                 title="MCPs as agents"
                 description="Transform your AI capabilities with agent-driven workflows. Connect and orchestrate MCP tools into powerful automation sequences that solve complex problems with minimal oversight."
                 comingSoon={true}
@@ -250,7 +227,7 @@ export default function Home() {
               <TestimonialCard
                 quote="Congratulations to @jasonkneen, the Godfather of MCPs!!! He was the first person to talk about MCPs in this space (when everyone was still sleeping on it) & never stopped exploring the use cases for them. "
                 author="Lianna"
-                role="Entreprenuer"
+                role="Entrepreneur"
               />
             </div>
           </div>
@@ -290,26 +267,21 @@ export default function Home() {
 }
 
 interface FeatureCardProps {
-  icon?: ReactNode;
   title: string;
   description: string;
   comingSoon?: boolean;
 }
 
-function FeatureCard({ icon, title, description, comingSoon = false }: FeatureCardProps) {
+function FeatureCard({ title, description, comingSoon = false }: FeatureCardProps) {
   return (
     <TiltPanel className="bg-gray-900 p-4 rounded-lg border border-gray-800 hover:border-emerald-900 transition-colors hover-shimmer">
       {comingSoon && (
-        <div className="align-middle mb-4">
-          <span className="bottom-0 inline-block px-2 py-1 text-xs font-semibold rounded-full bg-emerald-900 text-emerald-300">
-            COMING SOON
-          </span>
-        </div>
+        <span className="inline-block px-2 py-1 mb-4 text-xs font-semibold rounded-full bg-emerald-900 text-emerald-300">
+          COMING SOON
+        </span>
       )}
-      <div className="mb-0">{icon}</div>
       <h3 className="text-2xl font-bold mb-2">{title}</h3>
-      <p className="text-gray-400"><span className="inline">{description}</span></p>
-      
+      <p className="text-gray-400">{description}</p>
     </TiltPanel>
   )
 }

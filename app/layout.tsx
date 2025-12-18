@@ -1,33 +1,10 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { Inter, Quantico, Exo_2 } from 'next/font/google'
+import { Exo_2 } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
-// Custom cursor removed
 import { AnimatedBackground } from '@/components/animated-background'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
-
-// Google Fonts import for direct CSS usage
-export const fontImport = `
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Armata&family=Bungee+Tint&family=Honk&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Orbitron:wght@400..900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Russo+One&family=Tektur:wght@400..900&family=Exo+2:wght@100..900&display=swap');
-</style>
-`
-
-// Define the fonts
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
-})
-
-const quantico = Quantico({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  style: ['normal', 'italic'],
-  display: 'swap',
-  variable: '--font-quantico',
-})
 
 const exo2 = Exo_2({
   subsets: ['latin'],
@@ -110,7 +87,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" dir="ltr" suppressHydrationWarning className={`${inter.variable} ${quantico.variable} ${exo2.variable}`}>
+    <html lang="en" dir="ltr" suppressHydrationWarning className={exo2.variable}>
       <body className="antialiased font-sans font-exo2">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <AnimatedBackground />
@@ -121,7 +98,6 @@ export default function RootLayout({
             </main>
             <Footer />
           </div>
-          {/* Custom cursor removed */}
         </ThemeProvider>
       </body>
     </html>

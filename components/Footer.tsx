@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { Terminal, Github } from "lucide-react"
-import { HybridLink } from "@/components/hybrid-link"
+import { features } from "@/config/features"
 
 export function Footer() {
   return (
@@ -12,7 +12,7 @@ export function Footer() {
           <div>
             <div className="flex items-center space-x-2">
               <Terminal className="text-white" />
-              <span className="text-3xl font-bold honk text-white">mcpz it!</span>              
+              <span className="text-3xl font-bold honk text-white">mcpz it!</span>
             </div>
             <p className="text-gray-400 text-sm">The intelligent Model Context Protocol management platform that optimizes AI interactions, reduces token usage by up to 70%, and transforms how developers work with AI tools.</p>
           </div>
@@ -30,27 +30,13 @@ export function Footer() {
                   Pricing
                 </Link>
               </li>
-              <li>
-                <HybridLink 
-                  feature="blog" 
-                  className="hover:text-emerald-400"
-                >
-                  Changelog
-                </HybridLink>
-              </li>
-              {/* <li>
-                <HybridLink 
-                  feature="blog" 
-                  className="hover:text-emerald-400"
-                >
-                  Roadmap
-                </HybridLink>
-              </li>
-              <li>
-                <HybridLink feature="roadmap" className="hover:text-emerald-400">
-                  Roadmap
-                </HybridLink>
-              </li> */}
+              {features.blog && (
+                <li>
+                  <Link href="/blog" className="hover:text-emerald-400">
+                    Changelog
+                  </Link>
+                </li>
+              )}
             </ul>
           </div>
 

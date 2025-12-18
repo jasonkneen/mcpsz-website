@@ -3,24 +3,14 @@
 import Link from "next/link"
 import { Terminal, Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { HybridLink } from "@/components/hybrid-link"
 import { features } from "@/config/features"
-import { usePathname } from "next/navigation"
 
 export function Header() {
-  const pathname = usePathname()
-  
-  const isActive = (path: string) => {
-    if (path === '/') {
-      return pathname === path
-    }
-    return pathname.startsWith(path)
-  }
   return (
     <header className="container mx-auto flex h-16 items-center justify-between px-4">
       <div className="flex items-center space-x-2">
         <Terminal className="text-white" />
-        <span className="text-3xl font-bold honk text-white">mcpz it!</span>        
+        <span className="text-3xl font-bold honk text-white">mcpz it!</span>
       </div>
       <nav className="hidden md:block">
         <ul className="flex space-x-8">
@@ -44,35 +34,13 @@ export function Header() {
               Pricing
             </Link>
           </li>
-          <li>
-            <HybridLink 
-              feature="blog" 
-              className="hover:text-emerald-400 transition-colors"
-            >
-              Blog
-            </HybridLink>
-          </li>
-          {/* <li>
-            <HybridLink 
-              feature="roadmap" 
-              className="hover:text-emerald-400 transition-colors"
-            >
-              Roadmap
-            </HybridLink>
-          </li>
-          <li>
-            <HybridLink 
-              feature="discover" 
-              className="hover:text-emerald-400 transition-colors"
-            >
-              Discover
-            </HybridLink>
+          {features.blog && (
+            <li>
+              <Link href="/blog" className="hover:text-emerald-400 transition-colors">
+                Blog
+              </Link>
             </li>
-          <li>
-            <Link href="https://github.com/jasonkneen/mcpz/discussions/" className="hover:text-emerald-400 transition-colors">
-              Community
-            </Link>
-          </li> */}
+          )}
         </ul>
       </nav>
       <div className="flex items-center space-x-4">

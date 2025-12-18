@@ -44,7 +44,6 @@ export default function Pricing() {
                       <FeatureItem text="Fully local" />
                       <FeatureItem text="Command-line interface" />
                       <FeatureItem text="Chat with MCPs (your keys)" />
-                      <FeatureItem text="Open Source VSCode extension" />
                       <FeatureItem text="Basic analytics" />
                       <FeatureItem text="Community support" />
                     </ul>

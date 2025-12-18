@@ -170,7 +170,7 @@ mcpz use "My Server"<br/>
             
             <h3 className="text-xl font-bold mt-6 mb-3 text-white">stdio</h3>
             <p className="mb-4">
-              Start MCP over stdio. This is the main command used by the VSCode extension to communicate with MCP.
+              Start MCP over stdio. This is the main command used by MCP clients to communicate with MCP servers.
             </p>
             <div className="rounded-lg border border-gray-800 bg-gray-950 overflow-hidden mb-4">
               <div className="p-4 font-mono text-sm overflow-x-auto">
@@ -350,8 +350,7 @@ mcpz groups add "favorites" --tools="openai,anthropic"</pre>
 
             <h2 className="text-2xl font-bold mt-8 mb-4 text-emerald-400">Configuration</h2>
             <p className="mb-6">
-              mcpz CLI uses the configuration file located at <code className="bg-gray-800 px-1 rounded">~/.mcpz/config.json</code>. 
-              This file is shared with the MCP VSCode extension, ensuring consistent configuration across your entire development environment.
+              mcpz CLI uses the configuration file located at <code className="bg-gray-800 px-1 rounded">~/.mcpz/config.json</code>.
             </p>
 
             <h2 className="text-2xl font-bold mt-8 mb-4 text-emerald-400">Token Optimization Strategy</h2>
